@@ -1,5 +1,8 @@
 //Adatstruktúra
+var boatTypes = ["egyes", "kettes1", "kettes2", "harmas1", "harmas2", "negyes", "otos"];
+var smt = [1, 2, 3];
 
+// Játékosok adatai
 var playersData = {
     player2 : {
         coords : {
@@ -529,45 +532,40 @@ var playersData = {
     }
 }
 
-//console.log(playersData.player2.boats.hatos[5-1].x);
+function PutBoat() {
+    var bCor = document.getElementById("bcor").value;
+    var bType = document.getElementById("boat-type").value;
+    var bCell = document.getElementById("boat-cell").value-1;
+    var validB = false;
 
-/*
-// Lövés koordinátája
-var fCor = "b3";
-// Végeredmény maghatározása
-var result = "";
-//Elsüllyedés vizsgálata
-var sullyedt = true;
-// Az objektumban lévő sorszám
-var fp = "Semmi";
-// A koordinátán lévő hajónév lekérése
-//fn = Get(fCor).value;
-fn = "harmas";
-//Ha a koordinátához nem tartozik hajó
-if (fn == "none")
-{
-    result = "nemtalalt";
-}
-// A hajón a találat beírása, és visszatérés vagy találtal, vagy süllyedtel
-var boats = playersData.player2.boats;
-for(fps in boats[fn])
-{
-    //Ha a lövés helye egyezik a hajó egyik koordináta értékével
-    if (fCor === boats[fn][fps].pos) {
-        //Sorszám átadása
-        fp = fps;
-        // Ha a hajó azon részére még nem lőttek akkor
-        if (boats[fn][fps].fired === false) {
-            // A hajó ezen részére legyen igaz az hogy lőttek rá
-            playersData.player2.boats[fn][fps].fired = true;
-            boats = playersData.player2.boats;
+    for (bTypes in boatTypes)
+    {
+        if (bType === boatTypes[bTypes])
+        {
+            validB = true;
         }
+        //console.log(boatTypes[bTypes]);
     }
-    //Ha a hajó koordinátáján nincs lövés legyen false
-    if (boats[fn][fps].fired === false) {
-        var sullyedt = false;
+
+    if (validB)
+    {
+        console.debug("Jo a hajónév")
+        try {
+            playersData.player2.boats[bType][bCell].pos = bCor;
+            console.log(playersData.player2.boats[bType]);
+            playersData.player2.coords[bCor].boat = bType;
+            console.log(playersData.player2.coords[bCor]);
+          } catch (error) {
+            console.log("Hiba!")
+            console.error(error);
+          }
     }
-}*/
+    else {
+        console.warn("Rossz hajónevet adott meg!")
+    }
+
+
+}
 
 
 
@@ -587,12 +585,17 @@ function Fire() {
 
     // A koordinátán lévő hajónév lekérése
     //fn = Get(fCor).value;
-    fn = "harmas1";
-
+    fn = playersData.player2.coords[fCor].boat;
+    // Lőttek e már arra a mezőre?
+    ifFired = playersData.player2.coords[fCor].fired;
+    if (ifFired){
+        console.warn("Ide már lőttek!");
+    }
     //Ha a koordinátához nem tartozik hajó
-    if (fn == "none")
+    else if (fn == "none")
     {
         result = "nemtalalt";
+        fancyLog("Nem találta el a hajót!", "rgb(255, 0, 0)", '', "rgb(255, 0, 0)")
     }
     else 
     {
@@ -623,19 +626,34 @@ function Fire() {
             result = "Sullyedt";
         }
 
-        if (result === "Sullyedt" | result === "Talalt")
+        if (result === "Sullyedt")
         {
             boats = playersData.player2.boats;
-            console.log(playersData.player2.boats[fn][fp].fired );
-            console.log(sullyedt);
-            console.log(fp);
+            console.log(playersData.player2.boats[fn][fp].fired);
+            fancyLog("Elsüllyesztette a hajót: ", "white", fn, "rgba(20, 245, 106)")
+            //console.log(sullyedt);
+            //console.log(fp);
+        }
+        else if (result === "Talalt") {
+            boats = playersData.player2.boats;
+            fancyLog("Eltalálta a hajót: ", "white", fn, "rgba(20, 245, 106)")
         }
         else {
             result = "nemtalalt";
+            fancyLog("Nem találta el a hajót: ", "rgb(255, 0, 0)", fn, "rgb(255, 0, 0)")
         }
     
     }
+    playersData.player2.coords[fCor].fired = true;
     console.log(result);
     console.log("Hajók állása");
     console.log(playersData.player2.boats);
+}
+
+function fancyLog(msg1, color1, msg2, color2) {
+    console.log(
+        '%c'+msg1+'%c'+msg2, 
+        'color: '+color1+'; background: black; font-size: 30px', 
+        'color: '+color2+'; background: black; font-size: 30px'
+    )
 }

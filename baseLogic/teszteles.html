@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torpedo Teszt</title>
+    <style>
+        .adatok {
+            border: 2px black solid;
+            padding: 10px;
+            margin: 20px;
+        }
+        span {
+            font-weight: bold;    
+            display: block;
+            margin-bottom: 6px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="adatok">
+        <span>Hajó felrakása:</span>
+        <input type="text" id="bcor">
+        <input type="text" id="boat-type">
+        <input type="number" id="boat-cell">
+        <button id="putBoat" onclick="PutBoat()">Felrakás</button>
+    </div>
+    <div class="adatok">
+        <span>Lövés:</span>
+        <input type="text" id="fcor">
+        <!--<input type="text" id="fajta">-->
+        <button id="fireBoat" onclick="Fire()">Tüzelés</button>
+    </div>
+
+    <button onclick="fancyLog('white', 'rgba(20, 245, 106)', 'red', 'red')">Fancy log Tester</button>
+</body>
+<script src="adatok.js"></script>
+</html>
