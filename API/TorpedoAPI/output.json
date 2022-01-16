@@ -1,0 +1,503 @@
+{
+    "sessionID": "Test",
+    "player1": {
+      "coords": {
+        "a1": {
+          "btype": "none",
+          "fired": false
+        },
+        "a2": {
+          "btype": "none",
+          "fired": false
+        },
+        "a3": {
+          "btype": "none",
+          "fired": false
+        },
+        "a4": {
+          "btype": "none",
+          "fired": false
+        },
+        "a5": {
+          "btype": "none",
+          "fired": false
+        },
+        "a6": {
+          "btype": "none",
+          "fired": false
+        },
+        "a7": {
+          "btype": "none",
+          "fired": false
+        },
+        "a8": {
+          "btype": "none",
+          "fired": false
+        },
+        "a9": {
+          "btype": "none",
+          "fired": false
+        },
+        "a10": {
+          "btype": "none",
+          "fired": false
+        },
+        "b1": {
+          "btype": "none",
+          "fired": false
+        },
+        "b2": {
+          "btype": "none",
+          "fired": false
+        },
+        "b3": {
+          "btype": "none",
+          "fired": false
+        },
+        "b4": {
+          "btype": "none",
+          "fired": false
+        },
+        "b5": {
+          "btype": "none",
+          "fired": false
+        },
+        "b6": {
+          "btype": "none",
+          "fired": false
+        },
+        "b7": {
+          "btype": "none",
+          "fired": false
+        },
+        "b8": {
+          "btype": "none",
+          "fired": false
+        },
+        "b9": {
+          "btype": "none",
+          "fired": false
+        },
+        "b10": {
+          "btype": "none",
+          "fired": false
+        },
+        "c1": {
+          "btype": "none",
+          "fired": false
+        },
+        "c2": {
+          "btype": "none",
+          "fired": false
+        },
+        "c3": {
+          "btype": "none",
+          "fired": false
+        },
+        "c4": {
+          "btype": "none",
+          "fired": false
+        },
+        "c5": {
+          "btype": "none",
+          "fired": false
+        },
+        "c6": {
+          "btype": "none",
+          "fired": false
+        },
+        "c7": {
+          "btype": "none",
+          "fired": false
+        },
+        "c8": {
+          "btype": "none",
+          "fired": false
+        },
+        "c9": {
+          "btype": "none",
+          "fired": false
+        },
+        "c10": {
+          "btype": "none",
+          "fired": false
+        },
+        "d1": {
+          "btype": "none",
+          "fired": false
+        },
+        "d2": {
+          "btype": "none",
+          "fired": false
+        },
+        "d3": {
+          "btype": "none",
+          "fired": false
+        },
+        "d4": {
+          "btype": "none",
+          "fired": false
+        },
+        "d5": {
+          "btype": "none",
+          "fired": false
+        },
+        "d6": {
+          "btype": "none",
+          "fired": false
+        },
+        "d7": {
+          "btype": "none",
+          "fired": false
+        },
+        "d8": {
+          "btype": "none",
+          "fired": false
+        },
+        "d9": {
+          "btype": "none",
+          "fired": false
+        },
+        "d10": {
+          "btype": "none",
+          "fired": false
+        },
+        "e1": {
+          "btype": "none",
+          "fired": false
+        },
+        "e2": {
+          "btype": "none",
+          "fired": false
+        },
+        "e3": {
+          "btype": "none",
+          "fired": false
+        },
+        "e4": {
+          "btype": "none",
+          "fired": false
+        },
+        "e5": {
+          "btype": "none",
+          "fired": false
+        },
+        "e6": {
+          "btype": "none",
+          "fired": false
+        },
+        "e7": {
+          "btype": "none",
+          "fired": false
+        },
+        "e8": {
+          "btype": "none",
+          "fired": false
+        },
+        "e9": {
+          "btype": "none",
+          "fired": false
+        },
+        "e10": {
+          "btype": "none",
+          "fired": false
+        },
+        "f1": {
+          "btype": "none",
+          "fired": false
+        },
+        "f2": {
+          "btype": "none",
+          "fired": false
+        },
+        "f3": {
+          "btype": "none",
+          "fired": false
+        },
+        "f4": {
+          "btype": "none",
+          "fired": false
+        },
+        "f5": {
+          "btype": "none",
+          "fired": false
+        },
+        "f6": {
+          "btype": "none",
+          "fired": false
+        },
+        "f7": {
+          "btype": "none",
+          "fired": false
+        },
+        "f8": {
+          "btype": "none",
+          "fired": false
+        },
+        "f9": {
+          "btype": "none",
+          "fired": false
+        },
+        "f10": {
+          "btype": "none",
+          "fired": false
+        },
+        "g1": {
+          "btype": "none",
+          "fired": false
+        },
+        "g2": {
+          "btype": "none",
+          "fired": false
+        },
+        "g3": {
+          "btype": "none",
+          "fired": false
+        },
+        "g4": {
+          "btype": "none",
+          "fired": false
+        },
+        "g5": {
+          "btype": "none",
+          "fired": false
+        },
+        "g6": {
+          "btype": "none",
+          "fired": false
+        },
+        "g7": {
+          "btype": "none",
+          "fired": false
+        },
+        "g8": {
+          "btype": "none",
+          "fired": false
+        },
+        "g9": {
+          "btype": "none",
+          "fired": false
+        },
+        "g10": {
+          "btype": "none",
+          "fired": false
+        },
+        "h1": {
+          "btype": "none",
+          "fired": false
+        },
+        "h2": {
+          "btype": "none",
+          "fired": false
+        },
+        "h3": {
+          "btype": "none",
+          "fired": false
+        },
+        "h4": {
+          "btype": "none",
+          "fired": false
+        },
+        "h5": {
+          "btype": "none",
+          "fired": false
+        },
+        "h6": {
+          "btype": "none",
+          "fired": false
+        },
+        "h7": {
+          "btype": "none",
+          "fired": false
+        },
+        "h8": {
+          "btype": "none",
+          "fired": false
+        },
+        "h9": {
+          "btype": "none",
+          "fired": false
+        },
+        "h10": {
+          "btype": "none",
+          "fired": false
+        },
+        "i1": {
+          "btype": "none",
+          "fired": false
+        },
+        "i2": {
+          "btype": "none",
+          "fired": false
+        },
+        "i3": {
+          "btype": "none",
+          "fired": false
+        },
+        "i4": {
+          "btype": "none",
+          "fired": false
+        },
+        "i5": {
+          "btype": "none",
+          "fired": false
+        },
+        "i6": {
+          "btype": "none",
+          "fired": false
+        },
+        "i7": {
+          "btype": "none",
+          "fired": false
+        },
+        "i8": {
+          "btype": "none",
+          "fired": false
+        },
+        "i9": {
+          "btype": "none",
+          "fired": false
+        },
+        "i10": {
+          "btype": "none",
+          "fired": false
+        },
+        "j1": {
+          "btype": "none",
+          "fired": false
+        },
+        "j2": {
+          "btype": "none",
+          "fired": false
+        },
+        "j3": {
+          "btype": "none",
+          "fired": false
+        },
+        "j4": {
+          "btype": "none",
+          "fired": false
+        },
+        "j5": {
+          "btype": "none",
+          "fired": false
+        },
+        "j6": {
+          "btype": "none",
+          "fired": false
+        },
+        "j7": {
+          "btype": "none",
+          "fired": false
+        },
+        "j8": {
+          "btype": "none",
+          "fired": false
+        },
+        "j9": {
+          "btype": "none",
+          "fired": false
+        },
+        "j10": {
+          "btype": "none",
+          "fired": false
+        }
+      },
+      "boats": {
+        "egyes": [
+          {
+            "pos": "a1",
+            "fired": false
+          }
+        ],
+        "kettes1": [
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          }
+        ],
+        "kettes2": [
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          }
+        ],
+        "harmas1": [
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          }
+        ],
+        "harmas2": [
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          }
+        ],
+        "negyes": [
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          }
+        ],
+        "otos": [
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          },
+          {
+            "pos": "",
+            "fired": false
+          }
+        ]
+      }
+    }
+  }

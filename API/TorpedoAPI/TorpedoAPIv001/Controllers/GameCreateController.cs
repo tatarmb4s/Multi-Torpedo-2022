@@ -5,6 +5,114 @@ namespace TorpedoAPIv001.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    public class GameCreateTempController : ControllerBase
+    {
+        [HttpGet]
+        public async Task<ActionResult<dynamic>> Get()
+        {
+            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
+
+            var HajCon = new
+            {
+                pos = egy1.pos,
+                fired = egy1.fired,
+            };
+
+            List<dynamic> egyes = new List<dynamic>();
+            egyes.Add(HajCon);
+
+            return Ok(Boattest());
+        }
+
+        public static dynamic BoatConv(dynamic Boat)
+        {
+            var HajCon = new
+            {
+                pos = Boat.pos,
+                fired = Boat.fired,
+            };
+
+            return HajCon;
+        }
+
+        public static dynamic Boattest()
+        {
+            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
+
+            List<dynamic> egyes = new List<dynamic>();
+            egyes.Add(BoatConv(egy1));
+
+            PlayerData.Player1.boats.kettes1.first kett11 = new PlayerData.Player1.boats.kettes1.first("", false);
+            PlayerData.Player1.boats.kettes1.second kett12 = new PlayerData.Player1.boats.kettes1.second("", false);
+            List<dynamic> kettes1 = new List<dynamic>();
+            kettes1.Add(BoatConv(kett11));
+            kettes1.Add(BoatConv(kett12));
+
+            PlayerData.Player1.boats.kettes2.first kett21 = new PlayerData.Player1.boats.kettes2.first("", false);
+            PlayerData.Player1.boats.kettes2.second kett22 = new PlayerData.Player1.boats.kettes2.second("", false);
+            List<dynamic> kettes2 = new List<dynamic>();
+            kettes2.Add(BoatConv(kett21));
+            kettes2.Add(BoatConv(kett22));
+
+            PlayerData.Player1.boats.harmas1.first harm11 = new PlayerData.Player1.boats.harmas1.first("", false);
+            PlayerData.Player1.boats.harmas1.second harm12 = new PlayerData.Player1.boats.harmas1.second("", false);
+            PlayerData.Player1.boats.harmas1.third harm13 = new PlayerData.Player1.boats.harmas1.third("", false);
+            List<dynamic> harmas1 = new List<dynamic>();
+            harmas1.Add(BoatConv(harm11));
+            harmas1.Add(BoatConv(harm12));
+            harmas1.Add(BoatConv(harm13));
+
+            PlayerData.Player1.boats.harmas2.first harm21 = new PlayerData.Player1.boats.harmas2.first("", false);
+            PlayerData.Player1.boats.harmas2.second harm22 = new PlayerData.Player1.boats.harmas2.second("", false);
+            PlayerData.Player1.boats.harmas2.third harm23 = new PlayerData.Player1.boats.harmas2.third("", false);
+            List<dynamic> harmas2 = new List<dynamic>();
+            harmas2.Add(BoatConv(harm21));
+            harmas2.Add(BoatConv(harm22));
+            harmas2.Add(BoatConv(harm23));
+
+            PlayerData.Player1.boats.negyes.first negy1 = new PlayerData.Player1.boats.negyes.first("", false);
+            PlayerData.Player1.boats.negyes.second negy2 = new PlayerData.Player1.boats.negyes.second("", false);
+            PlayerData.Player1.boats.negyes.third negy3 = new PlayerData.Player1.boats.negyes.third("", false);
+            PlayerData.Player1.boats.negyes.fourth negy4 = new PlayerData.Player1.boats.negyes.fourth("", false);
+
+            List<dynamic> negyes = new List<dynamic>();
+            negyes.Add(BoatConv(negy1));
+            negyes.Add(BoatConv(negy2));
+            negyes.Add(BoatConv(negy3));
+            negyes.Add(BoatConv(negy4));
+
+
+            PlayerData.Player1.boats.otos.first ot1 = new PlayerData.Player1.boats.otos.first("", false);
+            PlayerData.Player1.boats.otos.second ot2 = new PlayerData.Player1.boats.otos.second("", false);
+            PlayerData.Player1.boats.otos.third ot3 = new PlayerData.Player1.boats.otos.third("", false);
+            PlayerData.Player1.boats.otos.fourth ot4 = new PlayerData.Player1.boats.otos.fourth("", false);
+            PlayerData.Player1.boats.otos.fiveth ot5 = new PlayerData.Player1.boats.otos.fiveth("", false);
+
+            List<dynamic> otos = new List<dynamic>();
+            otos.Add(BoatConv(ot1));
+            otos.Add(BoatConv(ot2));
+            otos.Add(BoatConv(ot3));
+            otos.Add(BoatConv(ot4));
+            otos.Add(BoatConv(ot5));
+
+
+            var boats = new
+            {
+                egyes = egyes,
+                kettes1 = kettes1,
+                kettes2 = kettes2,
+                harmas1 = harmas1,
+                harmas2 = harmas2,
+                negyes = negyes,
+                otos = otos,
+            };
+
+            return boats;
+        }
+    }
+    [Route("api/[controller]")]
+    [ApiController]
     public class GameCreateController : ControllerBase
     {
         [HttpGet]
@@ -25,6 +133,7 @@ namespace TorpedoAPIv001.Controllers
 
             return Ok(NewGame("Test"));
         }
+
         /**/
 
         public static dynamic ConCr(dynamic cord)
@@ -36,6 +145,17 @@ namespace TorpedoAPIv001.Controllers
             };
 
             return a1c;
+        }
+
+        public static dynamic BoatConv(dynamic Boat)
+        {
+            var HajCon = new
+            {
+                pos = Boat.pos,
+                fired = Boat.fired,
+            };
+
+            return HajCon;
         }
 
         public static dynamic NewGame(string sessionID)
@@ -177,115 +297,114 @@ namespace TorpedoAPIv001.Controllers
             var crds = new
             {
                 a1 = ConCr(a1),
-                a2 = a2,
-                a3 = a3,
-                a4 = a4,
-                a5 = a5,
-                a6 = a6,
-                a7 = a7,
-                a8 = a8,
-                a9 = a9,
-                a10 = a10,
+                a2 = ConCr(a2),
+                a3 = ConCr(a3),
+                a4 = ConCr(a4),
+                a5 = ConCr(a5),
+                a6 = ConCr(a6),
+                a7 = ConCr(a7),
+                a8 = ConCr(a8),
+                a9 = ConCr(a9),
+                a10 = ConCr(a10),
 
-                b1 = b1,
-                b2 = b2,
-                b3 = b3,
-                b4 = b4,
-                b5 = b5,
-                b6 = b6,
-                b7 = b7,
-                b8 = b8,
-                b9 = b9,
-                b10 = b10,
+                b1 = ConCr(b1),
+                b2 = ConCr(b2),
+                b3 = ConCr(b3),
+                b4 = ConCr(b4),
+                b5 = ConCr(b5),
+                b6 = ConCr(b6),
+                b7 = ConCr(b7),
+                b8 = ConCr(b8),
+                b9 = ConCr(b9),
+                b10 = ConCr(b10),
 
-                c1 = c1,
-                c2 = c2,
-                c3 = c3,
-                c4 = c4,
-                c5 = c5,
-                c6 = c6,
-                c7 = c7,
-                c8 = c8,
-                c9 = c9,
-                c10 = c10,
+                c1 = ConCr(c1),
+                c2 = ConCr(c2),
+                c3 = ConCr(c3),
+                c4 = ConCr(c4),
+                c5 = ConCr(c5),
+                c6 = ConCr(c6),
+                c7 = ConCr(c7),
+                c8 = ConCr(c8),
+                c9 = ConCr(c9),
+                c10 = ConCr(c10),
 
-                d1 = d1,
-                d2 = d2,
-                d3 = d3,
-                d4 = d4,
-                d5 = d5,
-                d6 = d6,
-                d7 = d7,
-                d8 = d8,
-                d9 = d9,
-                d10 = d10,
+                d1 = ConCr(d1),
+                d2 = ConCr(d2),
+                d3 = ConCr(d3),
+                d4 = ConCr(d4),
+                d5 = ConCr(d5),
+                d6 = ConCr(d6),
+                d7 = ConCr(d7),
+                d8 = ConCr(d8),
+                d9 = ConCr(d9),
+                d10 = ConCr(d10),
 
-                e1 = e1,
-                e2 = e2,
-                e3 = e3,
-                e4 = e4,
-                e5 = e5,
-                e6 = e6,
-                e7 = e7,
-                e8 = e8,
-                e9 = e9,
-                e10 = e10,
+                e1 = ConCr(e1),
+                e2 = ConCr(e2),
+                e3 = ConCr(e3),
+                e4 = ConCr(e4),
+                e5 = ConCr(e5),
+                e6 = ConCr(e6),
+                e7 = ConCr(e7),
+                e8 = ConCr(e8),
+                e9 = ConCr(e9),
+                e10 = ConCr(e10),
 
-                f1 = f1,
-                f2 = f2,
-                f3 = f3,
-                f4 = f4,
-                f5 = f5,
-                f6 = f6,
-                f7 = f7,
-                f8 = f8,
-                f9 = f9,
-                f10 = f10,
+                f1 = ConCr(f1),
+                f2 = ConCr(f2),
+                f3 = ConCr(f3),
+                f4 = ConCr(f4),
+                f5 = ConCr(f5),
+                f6 = ConCr(f6),
+                f7 = ConCr(f7),
+                f8 = ConCr(f8),
+                f9 = ConCr(f9),
+                f10 = ConCr(f10),
 
-                g1 = g1,
-                g2 = g2,
-                g3 = g3,
-                g4 = g4,
-                g5 = g5,
-                g6 = g6,
-                g7 = g7,
-                g8 = g8,
-                g9 = g9,
-                g10 = g10,
+                g1 = ConCr(g1),
+                g2 = ConCr(g2),
+                g3 = ConCr(g3),
+                g4 = ConCr(g4),
+                g5 = ConCr(g5),
+                g6 = ConCr(g6),
+                g7 = ConCr(g7),
+                g8 = ConCr(g8),
+                g9 = ConCr(g9),
+                g10 = ConCr(g10),
 
-                h1 = h1,
-                h2 = h2,
-                h3 = h3,
-                h4 = h4,
-                h5 = h5,
-                h6 = h6,
-                h7 = h7,                 
-                h8 = h8,
-                h9 = h9,
-                h10 = h10,
+                h1 = ConCr(h1),
+                h2 = ConCr(h2),
+                h3 = ConCr(h3),
+                h4 = ConCr(h4),
+                h5 = ConCr(h5),
+                h6 = ConCr(h6),
+                h7 = ConCr(h7),                 
+                h8 = ConCr(h8),
+                h9 = ConCr(h9),
+                h10 = ConCr(h10),
                 
-                i1 = i1,
-                i2 = i2,
-                i3 = i3,
-                i4 = i4,
-                i5 = i5,
-                i6 = i6,
-                i7 = i7,
+                i1 = ConCr(i1),
+                i2 = ConCr(i2),
+                i3 = ConCr(i3),
+                i4 = ConCr(i4),
+                i5 = ConCr(i5),
+                i6 = ConCr(i6),
+                i7 = ConCr(i7),
+                i8 = ConCr(i8),
+                i9 = ConCr(i9),
+                i10 = ConCr(i10),
 
-                i8 = i8,
-                i9 = i9,
-                i10 = i10,
-
-                j1 = j1,
-                j2 = j2,
-                j3 = j3,
-                j4 = j4,
-                j5 = j5,
-                j6 = j6,
-                j7 = j7,
-                j8 = j8,
-                j9 = j9,
-                j10 = j10,
+                j1 = ConCr(j1),
+                j2 = ConCr(j2),
+                j3 = ConCr(j3),
+                j4 = ConCr(j4),
+                j5 = ConCr(j5),
+                j6 = ConCr(j6),
+                j7 = ConCr(j7),
+                j8 = ConCr(j8),
+                j9 = ConCr(j9),
+                j10 = ConCr(j10),
 
 
             };
@@ -293,46 +412,46 @@ namespace TorpedoAPIv001.Controllers
             PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
 
             List<dynamic> egyes = new List<dynamic>();
-            egyes.Add(egy1);
+            egyes.Add(BoatConv(egy1));
 
             PlayerData.Player1.boats.kettes1.first kett11 = new PlayerData.Player1.boats.kettes1.first("", false);
             PlayerData.Player1.boats.kettes1.second kett12 = new PlayerData.Player1.boats.kettes1.second("", false);
             List<dynamic> kettes1 = new List<dynamic>();
-            kettes1.Add(kett11);
-            kettes1.Add(kett12);
+            kettes1.Add(BoatConv(kett11));
+            kettes1.Add(BoatConv(kett12));
 
             PlayerData.Player1.boats.kettes2.first kett21 = new PlayerData.Player1.boats.kettes2.first("", false);
             PlayerData.Player1.boats.kettes2.second kett22 = new PlayerData.Player1.boats.kettes2.second("", false);
             List<dynamic> kettes2 = new List<dynamic>();
-            kettes2.Add(kett21);
-            kettes2.Add(kett22);
+            kettes2.Add(BoatConv(kett21));
+            kettes2.Add(BoatConv(kett22));
 
             PlayerData.Player1.boats.harmas1.first harm11 = new PlayerData.Player1.boats.harmas1.first("", false);
             PlayerData.Player1.boats.harmas1.second harm12 = new PlayerData.Player1.boats.harmas1.second("", false);
             PlayerData.Player1.boats.harmas1.third harm13 = new PlayerData.Player1.boats.harmas1.third("", false);
             List<dynamic> harmas1 = new List<dynamic>();
-            harmas1.Add(harm11);
-            harmas1.Add(harm12);
-            harmas1.Add(harm13);
+            harmas1.Add(BoatConv(harm11));
+            harmas1.Add(BoatConv(harm12));
+            harmas1.Add(BoatConv(harm13));
 
             PlayerData.Player1.boats.harmas2.first harm21 = new PlayerData.Player1.boats.harmas2.first("", false);
             PlayerData.Player1.boats.harmas2.second harm22 = new PlayerData.Player1.boats.harmas2.second("", false);
             PlayerData.Player1.boats.harmas2.third harm23 = new PlayerData.Player1.boats.harmas2.third("", false);
             List<dynamic> harmas2 = new List<dynamic>();
-            harmas2.Add(harm21);
-            harmas2.Add(harm22);
-            harmas2.Add(harm23);
+            harmas2.Add(BoatConv(harm21));
+            harmas2.Add(BoatConv(harm22));
+            harmas2.Add(BoatConv(harm23));
 
             PlayerData.Player1.boats.negyes.first negy1 = new PlayerData.Player1.boats.negyes.first("", false);
             PlayerData.Player1.boats.negyes.second negy2 = new PlayerData.Player1.boats.negyes.second("", false);
             PlayerData.Player1.boats.negyes.third negy3 = new PlayerData.Player1.boats.negyes.third("", false);
             PlayerData.Player1.boats.negyes.fourth negy4 = new PlayerData.Player1.boats.negyes.fourth("", false);
-            
+
             List<dynamic> negyes = new List<dynamic>();
-            negyes.Add(negy1);
-            negyes.Add(negy2);
-            negyes.Add(negy3);
-            negyes.Add(negy4);
+            negyes.Add(BoatConv(negy1));
+            negyes.Add(BoatConv(negy2));
+            negyes.Add(BoatConv(negy3));
+            negyes.Add(BoatConv(negy4));
 
 
             PlayerData.Player1.boats.otos.first ot1 = new PlayerData.Player1.boats.otos.first("", false);
@@ -342,12 +461,11 @@ namespace TorpedoAPIv001.Controllers
             PlayerData.Player1.boats.otos.fiveth ot5 = new PlayerData.Player1.boats.otos.fiveth("", false);
 
             List<dynamic> otos = new List<dynamic>();
-            otos.Add(ot1);
-            otos.Add(ot2);
-            otos.Add(ot3);
-            otos.Add(ot4);
-            otos.Add(ot5);
-
+            otos.Add(BoatConv(ot1));
+            otos.Add(BoatConv(ot2));
+            otos.Add(BoatConv(ot3));
+            otos.Add(BoatConv(ot4));
+            otos.Add(BoatConv(ot5));
 
             var boats = new
             {
@@ -363,7 +481,7 @@ namespace TorpedoAPIv001.Controllers
             var player1 = new
             {
                 coords = crds,
-                boats = boats.otos[1],
+                boats = boats,
             };
 
             var sess = new

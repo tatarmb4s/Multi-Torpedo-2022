@@ -31,8 +31,8 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public first(string ps, bool frd)
                         {
@@ -45,8 +45,8 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public first(string ps, bool frd)
                         {
@@ -56,8 +56,8 @@ namespace TorpedoAPIv001
                     }
                     public struct second
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public second(string ps, bool frd)
                         {
@@ -71,19 +71,19 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
-
+                        public string pos;
+                        public bool fired;
+                        
                         public first(string ps, bool frd)
                         {
                             pos = ps;
                             fired = frd;
                         }
-                    }
+                    }   
                     public struct second
-                    {
-                        string pos;
-                        bool fired;
+                    {   
+                        public string pos;
+                        public bool fired;
 
                         public second(string ps, bool frd)
                         {
@@ -97,8 +97,8 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public first(string ps, bool frd)
                         {
@@ -108,8 +108,8 @@ namespace TorpedoAPIv001
                     }
                     public struct second
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public second(string ps, bool frd)
                         {
@@ -120,8 +120,8 @@ namespace TorpedoAPIv001
 
                     public struct third
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public third(string ps, bool frd)
                         {
@@ -135,8 +135,8 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public first(string ps, bool frd)
                         {
@@ -146,8 +146,8 @@ namespace TorpedoAPIv001
                     }
                     public struct second
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public second(string ps, bool frd)
                         {
@@ -158,8 +158,8 @@ namespace TorpedoAPIv001
 
                     public struct third
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public third(string ps, bool frd)
                         {
@@ -173,8 +173,8 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public first(string ps, bool frd)
                         {
@@ -184,8 +184,8 @@ namespace TorpedoAPIv001
                     }
                     public struct second
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public second(string ps, bool frd)
                         {
@@ -196,8 +196,8 @@ namespace TorpedoAPIv001
 
                     public struct third
                     {
-                        string pos;
-                        bool fired;
+                       public string pos;
+                       public bool fired;
 
                         public third(string ps, bool frd)
                         {
@@ -208,8 +208,8 @@ namespace TorpedoAPIv001
 
                     public struct fourth
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public fourth(string ps, bool frd)
                         {
@@ -223,8 +223,8 @@ namespace TorpedoAPIv001
                 {
                     public struct first
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public first(string ps, bool frd)
                         {
@@ -234,8 +234,8 @@ namespace TorpedoAPIv001
                     }
                     public struct second
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public second(string ps, bool frd)
                         {
@@ -246,8 +246,8 @@ namespace TorpedoAPIv001
 
                     public struct third
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public third(string ps, bool frd)
                         {
@@ -258,8 +258,8 @@ namespace TorpedoAPIv001
 
                     public struct fourth
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public fourth(string ps, bool frd)
                         {
@@ -270,8 +270,8 @@ namespace TorpedoAPIv001
 
                     public struct fiveth
                     {
-                        string pos;
-                        bool fired;
+                        public string pos;
+                        public bool fired;
 
                         public fiveth(string ps, bool frd)
                         {
