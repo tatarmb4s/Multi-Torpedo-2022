@@ -1,10 +1,12 @@
-﻿namespace TorpedoAPIv001
+﻿using System;
+
+namespace TorpedoAPIv001
 {
     public class PlayerData
     {
         public string sessionID { get; set; }
-        public List<coords1> coodspl1 { get; set; }
-        public string boats { get; set; }
+        //public List<coords1> coodspl1 { get; set; }
+        //public string boats { get; set; }
 
         public struct Player1
         {
@@ -17,6 +19,8 @@
                     btype = bType;
                     fired = fiRed;
                 }
+
+                
             }
 
             public struct boats
