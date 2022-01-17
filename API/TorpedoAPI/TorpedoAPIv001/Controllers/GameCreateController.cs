@@ -11,110 +11,28 @@ namespace TorpedoAPIv001.Controllers
         [HttpGet]
         public async Task<ActionResult<dynamic>> Get()
         {
-            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
+            
 
-            var HajCon = new
-            {
-                pos = egy1.pos,
-                fired = egy1.fired,
-            };
-
-            List<dynamic> egyes = new List<dynamic>();
-            egyes.Add(HajCon);
-
-            return Ok(Boattest());
+            return Ok("");
         }
 
-        public static dynamic BoatConv(dynamic Boat)
-        {
-            var HajCon = new
-            {
-                pos = Boat.pos,
-                fired = Boat.fired,
-            };
-
-            return HajCon;
-        }
-
-        public static dynamic Boattest()
-        {
-            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
-
-            List<dynamic> egyes = new List<dynamic>();
-            egyes.Add(BoatConv(egy1));
-
-            PlayerData.Player1.boats.kettes1.first kett11 = new PlayerData.Player1.boats.kettes1.first("", false);
-            PlayerData.Player1.boats.kettes1.second kett12 = new PlayerData.Player1.boats.kettes1.second("", false);
-            List<dynamic> kettes1 = new List<dynamic>();
-            kettes1.Add(BoatConv(kett11));
-            kettes1.Add(BoatConv(kett12));
-
-            PlayerData.Player1.boats.kettes2.first kett21 = new PlayerData.Player1.boats.kettes2.first("", false);
-            PlayerData.Player1.boats.kettes2.second kett22 = new PlayerData.Player1.boats.kettes2.second("", false);
-            List<dynamic> kettes2 = new List<dynamic>();
-            kettes2.Add(BoatConv(kett21));
-            kettes2.Add(BoatConv(kett22));
-
-            PlayerData.Player1.boats.harmas1.first harm11 = new PlayerData.Player1.boats.harmas1.first("", false);
-            PlayerData.Player1.boats.harmas1.second harm12 = new PlayerData.Player1.boats.harmas1.second("", false);
-            PlayerData.Player1.boats.harmas1.third harm13 = new PlayerData.Player1.boats.harmas1.third("", false);
-            List<dynamic> harmas1 = new List<dynamic>();
-            harmas1.Add(BoatConv(harm11));
-            harmas1.Add(BoatConv(harm12));
-            harmas1.Add(BoatConv(harm13));
-
-            PlayerData.Player1.boats.harmas2.first harm21 = new PlayerData.Player1.boats.harmas2.first("", false);
-            PlayerData.Player1.boats.harmas2.second harm22 = new PlayerData.Player1.boats.harmas2.second("", false);
-            PlayerData.Player1.boats.harmas2.third harm23 = new PlayerData.Player1.boats.harmas2.third("", false);
-            List<dynamic> harmas2 = new List<dynamic>();
-            harmas2.Add(BoatConv(harm21));
-            harmas2.Add(BoatConv(harm22));
-            harmas2.Add(BoatConv(harm23));
-
-            PlayerData.Player1.boats.negyes.first negy1 = new PlayerData.Player1.boats.negyes.first("", false);
-            PlayerData.Player1.boats.negyes.second negy2 = new PlayerData.Player1.boats.negyes.second("", false);
-            PlayerData.Player1.boats.negyes.third negy3 = new PlayerData.Player1.boats.negyes.third("", false);
-            PlayerData.Player1.boats.negyes.fourth negy4 = new PlayerData.Player1.boats.negyes.fourth("", false);
-
-            List<dynamic> negyes = new List<dynamic>();
-            negyes.Add(BoatConv(negy1));
-            negyes.Add(BoatConv(negy2));
-            negyes.Add(BoatConv(negy3));
-            negyes.Add(BoatConv(negy4));
-
-
-            PlayerData.Player1.boats.otos.first ot1 = new PlayerData.Player1.boats.otos.first("", false);
-            PlayerData.Player1.boats.otos.second ot2 = new PlayerData.Player1.boats.otos.second("", false);
-            PlayerData.Player1.boats.otos.third ot3 = new PlayerData.Player1.boats.otos.third("", false);
-            PlayerData.Player1.boats.otos.fourth ot4 = new PlayerData.Player1.boats.otos.fourth("", false);
-            PlayerData.Player1.boats.otos.fiveth ot5 = new PlayerData.Player1.boats.otos.fiveth("", false);
-
-            List<dynamic> otos = new List<dynamic>();
-            otos.Add(BoatConv(ot1));
-            otos.Add(BoatConv(ot2));
-            otos.Add(BoatConv(ot3));
-            otos.Add(BoatConv(ot4));
-            otos.Add(BoatConv(ot5));
-
-
-            var boats = new
-            {
-                egyes = egyes,
-                kettes1 = kettes1,
-                kettes2 = kettes2,
-                harmas1 = harmas1,
-                harmas2 = harmas2,
-                negyes = negyes,
-                otos = otos,
-            };
-
-            return boats;
-        }
+        
     }
     [Route("api/[controller]")]
     [ApiController]
     public class GameCreateController : ControllerBase
     {
+        //public List<> sessions = new List<dynamic>();
+        private static List<Games> games = new List<Games>
+        {
+            /*new Games
+            {
+                sessionID = 1,
+                status = 1,
+                PlayerData =""
+            }*/
+        };
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -131,7 +49,52 @@ namespace TorpedoAPIv001.Controllers
 
             
 
-            return Ok(NewGame("Test"));
+            return Ok(games);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<List<Games>>> NGame(string sessionID)
+        {
+            NewGame(sessionID);
+
+
+            return Ok(sessionID+"/player1.html");
+        }
+        
+        [HttpGet("sessions")]
+        public async Task<ActionResult<List<Games>>> Sessons()
+        {
+            
+            List<string> ss = new List<string>();
+            
+            foreach (dynamic g in games)
+            {
+                ss.Add(g.sessionID);
+            }
+
+            return Ok(ss);
+        }
+
+        [HttpPost("fire")]
+        public async Task<ActionResult<List<Games>>> fire(string sessionID, string target, string coord)
+        {
+            NewGame(sessionID);
+
+            List<dynamic> datas = new List<dynamic>();
+            
+            foreach (dynamic g in games)
+            {
+                datas.Add(g.PlayerData);
+            }
+
+            
+
+            int index = games.FindIndex(g => g.sessionID == sessionID);
+
+            //games[index].PlayerData.target.coord.fired = true;
+            
+            return Ok(games[index].PlayerData.target.player1.a1.fired);
+
         }
 
         /**/
@@ -482,26 +445,37 @@ namespace TorpedoAPIv001.Controllers
             {
                 coords = crds,
                 boats = boats,
+                joined = false
             };
 
-            var sess = new
+            var player2 = new
+            {
+                coords = crds,
+                boats = boats,
+                joined = false
+            };
+
+            var playerData = new
+            {
+                player1 = player1,
+                player2 = player2,
+            };
+
+
+
+            var sess = new Games
             {
                 sessionID = sessionID,
-                player1 = player1
+                status = 0,
+                PlayerData = playerData
             };
 
-            return sess;
+            List<dynamic> sessions = new List<dynamic>();
+            games.Add(sess);
+
+            return games;
 
 
-        }
-
-        public struct sessions
-        {
-            public struct coordCon
-            {
-                PlayerData.Player1.coords a1 = new PlayerData.Player1.coords("none", false);
-
-            }
         }
 
     }
