@@ -40,19 +40,12 @@ namespace TorpedoAPIv001.Controllers
             {
                 new coords1() { coordinate="a1", boatType="none", fired=false},
                 new coords1() { coordinate="a2", boatType="none", fired=false}
-            };*/
-
-            PlayerData.Player1.coords a1 = new PlayerData.Player1.coords("none", false);
-
-            var salmons = new List<dynamic>();
-            salmons.Add(1);
-
-            
+            };*/          
 
             return Ok(games);
         }
 
-        [HttpPost]
+        [HttpPost("NewGame")]
         public async Task<ActionResult<List<Games>>> NGame(string sessionID)
         {
             NewGame(sessionID);
@@ -85,6 +78,9 @@ namespace TorpedoAPIv001.Controllers
             foreach (dynamic g in games)
             {
                 datas.Add(g.PlayerData);
+                //Dictionary<string, int> cords = new Dictionary<string, int>();
+                //cords.Add("a1", 200);
+                //
             }
 
             
@@ -92,9 +88,17 @@ namespace TorpedoAPIv001.Controllers
             int index = games.FindIndex(g => g.sessionID == sessionID);
 
             //games[index].PlayerData.target.coord.fired = true;
-            
-            return Ok(games[index].PlayerData.target.player1.a1.fired);
+           
+            //return Ok(games[index].PlayerData.player1.coords[coord-1].fired);
+            return Ok(games[index].PlayerData.player1.coords.a1.fired);
 
+        }
+
+        [HttpPost("actual")]
+        public async Task<ActionResult<List<Games>>> actual(string sessionID)
+        {
+            int index = games.FindIndex(g => g.sessionID == sessionID);
+            return Ok(games[index].actualPlayer);
         }
 
         /**/
@@ -121,9 +125,11 @@ namespace TorpedoAPIv001.Controllers
             return HajCon;
         }
 
+
         public static dynamic NewGame(string sessionID)
         {
             
+            PlayerData.Player1.coords tabelCoords = new PlayerData.Player1.coords("none", false);
 
             /*var sessions = new List<PlayerData>
             {
@@ -461,13 +467,16 @@ namespace TorpedoAPIv001.Controllers
                 player2 = player2,
             };
 
+            
+
 
 
             var sess = new Games
             {
                 sessionID = sessionID,
                 status = 0,
-                PlayerData = playerData
+                PlayerData = playerData,
+                actualPlayer = 1,
             };
 
             List<dynamic> sessions = new List<dynamic>();
