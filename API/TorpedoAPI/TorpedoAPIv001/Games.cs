@@ -5,6 +5,8 @@
         public dynamic sessionID { get; set; }
         public dynamic status { get; set; }
         public dynamic PlayerData { get; set; }
-        //public int coords { get; set; }
+        public int actualPlayer { get; set; }
     }
+
+   
 }

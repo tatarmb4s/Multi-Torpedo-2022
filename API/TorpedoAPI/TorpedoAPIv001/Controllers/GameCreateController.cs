@@ -23,7 +23,7 @@ namespace TorpedoAPIv001.Controllers
     public class GameCreateController : ControllerBase
     {
         //public List<> sessions = new List<dynamic>();
-        private static List<Games> games = new List<Games>
+        private static Dictionary<string, Games> games = new Dictionary<string, Games>
         {
             /*new Games
             {
@@ -58,21 +58,21 @@ namespace TorpedoAPIv001.Controllers
         public async Task<ActionResult<List<Games>>> Sessons()
         {
             
-            List<string> ss = new List<string>();
+            /*List<string> ss = new List<string>();
             
             foreach (dynamic g in games)
             {
                 ss.Add(g.sessionID);
-            }
+            }*/
 
-            return Ok(ss);
+            return Ok(games);
         }
 
         [HttpPost("fire")]
         public async Task<ActionResult<List<Games>>> fire(string sessionID, string target, string coord)
         {
             NewGame(sessionID);
-
+            /*
             List<dynamic> datas = new List<dynamic>();
             
             foreach (dynamic g in games)
@@ -81,24 +81,24 @@ namespace TorpedoAPIv001.Controllers
                 //Dictionary<string, int> cords = new Dictionary<string, int>();
                 //cords.Add("a1", 200);
                 //
-            }
+            }*/
 
-            
 
-            int index = games.FindIndex(g => g.sessionID == sessionID);
+
+            //int index = games.FindIndex(g => g.sessionID == sessionID);
 
             //games[index].PlayerData.target.coord.fired = true;
-           
+
             //return Ok(games[index].PlayerData.player1.coords[coord-1].fired);
-            return Ok(games[index].PlayerData.player1.coords.a1.fired);
+            return Ok(games[sessionID].PlayerData[target].coords[coord]);//);
 
         }
 
         [HttpPost("actual")]
         public async Task<ActionResult<List<Games>>> actual(string sessionID)
         {
-            int index = games.FindIndex(g => g.sessionID == sessionID);
-            return Ok(games[index].actualPlayer);
+            //int index = games.FindIndex(g => g.sessionID == sessionID);
+            return Ok(games[sessionID].actualPlayer);
         }
 
         /**/
@@ -256,127 +256,133 @@ namespace TorpedoAPIv001.Controllers
             PlayerData.Player1.coords j8 = new PlayerData.Player1.coords("none", false);
             PlayerData.Player1.coords j9 = new PlayerData.Player1.coords("none", false);
             PlayerData.Player1.coords j10 = new PlayerData.Player1.coords("none", false);
-
-            var a1c = new
-            {
-                btype = a1.btype,
-                fired = a1.fired
-            };
-
-            var crds = new
-            {
-                a1 = ConCr(a1),
-                a2 = ConCr(a2),
-                a3 = ConCr(a3),
-                a4 = ConCr(a4),
-                a5 = ConCr(a5),
-                a6 = ConCr(a6),
-                a7 = ConCr(a7),
-                a8 = ConCr(a8),
-                a9 = ConCr(a9),
-                a10 = ConCr(a10),
-
-                b1 = ConCr(b1),
-                b2 = ConCr(b2),
-                b3 = ConCr(b3),
-                b4 = ConCr(b4),
-                b5 = ConCr(b5),
-                b6 = ConCr(b6),
-                b7 = ConCr(b7),
-                b8 = ConCr(b8),
-                b9 = ConCr(b9),
-                b10 = ConCr(b10),
-
-                c1 = ConCr(c1),
-                c2 = ConCr(c2),
-                c3 = ConCr(c3),
-                c4 = ConCr(c4),
-                c5 = ConCr(c5),
-                c6 = ConCr(c6),
-                c7 = ConCr(c7),
-                c8 = ConCr(c8),
-                c9 = ConCr(c9),
-                c10 = ConCr(c10),
-
-                d1 = ConCr(d1),
-                d2 = ConCr(d2),
-                d3 = ConCr(d3),
-                d4 = ConCr(d4),
-                d5 = ConCr(d5),
-                d6 = ConCr(d6),
-                d7 = ConCr(d7),
-                d8 = ConCr(d8),
-                d9 = ConCr(d9),
-                d10 = ConCr(d10),
-
-                e1 = ConCr(e1),
-                e2 = ConCr(e2),
-                e3 = ConCr(e3),
-                e4 = ConCr(e4),
-                e5 = ConCr(e5),
-                e6 = ConCr(e6),
-                e7 = ConCr(e7),
-                e8 = ConCr(e8),
-                e9 = ConCr(e9),
-                e10 = ConCr(e10),
-
-                f1 = ConCr(f1),
-                f2 = ConCr(f2),
-                f3 = ConCr(f3),
-                f4 = ConCr(f4),
-                f5 = ConCr(f5),
-                f6 = ConCr(f6),
-                f7 = ConCr(f7),
-                f8 = ConCr(f8),
-                f9 = ConCr(f9),
-                f10 = ConCr(f10),
-
-                g1 = ConCr(g1),
-                g2 = ConCr(g2),
-                g3 = ConCr(g3),
-                g4 = ConCr(g4),
-                g5 = ConCr(g5),
-                g6 = ConCr(g6),
-                g7 = ConCr(g7),
-                g8 = ConCr(g8),
-                g9 = ConCr(g9),
-                g10 = ConCr(g10),
-
-                h1 = ConCr(h1),
-                h2 = ConCr(h2),
-                h3 = ConCr(h3),
-                h4 = ConCr(h4),
-                h5 = ConCr(h5),
-                h6 = ConCr(h6),
-                h7 = ConCr(h7),                 
-                h8 = ConCr(h8),
-                h9 = ConCr(h9),
-                h10 = ConCr(h10),
-                
-                i1 = ConCr(i1),
-                i2 = ConCr(i2),
-                i3 = ConCr(i3),
-                i4 = ConCr(i4),
-                i5 = ConCr(i5),
-                i6 = ConCr(i6),
-                i7 = ConCr(i7),
-                i8 = ConCr(i8),
-                i9 = ConCr(i9),
-                i10 = ConCr(i10),
-
-                j1 = ConCr(j1),
-                j2 = ConCr(j2),
-                j3 = ConCr(j3),
-                j4 = ConCr(j4),
-                j5 = ConCr(j5),
-                j6 = ConCr(j6),
-                j7 = ConCr(j7),
-                j8 = ConCr(j8),
-                j9 = ConCr(j9),
-                j10 = ConCr(j10),
+            PlayerData.Player1.coords xy = new PlayerData.Player1.coords("none", false);
 
 
-            };
+            Dictionary<string, dynamic> crds = new Dictionary<string, dynamic>();
+            crds.Add("a1", ConCr(a1));
+            crds.Add("a2", ConCr(a2));
+            crds.Add("a3", ConCr(a3));
+            crds.Add("a4", ConCr(a4));
+            crds.Add("a5", ConCr(a5));
+            crds.Add("a6", ConCr(a6));
+            crds.Add("a7", ConCr(a7));
+            crds.Add("a8", ConCr(a8));
+            crds.Add("a9", ConCr(a9));
+            crds.Add("a10", ConCr(a10));
+            //b
+            crds.Add("b1", ConCr(b1));
+            crds.Add("b2", ConCr(b2));
+            crds.Add("b3", ConCr(b3));
+            crds.Add("b4", ConCr(b4));
+            crds.Add("b5", ConCr(b5));
+            crds.Add("b6", ConCr(b6));
+            crds.Add("b7", ConCr(b7));
+            crds.Add("b8", ConCr(b8));
+            crds.Add("b9", ConCr(b9));
+            crds.Add("b10", ConCr(b10));
+            //c
+            crds.Add("c1", ConCr(c1));
+            crds.Add("c2", ConCr(c2));
+            crds.Add("c3", ConCr(c3));
+            crds.Add("c4", ConCr(c4));
+            crds.Add("c5", ConCr(c5));
+            crds.Add("c6", ConCr(c6));
+            crds.Add("c7", ConCr(c7));
+            crds.Add("c8", ConCr(c8));
+            crds.Add("c9", ConCr(c9));
+            crds.Add("c10", ConCr(c10));
+            //d
+            crds.Add("d1", ConCr(d1));
+            crds.Add("d2", ConCr(d2));
+            crds.Add("d3", ConCr(d3));
+            crds.Add("d4", ConCr(d4));
+            crds.Add("d5", ConCr(d5));
+            crds.Add("d6", ConCr(d6));
+            crds.Add("d7", ConCr(d7));
+            crds.Add("d8", ConCr(d8));
+            crds.Add("d9", ConCr(d9));
+            crds.Add("d10", ConCr(d10));
+            //e
+            crds.Add("e1", ConCr(e1));
+            crds.Add("e2", ConCr(e2));
+            crds.Add("e3", ConCr(e3));
+            crds.Add("e4", ConCr(e4));
+            crds.Add("e5", ConCr(e5));
+            crds.Add("e6", ConCr(e6));
+            crds.Add("e7", ConCr(e7));
+            crds.Add("e8", ConCr(e8));
+            crds.Add("e9", ConCr(e9));
+            crds.Add("e10", ConCr(e10));
+            //f
+            crds.Add("f1", ConCr(f1));
+            crds.Add("f2", ConCr(f2));
+            crds.Add("f3", ConCr(f3));
+            crds.Add("f4", ConCr(f4));
+            crds.Add("f5", ConCr(f5));
+            crds.Add("f6", ConCr(f6));
+            crds.Add("f7", ConCr(f7));
+            crds.Add("f8", ConCr(f8));
+            crds.Add("f9", ConCr(f9));
+            crds.Add("f10", ConCr(f10));
+            //g
+            crds.Add("g1", ConCr(g1));
+            crds.Add("g2", ConCr(g2));
+            crds.Add("g3", ConCr(g3));
+            crds.Add("g4", ConCr(g4));
+            crds.Add("g5", ConCr(g5));
+            crds.Add("g6", ConCr(g6));
+            crds.Add("g7", ConCr(g7));
+            crds.Add("g8", ConCr(g8));
+            crds.Add("g9", ConCr(g9));
+            crds.Add("g10", ConCr(g10));
+            //h
+            crds.Add("h1", ConCr(h1));
+            crds.Add("h2", ConCr(h2));
+            crds.Add("h3", ConCr(h3));
+            crds.Add("h4", ConCr(h4));
+            crds.Add("h5", ConCr(h5));
+            crds.Add("h6", ConCr(h6));
+            crds.Add("h7", ConCr(h7));
+            crds.Add("h8", ConCr(h8));
+            crds.Add("h9", ConCr(h9));
+            crds.Add("h10", ConCr(h10));
+            //i
+            crds.Add("i1", ConCr(i1));
+            crds.Add("i2", ConCr(i2));
+            crds.Add("i3", ConCr(i3));
+            crds.Add("i4", ConCr(i4));
+            crds.Add("i5", ConCr(i5));
+            crds.Add("i6", ConCr(i6));
+            crds.Add("i7", ConCr(i7));
+            crds.Add("i8", ConCr(i8));
+            crds.Add("i9", ConCr(i9));
+            crds.Add("i10", ConCr(i10));
+            //j
+            crds.Add("j1", ConCr(j1));
+            crds.Add("j2", ConCr(j2));
+            crds.Add("j3", ConCr(j3));
+            crds.Add("j4", ConCr(j4));
+            crds.Add("j5", ConCr(j5));
+            crds.Add("j6", ConCr(j6));
+            crds.Add("j7", ConCr(j7));
+            crds.Add("j8", ConCr(j8));
+            crds.Add("j9", ConCr(j9));
+            crds.Add("j10", ConCr(j10));
+            /*
+            //x
+            crds.Add("x1", ConCr(x1));
+            crds.Add("x2", ConCr(x2));
+            crds.Add("x3", ConCr(x3));
+            crds.Add("x4", ConCr(x4));
+            crds.Add("x5", ConCr(x5));
+            crds.Add("x6", ConCr(x6));
+            crds.Add("x7", ConCr(x7));
+            crds.Add("x8", ConCr(x8));
+            crds.Add("x9", ConCr(x9));
+            crds.Add("x10", ConCr(x10));
+            */
+            /*old var crds*/
 
             PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
 
@@ -447,6 +453,7 @@ namespace TorpedoAPIv001.Controllers
                 otos = otos,
             };
 
+
             var player1 = new
             {
                 coords = crds,
@@ -461,11 +468,18 @@ namespace TorpedoAPIv001.Controllers
                 joined = false
             };
 
+            Dictionary<string, dynamic> playerData = new Dictionary<string, dynamic>();
+            playerData.Add("player1", player1);
+            playerData.Add("player2", player2);
+            
+            
+            /*
             var playerData = new
             {
                 player1 = player1,
                 player2 = player2,
             };
+            */
 
             
 
@@ -479,8 +493,8 @@ namespace TorpedoAPIv001.Controllers
                 actualPlayer = 1,
             };
 
-            List<dynamic> sessions = new List<dynamic>();
-            games.Add(sess);
+            //List<dynamic> sessions = new List<dynamic>();
+            games.Add(sessionID, sess);
 
             return games;
 
