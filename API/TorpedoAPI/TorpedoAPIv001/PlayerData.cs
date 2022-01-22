@@ -569,4 +569,10 @@ namespace TorpedoAPIv001
     {
         public List<string>
     }*/
+
+    public class Fire
+    {
+        public string result { get; set; }
+        public dynamic boat { get; set; }
+    }
 }

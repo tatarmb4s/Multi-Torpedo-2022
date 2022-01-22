@@ -33,6 +33,10 @@ namespace TorpedoAPIv001.Controllers
             }*/
         };
 
+        
+
+        private static Dictionary<string, Fire> FIre = new Dictionary<string, Fire> { };
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -67,31 +71,194 @@ namespace TorpedoAPIv001.Controllers
 
             return Ok(games);
         }
+        /*
+        [HttpPost("putBoat")]
+        public async Task<ActionResult<List<Games>>> putBoat(string sessionID, string targetor, PlayerData.Player1.boats boats)
+        {
+
+            /*foreach (var ps in poss)
+            {
+                games[sessionID].PlayerData[targetor].boats[boatType][ps].pos = poss[ps].pos;
+            }
+
+            games[sessionID].PlayerData[targetor].boats = boats;
+
+            return Ok(false);
+        }*/
+         
+        [HttpPost("putBoat")]
+        public async Task<ActionResult<List<Games>>> putBoat(string sessionID, string targetor, string boatType, List<string>boatPos)
+        {
+            List<dynamic> crds = new List<dynamic>();
+
+            for (int i = 0; i < boatPos.Count; i++)
+            {
+                //games[sessionID].PlayerData[targetor].boats[boatType][i].pos = boatPos[i];
+                
+                games[sessionID].PlayerData[targetor].boats[boatType][i] = NewBtData(boatPos[i], false);
+
+                
+
+                //games[sessionID].PlayerData[targetor].coords[boatPos[i]].btype = boatType;
+                games[sessionID].PlayerData[targetor].coords[boatPos[i]] = NewCrData(boatType, false);
+
+
+                crds.Add(games[sessionID].PlayerData[targetor].coords[boatPos[i]]);
+            }
+
+            
+
+            return Ok(games[sessionID].PlayerData[targetor].boats[boatType] + "\n" + crds);
+        }
 
         [HttpPost("fire")]
-        public async Task<ActionResult<List<Games>>> fire(string sessionID, string target, string coord)
+        public async Task<ActionResult<List<Games>>> fire(string sessionID, string target, string fCor)
         {
-            NewGame(sessionID);
-            /*
-            List<dynamic> datas = new List<dynamic>();
-            
-            foreach (dynamic g in games)
+            //NewGame(sessionID);
+
+            // Végeredmény maghatározása
+            var result = "";
+
+            //Elsüllyedés vizsgálata
+            var sullyedt = true;
+
+            // Az objektumban lévő sorszám
+            int fp;
+
+            // A koordinátán lévő hajónév lekérése
+            var fn = games[sessionID].PlayerData[target].coords[fCor].btype;
+            // Lőttek e már arra a mezőre?
+            var ifFired = games[sessionID].PlayerData[target].coords[fCor].fired;
+
+            //Api válasza
+            dynamic response;
+
+            response = new
             {
-                datas.Add(g.PlayerData);
-                //Dictionary<string, int> cords = new Dictionary<string, int>();
-                //cords.Add("a1", 200);
-                //
-            }*/
+                result = result,
+                boat = "secreet"
+            };
+
+            //Ha a koordinátához nem tartozik hajó
+            if (ifFired)
+            {
+                return BadRequest("Ide már lőttek!");
+                
+            }
+            //Ha a koordinátához nem tartozik hajó
+            else if (fn == "none")
+            {
+                games[sessionID].PlayerData[target].coords[fCor].fired = NewCrData(fn, true);
+                result = "nemtalalt";
+                response = new
+                {
+                    result = result,
+                    boat = "noboat"
+                };
+            }
+            else
+            {
+                // A hajón a találat beírása, és visszatérés vagy találtal, vagy süllyedtel
+                //dynamic boats = games[sessionID].PlayerData[target].boats;
+
+                int count = games[sessionID].PlayerData[target].boats[fn].Count;
+
+                for (int fps = 0; fps < games[sessionID].PlayerData[target].boats[fn].Count; fps++)
+                {
+                    if (fCor == games[sessionID].PlayerData[target].boats[fn][fps].pos)
+                    {
+                        //Ha a lövés helye egyezik a hajó egyik koordináta értékével
+                        if (fCor == games[sessionID].PlayerData[target].boats[fn][fps].pos)
+                        {
+                            //Sorszám átadása
+                            fp = fps;
+                            // Ha a hajó azon részére még nem lőttek akkor
+                            if (games[sessionID].PlayerData[target].boats[fn][fps].fired == false)
+                            {
+                                // A hajó ezen részére legyen igaz az hogy lőttek rá
+                                games[sessionID].PlayerData[target].boats[fn][fps] = NewBtData(fCor, true);
+                                result = "Talalt";
+                            }
+                        }
+                        //Ha a hajó koordinátáján nincs lövés legyen false
+                    }
+                    if (games[sessionID].PlayerData[target].boats[fn][fps].fired == false)
+                    {
+                        sullyedt = false;
+                    }
+                }
+
+                /*
+                foreach (var fps in games[sessionID].PlayerData[target].boats[fn])
+                {
+                    //Ha a lövés helye egyezik a hajó egyik koordináta értékével
+                    if (fCor == games[sessionID].PlayerData[target].boats[fn][fps].pos)
+                    {
+                        //Ha a lövés helye egyezik a hajó egyik koordináta értékével
+                        if (fCor == games[sessionID].PlayerData[target].boats[fn][fps].pos)
+                        {
+                            //Sorszám átadása
+                            fp = fps;
+                            // Ha a hajó azon részére még nem lőttek akkor
+                            if (games[sessionID].PlayerData[target].boats[fn][fps].fired == false)
+                            {
+                                // A hajó ezen részére legyen igaz az hogy lőttek rá
+                                games[sessionID].PlayerData[target].boats[fn][fps].fired = NewBtData(fCor, false);
+                                result = "Talalt";
+                            }
+                        }
+                        //Ha a hajó koordinátáján nincs lövés legyen false
+                        if (games[sessionID].PlayerData[target].boats[fn][fps].fired == false)
+                        {
+                            sullyedt = false;
+                        }
+                    }
+                }*/
+                // Ha elsullyedt akkor legyen az eredmény süllyedt
+                
+                if (sullyedt)
+                {
+                    result = "Sullyedt";
+                    games[sessionID].PlayerData[target].coords[fCor] = NewCrData(fn, true);
+                    response = new
+                    {
+                        result = result,
+                        boat = games[sessionID].PlayerData[target].boats[fn]
+                    };
+
+                    Console.WriteLine(response);
+                }
+
+                if (result == "Talalt" && !sullyedt)
+                {
+                    games[sessionID].PlayerData[target].coords[fCor] = NewCrData(fn, true);
+                    response = new
+                    {
+                        result = result,
+                        boat = "secreetTalalt"
+                    };
+                    Console.WriteLine(response);
+                }
+                else
+                {
+                    if (!sullyedt && result != "Talalt")
+                    {
+                        //games[sessionID].PlayerData[target].coords[fCor] = NewCrData(fn, true);
+                        result = "nemtalaltWBt";
+                        response = new
+                        {
+                            result = result,
+                            boat = "noboat"
+                        };
+                    }
+
+                    Console.WriteLine(response);
+                }
+            }
 
 
-
-            //int index = games.FindIndex(g => g.sessionID == sessionID);
-
-            //games[index].PlayerData.target.coord.fired = true;
-
-            //return Ok(games[index].PlayerData.player1.coords[coord-1].fired);
-            return Ok(games[sessionID].PlayerData[target].coords[coord]);//);
-
+            //return Ok(games[sessionID].PlayerData[target].coords[fCor]);//);
+            return Ok(response);
         }
 
         [HttpPost("actual")]
@@ -102,6 +269,17 @@ namespace TorpedoAPIv001.Controllers
         }
 
         /**/
+
+        public static dynamic NewCrData(string boatType, bool frd)
+        {
+            PlayerData.Player1.coords btyp = new PlayerData.Player1.coords(boatType, frd);            
+            return (ConCr(btyp));
+        }
+
+        public static dynamic NewBtData(string boatPos, bool frd)
+        {
+            return (BoatConv(new PlayerData.Player1.boats.egyes.first(boatPos, frd)));
+        }
 
         public static dynamic ConCr(dynamic cord)
         {
@@ -384,7 +562,7 @@ namespace TorpedoAPIv001.Controllers
             */
             /*old var crds*/
 
-            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("a1", false);
+            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("", false);
 
             List<dynamic> egyes = new List<dynamic>();
             egyes.Add(BoatConv(egy1));
@@ -442,7 +620,16 @@ namespace TorpedoAPIv001.Controllers
             otos.Add(BoatConv(ot4));
             otos.Add(BoatConv(ot5));
 
-            var boats = new
+            Dictionary<string, dynamic> boats = new Dictionary<string, dynamic>();
+            boats.Add("egyes", egyes);
+            boats.Add("kettes1", kettes1);
+            boats.Add("kettes2", kettes2);
+            boats.Add("harmas1", harmas1);
+            boats.Add("harmas2", harmas2);
+            boats.Add("negyes", negyes);
+            boats.Add("otos", otos);
+
+            /*var boats = new
             {
                 egyes = egyes,
                 kettes1 = kettes1,
@@ -451,7 +638,7 @@ namespace TorpedoAPIv001.Controllers
                 harmas2 = harmas2,
                 negyes = negyes,
                 otos = otos,
-            };
+            };*/
 
 
             var player1 = new
