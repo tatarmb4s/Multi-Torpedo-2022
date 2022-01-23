@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace TorpedoAPIv001.Controllers
 {
+    /*TempController
     [Route("api/[controller]")]
     [ApiController]
 
@@ -17,7 +18,12 @@ namespace TorpedoAPIv001.Controllers
         }
 
         
-    }
+    }*/
+
+    /*
+     Find index kódrészlet: int index = games.FindIndex(g => g.sessionID == sessionID);
+     */
+
     [Route("api/[controller]")]
     [ApiController]
     public class GameCreateController : ControllerBase
@@ -291,7 +297,25 @@ namespace TorpedoAPIv001.Controllers
         [HttpPost("playerJoin")]
         public async Task<ActionResult<List<Games>>> playerJoin(string sessionID, string player)
         {
-            return null;
+            /*games[sessionID].PlayerData[player].joined = true;
+
+             dynamic temp = games[sessionID].PlayerData[player];
+             temp.joined = true;
+             games[sessionID].PlayerData[player] = temp;*/
+
+            bool msg = false;
+
+            if (player == "player1")
+            {
+                games[sessionID].player1joined = true;
+                msg = games[sessionID].player1joined;
+            }
+            else if (player == "player2") {
+                games[sessionID].player2joined = true;
+                msg = games[sessionID].player2joined;
+            }
+
+            return Ok(msg);
         }
 
         
@@ -716,19 +740,6 @@ namespace TorpedoAPIv001.Controllers
             Dictionary<string, dynamic> playerData = new Dictionary<string, dynamic>();
             playerData.Add("player1", player1);
             playerData.Add("player2", player2);
-            
-            
-            /*
-            var playerData = new
-            {
-                player1 = player1,
-                player2 = player2,
-            };
-            */
-
-            
-
-
 
             var sess = new Games
             {
@@ -736,9 +747,9 @@ namespace TorpedoAPIv001.Controllers
                 status = 0,
                 PlayerData = playerData,
                 actualPlayer = 1,
-            };
-
-            //List<dynamic> sessions = new List<dynamic>();
+                player1joined = false,
+                player2joined = false
+            };                    
             games.Add(sessionID, sess);
 
             return games;
