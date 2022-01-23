@@ -23,7 +23,7 @@ namespace TorpedoAPIv001.Controllers
     public class GameCreateController : ControllerBase
     {
         //public List<> sessions = new List<dynamic>();
-        private static Dictionary<string, Games> games = new Dictionary<string, Games>
+        public static Dictionary<string, Games> games = new Dictionary<string, Games>
         {
             /*new Games
             {
@@ -33,58 +33,94 @@ namespace TorpedoAPIv001.Controllers
             }*/
         };
 
+        public static List<string> PublicSessonsList = new List<string>();
+        
         
 
         private static Dictionary<string, Fire> FIre = new Dictionary<string, Fire> { };
 
         [HttpGet]
         public async Task<IActionResult> Get()
-        {
-            /*var coords = new List<coords1>
-            {
-                new coords1() { coordinate="a1", boatType="none", fired=false},
-                new coords1() { coordinate="a2", boatType="none", fired=false}
-            };*/          
-
+        {        
             return Ok(games);
         }
 
-        [HttpPost("NewGame")]
-        public async Task<ActionResult<List<Games>>> NGame(string sessionID)
+        [HttpPost("New-Game")]
+        public async Task<ActionResult<List<Games>>> New_Game(string sessionID, bool RandomName, bool isPublic)
         {
-            NewGame(sessionID);
+            dynamic a = "nincs";
+            var response = "Létezik a név. Addjon meg egy újat!";
+            bool siker = false;
 
+            while (!siker)
+            {
+                a = "nincs";
+                if (RandomName)
+                {
+                    sessionID = RandomSessionName(false, sessionID);
+                }
+                
+                try
+                {
+                    a = games[sessionID];
+                    sessionID = RandomSessionName(true, sessionID);
+                    //return BadRequest(response);
+                }
+                catch (Exception ex)
+                {
+                    if (a == "nincs")
+                    {
+                        NewGame(sessionID, isPublic);
+                        siker = true;
+                        response = sessionID + "/player1.html";
+                    }
+                }                
+            }
 
-            return Ok(sessionID+"/player1.html");
+            return Ok(response);
         }
         
         [HttpGet("sessions")]
-        public async Task<ActionResult<List<Games>>> Sessons()
-        {
-            
-            /*List<string> ss = new List<string>();
-            
-            foreach (dynamic g in games)
-            {
-                ss.Add(g.sessionID);
-            }*/
-
-            return Ok(games);
+        public async Task<ActionResult<List<Games>>> sessions()
+        {           
+            return Ok(PublicSessonsList);
         }
-        /*
-        [HttpPost("putBoat")]
-        public async Task<ActionResult<List<Games>>> putBoat(string sessionID, string targetor, PlayerData.Player1.boats boats)
-        {
 
-            /*foreach (var ps in poss)
+        [HttpPost("endgame")]
+        public async Task<ActionResult<List<Games>>> endgame(string sessionID)
+        {
+            bool isEnded = true;
+
+            foreach (dynamic item in games[sessionID].PlayerData["player1"].boats)
             {
-                games[sessionID].PlayerData[targetor].boats[boatType][ps].pos = poss[ps].pos;
+                foreach (dynamic cellak in item.Value)
+                {
+                    Console.WriteLine(cellak);
+                    if (cellak.fired == false)
+                    {
+                        isEnded = false;
+                    }
+                }
             }
 
-            games[sessionID].PlayerData[targetor].boats = boats;
+            if (isEnded == false)
+            {
+                foreach (dynamic item in games[sessionID].PlayerData["player2"].boats)
+                {
+                    foreach (dynamic cellak in item.Value)
+                    {
+                        Console.WriteLine(cellak);
+                        if (cellak.fired == false)
+                        {
+                            isEnded = false;
+                        }
+                    }
+                }
+            }
 
-            return Ok(false);
-        }*/
+            
+            return Ok(isEnded);
+        }
          
         [HttpPost("putBoat")]
         public async Task<ActionResult<List<Games>>> putBoat(string sessionID, string targetor, string boatType, List<string>boatPos)
@@ -115,6 +151,8 @@ namespace TorpedoAPIv001.Controllers
         public async Task<ActionResult<List<Games>>> fire(string sessionID, string target, string fCor)
         {
             //NewGame(sessionID);
+
+            
 
             // Végeredmény maghatározása
             var result = "";
@@ -148,7 +186,7 @@ namespace TorpedoAPIv001.Controllers
             //Ha a koordinátához nem tartozik hajó
             else if (fn == "none")
             {
-                games[sessionID].PlayerData[target].coords[fCor].fired = NewCrData(fn, true);
+                games[sessionID].PlayerData[target].coords[fCor] = NewCrData(fn, true);
                 result = "nemtalalt";
                 response = new
                 {
@@ -187,33 +225,6 @@ namespace TorpedoAPIv001.Controllers
                         sullyedt = false;
                     }
                 }
-
-                /*
-                foreach (var fps in games[sessionID].PlayerData[target].boats[fn])
-                {
-                    //Ha a lövés helye egyezik a hajó egyik koordináta értékével
-                    if (fCor == games[sessionID].PlayerData[target].boats[fn][fps].pos)
-                    {
-                        //Ha a lövés helye egyezik a hajó egyik koordináta értékével
-                        if (fCor == games[sessionID].PlayerData[target].boats[fn][fps].pos)
-                        {
-                            //Sorszám átadása
-                            fp = fps;
-                            // Ha a hajó azon részére még nem lőttek akkor
-                            if (games[sessionID].PlayerData[target].boats[fn][fps].fired == false)
-                            {
-                                // A hajó ezen részére legyen igaz az hogy lőttek rá
-                                games[sessionID].PlayerData[target].boats[fn][fps].fired = NewBtData(fCor, false);
-                                result = "Talalt";
-                            }
-                        }
-                        //Ha a hajó koordinátáján nincs lövés legyen false
-                        if (games[sessionID].PlayerData[target].boats[fn][fps].fired == false)
-                        {
-                            sullyedt = false;
-                        }
-                    }
-                }*/
                 // Ha elsullyedt akkor legyen az eredmény süllyedt
                 
                 if (sullyedt)
@@ -258,11 +269,35 @@ namespace TorpedoAPIv001.Controllers
 
 
             //return Ok(games[sessionID].PlayerData[target].coords[fCor]);//);
+
+            //Aktuális játékos átállítása a másik playerre
+
+            if (games[sessionID].actualPlayer == 1)
+            {
+                games[sessionID].actualPlayer = 2;
+            }
+            else
+            {
+                if (games[sessionID].actualPlayer == 2)
+                {
+                    games[sessionID].actualPlayer = 1;
+                }
+            }
+            
+
             return Ok(response);
         }
 
-        [HttpPost("actual")]
-        public async Task<ActionResult<List<Games>>> actual(string sessionID)
+        [HttpPost("playerJoin")]
+        public async Task<ActionResult<List<Games>>> playerJoin(string sessionID, string player)
+        {
+            return null;
+        }
+
+        
+
+        [HttpGet("actualPlayer")]
+        public async Task<ActionResult<List<Games>>> actualPlayer(string sessionID)
         {
             //int index = games.FindIndex(g => g.sessionID == sessionID);
             return Ok(games[sessionID].actualPlayer);
@@ -279,6 +314,24 @@ namespace TorpedoAPIv001.Controllers
         public static dynamic NewBtData(string boatPos, bool frd)
         {
             return (BoatConv(new PlayerData.Player1.boats.egyes.first(boatPos, frd)));
+        }
+
+        private static Random random = new Random();
+
+        public static string RandomSessionName(bool predefinied, string sessionID)
+        {
+            if (predefinied)
+            {
+                const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                return sessionID + "_" + new string(Enumerable.Repeat(chars, 5)
+                        .Select(s => s[random.Next(s.Length)]).ToArray());
+            }
+            else
+            {
+                const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                return new string(Enumerable.Repeat(chars, 5)
+                        .Select(s => s[random.Next(s.Length)]).ToArray());
+            }
         }
 
         public static dynamic ConCr(dynamic cord)
@@ -304,8 +357,13 @@ namespace TorpedoAPIv001.Controllers
         }
 
 
-        public static dynamic NewGame(string sessionID)
+        public static dynamic NewGame(string sessionID, bool isPublic)
         {
+
+            if (isPublic)
+            {
+                PublicSessonsList.Add(sessionID);
+            }
             
             PlayerData.Player1.coords tabelCoords = new PlayerData.Player1.coords("none", false);
 
