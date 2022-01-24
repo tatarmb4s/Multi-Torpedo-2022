@@ -78,21 +78,66 @@ namespace TorpedoAPIv001.Controllers
                     {
                         NewGame(sessionID, isPublic);
                         siker = true;
-                        response = sessionID + "/player1.html";
+                        response = sessionID;
                     }
                 }                
             }
 
             return Ok(response);
         }
-        
+
+        [HttpGet("CodeValid")]
+        public async Task<ActionResult<List<Games>>> CodeValid(string sessionID)
+        {
+            dynamic a = "nincs";           
+            
+            try
+            {
+                a = games[sessionID];                
+                return Ok(true);
+            }
+            catch (Exception ex)
+            {
+                if (a == "nincs")
+                {                    
+                    return BadRequest(false);
+                }
+            }
+
+            return Ok(false);
+        }
+
+        [HttpGet("CanJoin")]
+        public async Task<ActionResult<List<Games>>> CanJoin(string sessionID)
+        {            
+            return Ok(!games[sessionID].player2joined);
+        }
+
+        [HttpGet("SecondJoined")]
+        public async Task<ActionResult<List<Games>>> SecondJoined(string sessionID)
+        {
+            return Ok(games[sessionID].player2joined);
+        }
+
+        [HttpPost("StartGame")]
+        public async Task<ActionResult<List<Games>>> StartGame(string sessionID)
+        {
+            if (games[sessionID].player1ready && games[sessionID].player2ready)
+            {
+                games[sessionID].status = 1;
+                return Ok(true);
+            }
+
+            return Ok(false);
+        }
+
         [HttpGet("sessions")]
         public async Task<ActionResult<List<Games>>> sessions()
         {           
             return Ok(PublicSessonsList);
         }
 
-        [HttpPost("endgame")]
+        [HttpGet("endgame")]
         public async Task<ActionResult<List<Games>>> endgame(string sessionID)
         {
             bool isEnded = true;
@@ -261,7 +306,7 @@ namespace TorpedoAPIv001.Controllers
                     if (!sullyedt && result != "Talalt")
                     {
                         //games[sessionID].PlayerData[target].coords[fCor] = NewCrData(fn, true);
-                        result = "nemtalaltWBt";
+                        result = "nemtalalt";
                         response = new
                         {
                             result = result,
@@ -318,7 +363,30 @@ namespace TorpedoAPIv001.Controllers
             return Ok(msg);
         }
 
-        
+        [HttpPost("playerReady")]
+        public async Task<ActionResult<List<Games>>> playerReady(string sessionID, string player)
+        {
+            /*games[sessionID].PlayerData[player].joined = true;
+
+             dynamic temp = games[sessionID].PlayerData[player];
+             temp.joined = true;
+             games[sessionID].PlayerData[player] = temp;*/
+
+            bool msg = false;
+
+            if (player == "player1")
+            {
+                games[sessionID].player1ready = true;
+                msg = games[sessionID].player1ready;
+            }
+            else if (player == "player2")
+            {
+                games[sessionID].player2ready = true;
+                msg = games[sessionID].player2ready;
+            }
+
+            return Ok(msg);
+        }
 
         [HttpGet("actualPlayer")]
         public async Task<ActionResult<List<Games>>> actualPlayer(string sessionID)
@@ -748,7 +816,9 @@ namespace TorpedoAPIv001.Controllers
                 PlayerData = playerData,
                 actualPlayer = 1,
                 player1joined = false,
-                player2joined = false
+                player1ready = false,
+                player2joined = false,
+                player2ready = false
             };                    
             games.Add(sessionID, sess);
 
