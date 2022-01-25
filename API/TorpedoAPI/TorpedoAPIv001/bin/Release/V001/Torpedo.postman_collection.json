@@ -1,0 +1,1266 @@
+{
+	"info": {
+		"_postman_id": "fdadab6a-9b25-4508-98c3-96abb5243fb5",
+		"name": "Torpedo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NEM HASZNÁLHATÓ GameCreate (játékstátusz, authenticaionhoz lesz kötve)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GameCreate (játékstátusz, authenticaionhoz lesz kötve)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"1\": {\n        \"sessionID\": \"1\",\n        \"status\": 0,\n        \"playerData\": {\n            \"player1\": {\n                \"coords\": {\n                    \"a1\": {\n                        \"btype\": \"kettes1\",\n                        \"fired\": true\n                    },\n                    \"a2\": {\n                        \"btype\": \"kettes1\",\n                        \"fired\": false\n                    },\n                    \"a3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a7\": {\n                        \"btype\": \"none\",\n                        \"fired\": true\n                    },\n                    \"a8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a9\": {\n                        \"btype\": \"none\",\n                        \"fired\": true\n                    },\n                    \"a10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b1\": {\n                        \"btype\": \"egyes\",\n                        \"fired\": true\n                    },\n                    \"b2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    }\n                },\n                \"boats\": {\n                    \"egyes\": [\n                        {\n                            \"pos\": \"b1\",\n                            \"fired\": true\n                        }\n                    ],\n                    \"kettes1\": [\n                        {\n                            \"pos\": \"a1\",\n                            \"fired\": true\n                        },\n                        {\n                            \"pos\": \"b1\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"negyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"otos\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ]\n                },\n                \"joined\": false\n            },\n            \"player2\": {\n                \"coords\": {\n                    \"a1\": {\n                        \"btype\": \"kettes1\",\n                        \"fired\": true\n                    },\n                    \"a2\": {\n                        \"btype\": \"kettes1\",\n                        \"fired\": false\n                    },\n                    \"a3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a7\": {\n                        \"btype\": \"none\",\n                        \"fired\": true\n                    },\n                    \"a8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a9\": {\n                        \"btype\": \"none\",\n                        \"fired\": true\n                    },\n                    \"a10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b1\": {\n                        \"btype\": \"egyes\",\n                        \"fired\": true\n                    },\n                    \"b2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    }\n                },\n                \"boats\": {\n                    \"egyes\": [\n                        {\n                            \"pos\": \"b1\",\n                            \"fired\": true\n                        }\n                    ],\n                    \"kettes1\": [\n                        {\n                            \"pos\": \"a1\",\n                            \"fired\": true\n                        },\n                        {\n                            \"pos\": \"b1\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"negyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"otos\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ]\n                },\n                \"joined\": false\n            }\n        },\n        \"actualPlayer\": 1,\n        \"player1joined\": true,\n        \"player1ready\": true,\n        \"player2joined\": false,\n        \"player2ready\": false\n    },\n    \"2\": {\n        \"sessionID\": \"2\",\n        \"status\": 0,\n        \"playerData\": {\n            \"player1\": {\n                \"coords\": {\n                    \"a1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    }\n                },\n                \"boats\": {\n                    \"egyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"negyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"otos\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ]\n                },\n                \"joined\": false\n            },\n            \"player2\": {\n                \"coords\": {\n                    \"a1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    }\n                },\n                \"boats\": {\n                    \"egyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"negyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"otos\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ]\n                },\n                \"joined\": false\n            }\n        },\n        \"actualPlayer\": 1,\n        \"player1joined\": false,\n        \"player1ready\": false,\n        \"player2joined\": false,\n        \"player2ready\": false\n    },\n    \"O6GFN\": {\n        \"sessionID\": \"O6GFN\",\n        \"status\": 0,\n        \"playerData\": {\n            \"player1\": {\n                \"coords\": {\n                    \"a1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    }\n                },\n                \"boats\": {\n                    \"egyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"negyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"otos\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ]\n                },\n                \"joined\": false\n            },\n            \"player2\": {\n                \"coords\": {\n                    \"a1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"a10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"b10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"c10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"d10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"e10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"f10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"g10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"h10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"i10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j1\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j2\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j3\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j4\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j5\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j6\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j7\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j8\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j9\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    },\n                    \"j10\": {\n                        \"btype\": \"none\",\n                        \"fired\": false\n                    }\n                },\n                \"boats\": {\n                    \"egyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"kettes2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas1\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"harmas2\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"negyes\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ],\n                    \"otos\": [\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        },\n                        {\n                            \"pos\": \"\",\n                            \"fired\": false\n                        }\n                    ]\n                },\n                \"joined\": false\n            }\n        },\n        \"actualPlayer\": 1,\n        \"player1joined\": false,\n        \"player1ready\": false,\n        \"player2joined\": false,\n        \"player2ready\": false\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "sessions rt:list (Publikus sessionok.)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/sessions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"sessions"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "példa",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/sessions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"sessions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\r\n    \"abcd\",\r\n    \"efgh\",\r\n    \"asdfg\",\r\n    \"stbstb\"\r\n]"
+				}
+			]
+		},
+		{
+			"name": "New-Game (Új játék)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/New-Game?sessionID=2&RandomName=false&isPublic=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"New-Game"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "2",
+							"description": "Session IDje"
+						},
+						{
+							"key": "RandomName",
+							"value": "false",
+							"description": "Hogy a játékos random nevet kért e"
+						},
+						{
+							"key": "isPublic",
+							"value": "true",
+							"description": "Hogy a session publikus e"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Publikus, és nem random nevű session",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/New-Game?sessionID=sessionnev&RandomName=false&isPublic=true",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"New-Game"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "sessionnev",
+									"description": "Session IDje"
+								},
+								{
+									"key": "RandomName",
+									"value": "false",
+									"description": "Hogy a játékos random nevet kért e"
+								},
+								{
+									"key": "isPublic",
+									"value": "true",
+									"description": "Hogy a session publikus e"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "\"sessionnev\""
+				}
+			]
+		},
+		{
+			"name": "CanJoin rt: bool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"CanJoin"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A második játékos már belépett",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"CanJoin"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				},
+				{
+					"name": "Beléphet",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"CanJoin"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				}
+			]
+		},
+		{
+			"name": "SecondJoined rt:bool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"SecondJoined"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A második játékos már belépett",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"SecondJoined"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "A második játékos még nem lépett be",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"SecondJoined"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				}
+			]
+		},
+		{
+			"name": "CodeValid rt: bool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/CodeValid?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"CodeValid"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Jó a kód",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/CodeValid?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"CodeValid"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "Rossz a kód",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/CodeValid?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"CodeValid"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				}
+			]
+		},
+		{
+			"name": "playerJoin (Játékos belépésének jelzése)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/playerJoin?sessionID=1&player=player1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"playerJoin"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						},
+						{
+							"key": "player",
+							"value": "player1",
+							"description": "A játékos aki belépett"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "player1 Joined",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/playerJoin?sessionID=1&player=player1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"playerJoin"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "player",
+									"value": "player1",
+									"description": "A játékos aki belépett"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "player2 Joined",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/playerJoin?sessionID=1&player=player2",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"playerJoin"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "player",
+									"value": "player2",
+									"description": "A játékos aki belépett"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				}
+			]
+		},
+		{
+			"name": "playerReady (Játékos készenállásának jelzése)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/playerReady?sessionID=1&player=player1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"playerReady"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						},
+						{
+							"key": "player",
+							"value": "player1",
+							"description": "A játékos aki készenáll"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sikeresen értékállítás",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/playerReady?sessionID=1&player=player1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"playerReady"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "player",
+									"value": "player1",
+									"description": "A játékos aki készenáll"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				}
+			]
+		},
+		{
+			"name": "StartGame rt: bool (Ha mindkét játékos ready zett akkor indulha a játék)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/StartGame?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"StartGame"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Elindult a játék",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/StartGame?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"StartGame"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				}
+			]
+		},
+		{
+			"name": "putBoat (Leírés commentelve a bodyban)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"b1\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/putBoat?sessionID=1&targetor=player1&boatType=egyes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"putBoat"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						},
+						{
+							"key": "targetor",
+							"value": "player1",
+							"description": "az a játékos aki felteszi a hajót a térfelére"
+						},
+						{
+							"key": "boatType",
+							"value": "egyes",
+							"description": "a hajó típusa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualPlayer (A soron lévő játékos aki tud hajót letenni)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/actualPlayer?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"actualPlayer"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "a player1 van soron",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/actualPlayer?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"actualPlayer"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "1"
+				},
+				{
+					"name": "a player2 van soron",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/actualPlayer?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"actualPlayer"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "2"
+				}
+			]
+		},
+		{
+			"name": "fire (Leírés commentelve a bodyban)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/fire?sessionID=1&target=player1&fCor=b1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"fire"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						},
+						{
+							"key": "target",
+							"value": "player1",
+							"description": "az a játékos akire lősz"
+						},
+						{
+							"key": "fCor",
+							"value": "b1",
+							"description": "a koordináta amire lőttél"
+						},
+						{
+							"key": "Visszatérési értékek:",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Dupla lövés",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/fire?sessionID=1&target=player1&fCor=b1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"fire"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "target",
+									"value": "player1",
+									"description": "az a játékos akire lősz"
+								},
+								{
+									"key": "fCor",
+									"value": "b1",
+									"description": "a koordináta amire lőttél"
+								},
+								{
+									"key": "Visszatérési értékek:",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "\"Ide már lőttek!\"\""
+				},
+				{
+					"name": "Nemtalált",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/fire?sessionID=1&target=player1&fCor=b1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"fire"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "target",
+									"value": "player1",
+									"description": "az a játékos akire lősz"
+								},
+								{
+									"key": "fCor",
+									"value": "b1",
+									"description": "a koordináta amire lőttél"
+								},
+								{
+									"key": "Visszatérési értékek:",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"result\": \"nemtalalt\",\n    \"boat\": \"noboat\"\n}"
+				},
+				{
+					"name": "Talált",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/fire?sessionID=1&target=player1&fCor=b1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"fire"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "target",
+									"value": "player1",
+									"description": "az a játékos akire lősz"
+								},
+								{
+									"key": "fCor",
+									"value": "b1",
+									"description": "a koordináta amire lőttél"
+								},
+								{
+									"key": "Visszatérési értékek:",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"result\": \"Talalt\",\n    \"boat\": \"secreetTalalt\"\n}"
+				},
+				{
+					"name": "Süllyedt",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/fire?sessionID=1&target=player1&fCor=b1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"fire"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								},
+								{
+									"key": "target",
+									"value": "player1",
+									"description": "az a játékos akire lősz"
+								},
+								{
+									"key": "fCor",
+									"value": "b1",
+									"description": "a koordináta amire lőttél"
+								},
+								{
+									"key": "Visszatérési értékek:",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "  {\r\n      \"result\": \"Sullyedt\",\r\n      \"boat\": [\r\n          //... \r\n          //Hajócellánként egy ilyen objektum.\r\n          {\r\n              \"pos\": \"xY\",\r\n              \"fired\": true\r\n          }\r\n          // Ha csak egy cella van akkor egy objektum. \r\n          //...\r\n      ]\r\n  }"
+				}
+			]
+		},
+		{
+			"name": "endgame rt: bool (A játék véget ért e)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/endgame?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"endgame"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A játék véget ért",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/endgame?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"endgame"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "A játék nem ért véget",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/endgame?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"endgame"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				}
+			]
+		}
+	]
+}

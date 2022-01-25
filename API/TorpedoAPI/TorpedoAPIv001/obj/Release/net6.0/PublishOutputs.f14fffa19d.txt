@@ -1,0 +1,11 @@
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.exe
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\appsettings.json
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.dll
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.deps.json
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.runtimeconfig.json
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.pdb
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\!School\Torpedo\Torpedo\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

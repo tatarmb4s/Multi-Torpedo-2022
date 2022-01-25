@@ -131,6 +131,23 @@ namespace TorpedoAPIv001.Controllers
             return Ok(false);
         }
 
+        [HttpGet("bothReady")]
+        public async Task<IActionResult> bothReady(string sessionID)
+        {
+            if (games[sessionID].player1ready && games[sessionID].player2ready)
+            {
+                //games[sessionID].status = 1;
+                return Ok(true);
+            }
+            return Ok(false);
+        }
+
+        [HttpGet("status")]
+        public async Task<IActionResult> Status(string sessionID)
+        {
+            return Ok(games[sessionID].status);
+        }
+
         [HttpGet("sessions")]
         public async Task<ActionResult<List<Games>>> sessions()
         {           
