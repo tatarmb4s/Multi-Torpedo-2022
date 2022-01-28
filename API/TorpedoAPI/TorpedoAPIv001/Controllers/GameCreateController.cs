@@ -186,6 +186,11 @@ namespace TorpedoAPIv001.Controllers
                 }
             }
 
+            if (isEnded)
+            {
+                games[sessionID].status = 2;
+            }
+
             
             return Ok(isEnded);
         }

@@ -1,7 +1,8 @@
 {
 	"info": {
-		"_postman_id": "fdadab6a-9b25-4508-98c3-96abb5243fb5",
-		"name": "Torpedo",
+		"_postman_id": "0ed5a163-2943-4b13-a2ea-f4d0c6f73881",
+		"name": "Torpedo API v002",
+		"description": "# Torpedo API v.002\n\nAz API-t Tatár Mátyás Bence készítette a Torpedo játlék számára.\n\n## Authentication\n\nA késöbbieben lesz benne, jelenleg nincs.\n\n## Introduction\n\nThis API is made by Mátyás Bence Tatár for the Battleship game.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -109,7 +110,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://api.torpedo.ml/api/GameCreate/New-Game?sessionID=2&RandomName=false&isPublic=true",
+					"raw": "https://api.torpedo.ml/api/GameCreate/New-Game?sessionID=1&RandomName=false&isPublic=true",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -124,7 +125,7 @@
 					"query": [
 						{
 							"key": "sessionID",
-							"value": "2",
+							"value": "1",
 							"description": "Session IDje"
 						},
 						{
@@ -184,202 +185,6 @@
 					"header": null,
 					"cookie": [],
 					"body": "\"sessionnev\""
-				}
-			]
-		},
-		{
-			"name": "CanJoin rt: bool",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
-					"protocol": "https",
-					"host": [
-						"api",
-						"torpedo",
-						"ml"
-					],
-					"path": [
-						"api",
-						"GameCreate",
-						"CanJoin"
-					],
-					"query": [
-						{
-							"key": "sessionID",
-							"value": "1",
-							"description": "Session IDje"
-						}
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "A második játékos már belépett",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
-							"protocol": "https",
-							"host": [
-								"api",
-								"torpedo",
-								"ml"
-							],
-							"path": [
-								"api",
-								"GameCreate",
-								"CanJoin"
-							],
-							"query": [
-								{
-									"key": "sessionID",
-									"value": "1",
-									"description": "Session IDje"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": null,
-					"cookie": [],
-					"body": "false"
-				},
-				{
-					"name": "Beléphet",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
-							"protocol": "https",
-							"host": [
-								"api",
-								"torpedo",
-								"ml"
-							],
-							"path": [
-								"api",
-								"GameCreate",
-								"CanJoin"
-							],
-							"query": [
-								{
-									"key": "sessionID",
-									"value": "1",
-									"description": "Session IDje"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": null,
-					"cookie": [],
-					"body": "true"
-				}
-			]
-		},
-		{
-			"name": "SecondJoined rt:bool",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
-					"protocol": "https",
-					"host": [
-						"api",
-						"torpedo",
-						"ml"
-					],
-					"path": [
-						"api",
-						"GameCreate",
-						"SecondJoined"
-					],
-					"query": [
-						{
-							"key": "sessionID",
-							"value": "1",
-							"description": "Session IDje"
-						}
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "A második játékos már belépett",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
-							"protocol": "https",
-							"host": [
-								"api",
-								"torpedo",
-								"ml"
-							],
-							"path": [
-								"api",
-								"GameCreate",
-								"SecondJoined"
-							],
-							"query": [
-								{
-									"key": "sessionID",
-									"value": "1",
-									"description": "Session IDje"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": null,
-					"cookie": [],
-					"body": "true"
-				},
-				{
-					"name": "A második játékos még nem lépett be",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
-							"protocol": "https",
-							"host": [
-								"api",
-								"torpedo",
-								"ml"
-							],
-							"path": [
-								"api",
-								"GameCreate",
-								"SecondJoined"
-							],
-							"query": [
-								{
-									"key": "sessionID",
-									"value": "1",
-									"description": "Session IDje"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": null,
-					"cookie": [],
-					"body": "false"
 				}
 			]
 		},
@@ -474,6 +279,202 @@
 					},
 					"status": "Bad Request",
 					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				}
+			]
+		},
+		{
+			"name": "CanJoin rt: bool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"CanJoin"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Beléphet",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"CanJoin"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "A második játékos már belépett",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/CanJoin?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"CanJoin"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				}
+			]
+		},
+		{
+			"name": "SecondJoined rt:bool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"SecondJoined"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "A második játékos már belépett",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"SecondJoined"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "A második játékos még nem lépett be",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/SecondJoined?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"SecondJoined"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1",
+									"description": "Session IDje"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": null,
 					"cookie": [],
@@ -669,6 +670,310 @@
 			]
 		},
 		{
+			"name": "status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/status?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"status"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Létrehozott de még el nem indított session",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/status?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"status"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "0"
+				},
+				{
+					"name": "Elindított játék",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/status?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"status"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "1"
+				},
+				{
+					"name": "Elindított és sikeresen befejeződött játék",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/status?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"status"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "2"
+				},
+				{
+					"name": "Nemlétező session",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/status?sessionID=NemLétezőSession",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"status"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "NemLétezőSession"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "putBoat (Leírés commentelve a bodyban)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"b1\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/putBoat?sessionID=1&targetor=player1&boatType=egyes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"putBoat"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1",
+							"description": "Session IDje"
+						},
+						{
+							"key": "targetor",
+							"value": "player1",
+							"description": "az a játékos aki felteszi a hajót a térfelére"
+						},
+						{
+							"key": "boatType",
+							"value": "egyes",
+							"description": "a hajó típusa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bothReady",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.torpedo.ml/api/GameCreate/bothReady?sessionID=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"torpedo",
+						"ml"
+					],
+					"path": [
+						"api",
+						"GameCreate",
+						"bothReady"
+					],
+					"query": [
+						{
+							"key": "sessionID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Mindkettő készenáll: igaz",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/bothReady?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"bothReady"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "true"
+				},
+				{
+					"name": "Mindkettő készenáll: hamis",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.torpedo.ml/api/GameCreate/bothReady?sessionID=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"torpedo",
+								"ml"
+							],
+							"path": [
+								"api",
+								"GameCreate",
+								"bothReady"
+							],
+							"query": [
+								{
+									"key": "sessionID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "false"
+				}
+			]
+		},
+		{
 			"name": "StartGame rt: bool (Ha mindkét játékos ready zett akkor indulha a játék)",
 			"request": {
 				"method": "POST",
@@ -731,54 +1036,6 @@
 					"body": "true"
 				}
 			]
-		},
-		{
-			"name": "putBoat (Leírés commentelve a bodyban)",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\"b1\"]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://api.torpedo.ml/api/GameCreate/putBoat?sessionID=1&targetor=player1&boatType=egyes",
-					"protocol": "https",
-					"host": [
-						"api",
-						"torpedo",
-						"ml"
-					],
-					"path": [
-						"api",
-						"GameCreate",
-						"putBoat"
-					],
-					"query": [
-						{
-							"key": "sessionID",
-							"value": "1",
-							"description": "Session IDje"
-						},
-						{
-							"key": "targetor",
-							"value": "player1",
-							"description": "az a játékos aki felteszi a hajót a térfelére"
-						},
-						{
-							"key": "boatType",
-							"value": "egyes",
-							"description": "a hajó típusa"
-						}
-					]
-				}
-			},
-			"response": []
 		},
 		{
 			"name": "actualPlayer (A soron lévő játékos aki tud hajót letenni)",
