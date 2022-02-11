@@ -28,3 +28,5 @@ A játék folyamán a játékosok egymásra lőnek torpedóikkal. Ezt úgy tudj�
 
 ## A Játék vége
 A játéknak akor van vége, amikor az egyik játékos összes hajója elsüllyedt. Értelemszerűen az a játékos nyer, akinek fentmaradtak a hajói. **FIGYELEM: Eltelált de nem elsüllyedt hajó, nem számít elsüllyedt hajónak, a játék addig megy, amig valahol minden hajó el nincs süllyesztve valakinél**
+
+### Képek még érkeznek majd...
