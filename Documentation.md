@@ -2,6 +2,6 @@
 
 <hr>
 
-- Fronend, design: Leviil
+- Frontend, design: Leviil
 - BackEnd, Szerver setup, API: Matyi
 - Szabályzat, dokumentáció: Dani
