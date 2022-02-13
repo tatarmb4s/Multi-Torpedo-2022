@@ -1,7 +1,3 @@
-# Torpedo
- The multiplayer Torpedo / Battleship game.
-<hr>
-
 # Mi a torpedó?
 
 *A torpedó egy saját hajtással és robanófejjel ellátott fegyver, ami leggyakrabban a hadihajókon és tengeralattjáról indítják, de előfordult már, hogy repülőről vettték be. A torpedó a céltárgyat a víz alatt közelíti meg, amikor eléri azt, vagy nekiütközik, felrobban. Ezzel okozva kárt a célpontban. Ezt a fegyvert általában tengerelettjárók és hadihajók ellen vetik be.*
