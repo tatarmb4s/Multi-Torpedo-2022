@@ -125,7 +125,10 @@ namespace TorpedoAPIv001.Controllers
             if (games[sessionID].player1ready && games[sessionID].player2ready)
             {
                 games[sessionID].status = 1;
+                if (PublicSessonsList.Contains(sessionID))
+                    PublicSessonsList.Remove(sessionID);
                 return Ok(true);
+                
             }
 
             return Ok(false);
