@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Készült a Microsoft Visio programban, SVG-exportálás Player UI.svg Player UI -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="48.6063in" height="11.6929in"
+		viewBox="0 0 3499.65 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st20">
+	<v:documentProperties v:langID="1033" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(0):26"/>
+			<v:ud v:nameU="msvWarnOnPersonalInfo" v:val="VT0(0):5"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#339933;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st2 {fill:#339933;font-family:Calibri;font-size:1.00001em}
+		.st3 {fill:#1ba1e2}
+		.st4 {stroke:#1897d5;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st5 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st6 {fill:#1076a7;font-family:Calibri;font-size:1.00001em}
+		.st7 {marker-end:url(#mrkr4-15);stroke:#1998d6;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st8 {fill:#1998d6;fill-opacity:1;stroke:#1998d6;stroke-opacity:1;stroke-width:0.16556291390728}
+		.st9 {fill:#1176a7;font-family:Calibri;font-size:1.00001em}
+		.st10 {fill:#1ba1e2;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st11 {fill:#ffffff;font-family:Calibri;font-size:1.00001em}
+		.st12 {font-size:1em}
+		.st13 {fill:#339933;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st14 {marker-end:url(#mrkr4-66);stroke:#ff0000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st15 {fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-opacity:1;stroke-width:0.16556291390728}
+		.st16 {marker-end:url(#mrkr4-78);stroke:#309030;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st17 {fill:#309030;fill-opacity:1;stroke:#309030;stroke-opacity:1;stroke-width:0.16556291390728}
+		.st18 {marker-end:url(#mrkr4-84);stroke:#92d050;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st19 {fill:#92d050;fill-opacity:1;stroke:#92d050;stroke-opacity:1;stroke-width:0.16556291390728}
+		.st20 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-15" class="st8" v:arrowType="4" v:arrowSize="2" v:setback="12.08" refX="-12.08" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-6.04,-6.04) "/>
+		</marker>
+		<marker id="mrkr4-66" class="st15" v:arrowType="4" v:arrowSize="2" v:setback="12.08" refX="-12.08" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-6.04,-6.04) "/>
+		</marker>
+		<marker id="mrkr4-78" class="st17" v:arrowType="4" v:arrowSize="2" v:setback="12.08" refX="-12.08" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-6.04,-6.04) "/>
+		</marker>
+		<marker id="mrkr4-84" class="st19" v:arrowType="4" v:arrowSize="2" v:setback="12.08" refX="-12.08" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-6.04,-6.04) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="2" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Player UI</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
+		<v:layer v:name="Összekötő" v:index="0"/>
+		<v:layer v:name="Flowchart" v:index="1"/>
+		<g id="shape2-1" v:mID="2" v:groupContext="shape" transform="translate(1757.31,-461.065)">
+			<title>Diamond.2</title>
+			<desc>Joined?</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st1"/>
+			<text x="35.48" y="809.49" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Joined?</text>		</g>
+		<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(2653.2,243.484) rotate(90)">
+			<title>Line Arrow.3</title>
+			<desc>Fa</desc>
+			<v:userDefs>
+				<v:ud v:nameU="Scale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:val="VT0(17):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="32.67" cy="841.89" width="65.34" height="0" transform="rotate(-180)"/>
+			<path d="M58.95 838.69 L58.95 845.09 L65.34 841.89 L58.95 838.69 Z" class="st3"/>
+			<path d="M58.95 838.69 L58.95 845.09 L65.34 841.89 L58.95 838.69" class="st4"/>
+			<path d="M0 841.89 L58.95 841.89" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="-38.3007" y="-849.09" width="11.2618" height="14.4001" transform="rotate(180)"
+					class="st5"/>
+			<text x="-38.3" y="-838.29" transform="rotate(180)" class="st6" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Fa</text>		</g>
+		<g id="shape6-10" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(1865.31,-488.065)">
+			<title>Dinamikus összekötő.6</title>
+			<desc>Fa</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="45.1836" cy="832.89" width="60.01" height="22.4037"/>
+			<path d="M0 832.89 L84.33 832.89" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="39.5526" y="825.69" width="11.2618" height="14.4001" class="st5"/>
+			<text x="39.55" y="836.49" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Fa</text>		</g>
+		<g id="shape5-18" v:mID="5" v:groupContext="shape" transform="translate(1955.67,-461.065)">
+			<title>Rectangle.5</title>
+			<desc>Waiting for player</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="10.05" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Waiting for player</text>		</g>
+		<g id="shape8-21" v:mID="8" v:groupContext="shape" transform="translate(1495.23,-332.639)">
+			<title>Diamond.8</title>
+			<desc>Ready?</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st10"/>
+			<text x="36.23" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Ready?</text>		</g>
+		<g id="shape9-24" v:mID="9" v:groupContext="shape" v:layerMember="0" transform="translate(1811.31,-461.065)">
+			<title>Dinamikus összekötő.9</title>
+			<desc>Player 1</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="-145.75" cy="855.39" width="60.01" height="22.4037"/>
+			<path d="M0 841.89 L0 855.39 L-262.07 855.39 L-262.07 892.28" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-165.291" y="848.19" width="39.0822" height="14.4001" class="st5"/>
+			<text x="-165.29" y="858.99" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Player 1</text>		</g>
+		<g id="shape10-31" v:mID="10" v:groupContext="shape" transform="translate(2019.38,-323.718)">
+			<title>Diamond.10</title>
+			<desc>Ready?</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st10"/>
+			<text x="36.23" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Ready?</text>		</g>
+		<g id="shape11-34" v:mID="11" v:groupContext="shape" v:layerMember="0" transform="translate(1811.31,-461.065)">
+			<title>Dinamikus összekötő.11</title>
+			<desc>Player 2</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="144.008" cy="853.215" width="60.01" height="22.4037"/>
+			<path d="M0 841.89 L0 855.39 L262.07 855.39 L262.07 901.2" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="124.467" y="846.015" width="39.0822" height="14.4001" class="st5"/>
+			<text x="124.47" y="856.82" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Player 2</text>		</g>
+		<g id="shape13-41" v:mID="13" v:groupContext="shape" v:layerMember="0" transform="translate(1540.23,-332.639)">
+			<title>Dinamikus összekötő.13</title>
+			<path d="M9 841.89 L9 862.85" class="st7"/>
+		</g>
+		<g id="shape12-46" v:mID="12" v:groupContext="shape" transform="translate(1495.23,-233.639)">
+			<title>Rectangle.12</title>
+			<desc>SendSetPlayerStatus(Ready, sessionID)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="6.25" y="802.29" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SendSetPlayerStatu<tspan
+						x="7.25" dy="1.2em" class="st12">s(Ready,</tspan> sessionID)</text>		</g>
+		<g id="shape15-50" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(2064.38,-323.718)">
+			<title>Dinamikus összekötő.15</title>
+			<path d="M9 841.89 L9 862.85" class="st7"/>
+		</g>
+		<g id="shape14-55" v:mID="14" v:groupContext="shape" transform="translate(2019.38,-224.718)">
+			<title>Rectangle.14</title>
+			<desc>SetPlayer2 = Ready</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st1"/>
+			<text x="7.38" y="809.49" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SetPlayer2 = Ready</text>		</g>
+		<g id="shape23-58" v:mID="23" v:groupContext="shape" transform="translate(1757.31,-323.725)">
+			<title>Diamond.23</title>
+			<desc>Booth Ready</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st13"/>
+			<text x="22.9" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Booth Ready</text>		</g>
+		<g id="shape24-61" v:mID="24" v:groupContext="shape" v:layerMember="0" transform="translate(1802.31,-461.065)">
+			<title>Dinamikus összekötő.24</title>
+			<desc>Server</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="9" cy="874.56" width="60.01" height="22.4037"/>
+			<path d="M9 841.89 L9 901.19" class="st14"/>
+			<rect v:rectContext="textBkgnd" x="-6.62109" y="867.36" width="31.2424" height="14.4001" class="st5"/>
+			<text x="-6.62" y="878.16" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Server</text>		</g>
+		<g id="shape27-69" v:mID="27" v:groupContext="shape" transform="translate(1757.31,-233.639)">
+			<title>Rounded Rectangle.27</title>
+			<desc>SetGameStarted(sessionID);</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15):1"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M10.8 841.89 L97.2 841.89 A10.7998 10.7998 -180 0 0 108 831.09 L108 780.69 A10.7998 10.7998 -180 0 0 97.2 769.89
+						 L10.8 769.89 A10.7998 10.7998 -180 0 0 0 780.69 L0 831.09 A10.7998 10.7998 -180 0 0 10.8 841.89 Z"
+					class="st13"/>
+			<text x="4.43" y="802.29" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SetGameStarted(ses<tspan
+						x="35.33" dy="1.2em" class="st12">sionID);</tspan></text>		</g>
+		<g id="shape28-73" v:mID="28" v:groupContext="shape" v:layerMember="0" transform="translate(1802.31,-323.725)">
+			<title>Dinamikus összekötő.28</title>
+			<path d="M9 841.89 L9 853.94" class="st16"/>
+		</g>
+		<g id="shape30-79" v:mID="30" v:groupContext="shape" v:layerMember="0" transform="translate(1549.23,-413.635)">
+			<title>Dinamikus összekötő.30</title>
+			<desc>Induláskor(NewThreat);</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="-131.04" cy="837.386" width="126.68" height="22.4037"/>
+			<path d="M0 850.89 L0 837.39 L-262.07 837.39 L-262.07 844.85" class="st18"/>
+			<rect v:rectContext="textBkgnd" x="-189.019" y="830.186" width="115.958" height="14.4001" class="st5"/>
+			<text x="-189.02" y="840.99" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Induláskor(NewThreat);</text>		</g>
+		<g id="shape29-87" v:mID="29" v:groupContext="shape" transform="translate(1233.16,-332.632)">
+			<title>Rectangle.29</title>
+			<desc>GetGameStatus</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st1"/>
+			<text x="15.63" y="809.49" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>GetGameStatus</text>		</g>
+		<g id="shape34-90" v:mID="34" v:groupContext="shape" transform="translate(1233.16,-233.639)">
+			<title>Diamond.34</title>
+			<desc>Is game started?</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st10"/>
+			<text x="13.7" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Is game started?</text>		</g>
+		<g id="shape35-93" v:mID="35" v:groupContext="shape" v:layerMember="0" transform="translate(1278.16,-332.632)">
+			<title>Dinamikus összekötő.35</title>
+			<path d="M9 841.89 L9 862.84" class="st7"/>
+		</g>
+		<g id="shape36-98" v:mID="36" v:groupContext="shape" transform="translate(1757.31,-598.405)">
+			<title>Diamond.36</title>
+			<desc>IsGame Started(sessionID);</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st1"/>
+			<text x="35.7" y="802.29" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>IsGame <tspan x="7.95"
+						dy="1.2em" class="st12">Started(sessionID);</tspan></text>		</g>
+		<g id="shape39-102" v:mID="39" v:groupContext="shape" v:layerMember="0" transform="translate(1865.31,-625.405)">
+			<title>Dinamikus összekötő.39</title>
+			<desc>Tr</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="13.5" cy="832.89" width="60.01" height="22.4037"/>
+			<path d="M0 832.89 L20.96 832.89" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="8.48428" y="825.69" width="10.0313" height="14.4001" class="st5"/>
+			<text x="8.48" y="836.49" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Tr</text>		</g>
+		<g id="shape38-109" v:mID="38" v:groupContext="shape" transform="translate(1892.31,-598.405)">
+			<title>Rectangle.38</title>
+			<desc>Alert(GameStated)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="8.2" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Alert(GameStated)</text>		</g>
+		<g id="shape41-112" v:mID="41" v:groupContext="shape" v:layerMember="0" transform="translate(2000.31,-625.405)">
+			<title>Dinamikus összekötő.41</title>
+			<path d="M0 832.89 L20.96 832.89" class="st7"/>
+		</g>
+		<g id="shape40-117" v:mID="40" v:groupContext="shape" transform="translate(2027.31,-598.405)">
+			<title>Rectangle.40</title>
+			<desc>Return To Homepage</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="29.91" y="802.29" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Return To <tspan
+						x="27.48" dy="1.2em" class="st12">Homepage</tspan></text>		</g>
+		<g id="shape42-121" v:mID="42" v:groupContext="shape" transform="translate(1730.31,-697.405)">
+			<title>Ellipse.42</title>
+			<desc>Site loaded Read SessionID From Local Json file</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="81" cy="787.89" width="141.75" height="94.5"/>
+			<path d="M0 787.89 A81 54 0 0 1 162 787.89 A81 54 0 1 1 0 787.89 Z" class="st10"/>
+			<text x="53.81" y="777.09" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Site loaded<v:newlineChar/><v:paragraph
+						v:horizAlign="1"/><tspan x="16.05" dy="1.2em" class="st12">Read SessionID From Local </tspan><tspan
+						x="61.5" dy="1.2em" class="st12">Json file</tspan></text>		</g>
+		<g id="shape47-126" v:mID="47" v:groupContext="shape" v:layerMember="0" transform="translate(2073.38,-386.721)">
+			<title>Dinamikus összekötő.47</title>
+			<desc>Induláskor(NewThreat);</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="131.038" cy="819.392" width="126.68" height="22.4037"/>
+			<path d="M0 832.89 L0 819.39 L262.08 819.39 L262.08 826.85" class="st18"/>
+			<rect v:rectContext="textBkgnd" x="73.0589" y="812.192" width="115.958" height="14.4001" class="st5"/>
+			<text x="73.06" y="822.99" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Induláskor(NewThreat);</text>		</g>
+		<g id="shape49-133" v:mID="49" v:groupContext="shape" v:layerMember="0" transform="translate(1278.16,-233.639)">
+			<title>Dinamikus összekötő.49</title>
+			<desc>Igen</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="9" cy="855.39" width="60.01" height="22.4037"/>
+			<path d="M9 841.89 L9 862.85" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-1.47372" y="848.19" width="20.9474" height="14.4001" class="st5"/>
+			<text x="-1.47" y="858.99" class="st9" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Igen</text>		</g>
+		<g id="shape48-140" v:mID="48" v:groupContext="shape" transform="translate(1233.16,-134.639)">
+			<title>Rectangle.48</title>
+			<desc>StartGame();</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="22.58" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>StartGame();</text>		</g>
+		<g id="shape53-143" v:mID="53" v:groupContext="shape" v:layerMember="0" transform="translate(1233.16,-260.639)">
+			<title>Dinamikus összekötő.53</title>
+			<desc>Nem</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="-13.5" cy="832.89" width="60.01" height="22.4037"/>
+			<path d="M0 832.89 L-20.96 832.89" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-25.1515" y="825.69" width="23.3031" height="14.4001" class="st5"/>
+			<text x="-25.15" y="836.49" class="st9" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Nem</text>		</g>
+		<g id="shape52-150" v:mID="52" v:groupContext="shape" transform="translate(1098.16,-233.639)">
+			<title>Rectangle.52</title>
+			<desc>Waiting for the second ready</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="17.1" y="802.29" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Waiting for the <tspan
+						x="21.49" dy="1.2em" class="st12">second ready</tspan></text>		</g>
+		<g id="shape54-154" v:mID="54" v:groupContext="shape" v:layerMember="0" transform="translate(1152.16,-305.639)">
+			<title>Dinamikus összekötő.54</title>
+			<path d="M0 841.89 L0 778.9 L74.96 778.9" class="st7"/>
+		</g>
+		<g id="shape55-159" v:mID="55" v:groupContext="shape" v:layerMember="0" transform="translate(1802.31,-697.405)">
+			<title>Dinamikus összekötő.55</title>
+			<path d="M9 841.89 L9 862.85" class="st7"/>
+		</g>
+		<g id="shape56-164" v:mID="56" v:groupContext="shape" v:layerMember="0" transform="translate(2009.67,-524.065)">
+			<title>Dinamikus összekötő.56</title>
+			<path d="M0 832.89 L0 819.39 L-198.37 819.39 L-198.37 826.85" class="st7"/>
+		</g>
+		<g id="shape57-169" v:mID="57" v:groupContext="shape" transform="translate(2281.46,-323.723)">
+			<title>Rectangle.57</title>
+			<desc>GetGameStatus</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st1"/>
+			<text x="15.63" y="809.49" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>GetGameStatus</text>		</g>
+		<g id="shape58-172" v:mID="58" v:groupContext="shape" transform="translate(2281.46,-224.73)">
+			<title>Diamond.58</title>
+			<desc>Is game started?</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<path d="M54 841.89 L108 805.89 L54 769.89 L0 805.89 L54 841.89 Z" class="st10"/>
+			<text x="13.7" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Is game started?</text>		</g>
+		<g id="shape59-175" v:mID="59" v:groupContext="shape" v:layerMember="0" transform="translate(2326.46,-323.723)">
+			<title>Dinamikus összekötő.59</title>
+			<path d="M9 841.89 L9 862.84" class="st7"/>
+		</g>
+		<g id="shape60-180" v:mID="60" v:groupContext="shape" v:layerMember="0" transform="translate(2326.46,-224.73)">
+			<title>Dinamikus összekötő.60</title>
+			<desc>Igen</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="9" cy="855.39" width="60.01" height="22.4037"/>
+			<path d="M9 841.89 L9 862.85" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-1.47372" y="848.19" width="20.9474" height="14.4001" class="st5"/>
+			<text x="-1.47" y="858.99" class="st9" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Igen</text>		</g>
+		<g id="shape61-187" v:mID="61" v:groupContext="shape" transform="translate(2281.46,-125.73)">
+			<title>Rectangle.61</title>
+			<desc>StartGame();</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="22.58" y="809.49" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>StartGame();</text>		</g>
+		<g id="shape62-190" v:mID="62" v:groupContext="shape" v:layerMember="0" transform="translate(2389.46,-269.725)">
+			<title>Dinamikus összekötő.62</title>
+			<desc>Nem</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="13.5" cy="850.89" width="60.01" height="22.4037"/>
+			<path d="M0 850.88 L13.5 850.88 L13.5 850.9 L20.96 850.9" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="1.84854" y="843.69" width="23.3031" height="14.4001" class="st5"/>
+			<text x="1.85" y="854.49" class="st9" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Nem</text>		</g>
+		<g id="shape63-197" v:mID="63" v:groupContext="shape" transform="translate(2416.46,-224.719)">
+			<title>Rectangle.63</title>
+			<desc>Waiting for the second ready</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="54" cy="805.89" width="108" height="72"/>
+			<rect x="0" y="769.89" width="108" height="72" class="st10"/>
+			<text x="17.1" y="802.29" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Waiting for the <tspan
+						x="21.49" dy="1.2em" class="st12">second ready</tspan></text>		</g>
+		<g id="shape64-201" v:mID="64" v:groupContext="shape" v:layerMember="0" transform="translate(2470.46,-296.719)">
+			<title>Dinamikus összekötő.64</title>
+			<path d="M0 841.89 L0 778.89 L-74.96 778.89" class="st7"/>
+		</g>
+	</g>
+</svg>
