@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Készült a Microsoft Visio programban, SVG-exportálás StartGame.svg Indulás oldala -->
+<!-- Készült a Microsoft Visio programban, SVG-exportálás StartGame.svg StartGame(); -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
-		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11in" height="16.5in" viewBox="0 0 792 1188"
-		xml:space="preserve" color-interpolation-filters="sRGB" class="st23">
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="48.6063in" height="11.6929in"
+		viewBox="0 0 3499.65 841.89" xml:space="preserve" color-interpolation-filters="sRGB" class="st24">
 	<v:documentProperties v:langID="1033" v:viewMarkup="false">
 		<v:userDefs>
 			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(0):26"/>
@@ -14,613 +14,883 @@
 	<style type="text/css">
 	<![CDATA[
 		.st1 {fill:#d80073;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st2 {fill:#ffffff;font-family:Segoe UI;font-size:0.666664em}
-		.st3 {marker-end:url(#mrkr4-12);stroke:#1998d6;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st4 {fill:#1998d6;fill-opacity:1;stroke:#1998d6;stroke-opacity:1;stroke-width:0.16556291390728}
-		.st5 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
-		.st6 {fill:#1176a7;font-family:Segoe UI;font-size:0.666664em}
-		.st7 {fill:url(#grad0-19);stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st8 {fill:#0078d4;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st9 {fill:#f2f2f2;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st10 {fill:#000000;font-family:Calibri;font-size:0.75em}
-		.st11 {font-size:1em}
-		.st12 {fill:#339933;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st13 {fill:url(#grad0-49);stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st14 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st15 {fill:url(#grad0-67);stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st16 {fill:#76bc2d;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st17 {fill:#198ab3;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st18 {fill:#c3f1ff;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st19 {fill:#50e6ff;stroke:none;stroke-linecap:butt;stroke-width:0.75}
-		.st20 {fill:#1ba1e2;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
-		.st21 {fill:#ffffff;font-family:Segoe UI;font-size:1.00001em}
-		.st22 {font-family:Wingdings;font-size:1em}
-		.st23 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+		.st2 {fill:#ffffff;font-family:Calibri;font-size:0.833336em}
+		.st3 {fill:#1ba1e2;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st4 {marker-end:url(#mrkr4-12);stroke:#1998d6;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st5 {fill:#1998d6;fill-opacity:1;stroke:#1998d6;stroke-opacity:1;stroke-width:0.16556291390728}
+		.st6 {fill:#1ba1e2}
+		.st7 {stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st8 {font-size:1em}
+		.st9 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st10 {fill:#1176a7;font-family:Calibri;font-size:0.833336em}
+		.st11 {fill:#ffffff}
+		.st12 {stroke:#1ba1e2;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st13 {fill:#1ba1e2;font-family:Calibri;font-size:0.833336em}
+		.st14 {stroke:#339933;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st15 {fill:#339933;font-family:Calibri;font-size:0.833336em}
+		.st16 {fill:#ffffff;stroke:#339933;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st17 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st18 {fill:#0070c0;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st19 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.5}
+		.st20 {fill:#000000;font-family:Calibri;font-size:0.833336em}
+		.st21 {fill:#ffffff;font-family:Segoe UI;font-size:0.833336em}
+		.st22 {fill:#1176a7;font-family:Segoe UI;font-size:0.833336em}
+		.st23 {fill:#339933;font-family:Segoe UI;font-size:0.833336em}
+		.st24 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
 	]]>
 	</style>
 
-	<defs id="Patterns_And_Gradients">
-		<linearGradient id="grad0-19" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-90 0.5 0.5)">
-			<stop offset="0" stop-color="#32bedd" stop-opacity="1"/>
-			<stop offset="0.175" stop-color="#32caea" stop-opacity="1"/>
-			<stop offset="0.41" stop-color="#32d2f2" stop-opacity="1"/>
-			<stop offset="0.775" stop-color="#32d4f5" stop-opacity="1"/>
-		</linearGradient>
-		<linearGradient id="grad0-49" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-90 0.5 0.5)">
-			<stop offset="0" stop-color="#32bedd" stop-opacity="1"/>
-			<stop offset="0.775" stop-color="#32d4f5" stop-opacity="1"/>
-		</linearGradient>
-		<linearGradient id="grad0-67" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(-90 0.5 0.5)">
-			<stop offset="0" stop-color="#76bc2d" stop-opacity="1"/>
-			<stop offset="0.19" stop-color="#7fcb30" stop-opacity="1"/>
-			<stop offset="0.42" stop-color="#84d332" stop-opacity="1"/>
-			<stop offset="0.775" stop-color="#86d633" stop-opacity="1"/>
-		</linearGradient>
-	</defs>
 	<defs id="Markers">
 		<g id="lend4">
 			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
 		</g>
-		<marker id="mrkr4-12" class="st4" v:arrowType="4" v:arrowSize="2" v:setback="12.08" refX="-12.08" orient="auto"
+		<marker id="mrkr4-12" class="st5" v:arrowType="4" v:arrowSize="2" v:setback="12.08" refX="-12.08" orient="auto"
 				markerUnits="strokeWidth" overflow="visible">
 			<use xlink:href="#lend4" transform="scale(-6.04,-6.04) "/>
 		</marker>
 	</defs>
-	<g v:mID="14" v:index="1" v:groupContext="foregroundPage">
+	<g v:mID="8" v:index="3" v:groupContext="foregroundPage">
 		<v:userDefs>
 			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
 		</v:userDefs>
-		<title>Indulás oldala</title>
+		<title>StartGame();</title>
 		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
-		<v:layer v:name="Folyamatábra" v:index="0"/>
+		<v:layer v:name="Flowchart" v:index="0"/>
 		<v:layer v:name="Összekötő" v:index="1"/>
-		<g id="shape1001-1" v:mID="1001" v:groupContext="shape" v:layerMember="0" transform="translate(352.134,-775.57)">
-			<title>Kezdete/vége.1001</title>
-			<desc>Start()</desc>
+		<v:layer v:name="Folyamatábra" v:index="2"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" v:layerMember="0" transform="translate(1008.6,-778.11)">
+			<title>Start/End.1</title>
+			<desc>StartGame();</desc>
 			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
 			</v:custProps>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.375):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.375):0"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1173.83" width="70.87" height="28.3465"/>
-			<path d="M14.17 1188 L56.69 1188 A14.1732 14.1732 -180 0 0 56.69 1159.65 L14.17 1159.65 A14.1732 14.1732 -180 1 0 14.17
-						 1188 Z" class="st1"/>
-			<text x="24.76" y="1176.23" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Start()</text>		</g>
-		<g id="shape1002-4" v:mID="1002" v:groupContext="shape" v:layerMember="0" transform="translate(352.134,-496.134)">
-			<title>Döntés.1002</title>
-			<desc>Játékválasztás</desc>
+			<v:textRect cx="36" cy="828.39" width="72" height="27"/>
+			<path d="M13.5 841.89 L58.5 841.89 A13.5 13.5 -180 0 0 58.5 814.89 L13.5 814.89 A13.5 13.5 -180 1 0 13.5 841.89 Z"
+					class="st1"/>
+			<text x="9.81" y="831.39" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>StartGame();</text>		</g>
+		<g id="shape2-4" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(1008.6,-526.11)">
+			<title>Process.2</title>
+			<desc>Eable Own UI</desc>
 			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
 			</v:custProps>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="59.06" height="31.8898"/>
-			<path d="M0 1166.74 L35.43 1145.48 L70.87 1166.74 L35.43 1188 L0 1166.74 Z" class="st1"/>
-			<text x="10.99" y="1169.14" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Játékválasztás</text>		</g>
-		<g id="shape1007-7" v:mID="1007" v:groupContext="shape" v:layerMember="1" transform="translate(423,-508.394)">
-			<title>Dinamikus összekötő.1007</title>
-			<desc>Belépés kóddal</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="37.0534" cy="1179" width="63.66" height="17.6036"/>
-			<path d="M0 1179 L68.07 1179" class="st3"/>
-			<rect v:rectContext="textBkgnd" x="10.3252" y="1174.2" width="53.4567" height="9.59985" class="st5"/>
-			<text x="10.33" y="1181.4" class="st6" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Belépés kóddal</text>		</g>
-		<g id="group1022-15" transform="translate(272.421,-185.036)" v:mID="1022" v:groupContext="group">
-			<title>Böngésző.1022</title>
-			<desc>Továbbítás a paraméterekkel ellátott player1.html?sessionID=&#60;...</desc>
-			<g id="shape1023-16" v:mID="1023" v:groupContext="shape">
-				<title>Lap.1023</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1162.6 L34.56 1162.6 L34.56 1186.56 A1.15471 1.43621 0 0 1 33.41 1188 L1.15 1188 A1.15471 1.43621 0 0
-							 1 0 1186.56 L0 1162.6 Z" class="st7"/>
-			</g>
-			<g id="shape1024-20" v:mID="1024" v:groupContext="shape" transform="translate(0,-25.4017)">
-				<title>Lap.1024</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M1.16 1178.84 L33.4 1178.84 A1.15471 1.43621 0 0 1 34.55 1180.28 L34.55 1188 L0 1188 L0 1180.28 A1.15471
-							 1.43621 0 0 1 1.16 1178.84 Z" class="st8"/>
-			</g>
-			<g id="shape1025-22" v:mID="1025" v:groupContext="shape" transform="translate(4.64934,-28.135)">
-				<title>Lap.1025</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1187.28 a0.577369 0.71812 -180 0 0 0.577355 0.718104 L24.68 1188 a0.577369 0.71812 -180 0 0 0.577355
-							 -0.718104 L25.26 1185.03 a0.577369 0.71812 -180 0 0 -0.577355 -0.718104 L0.58 1184.31 a0.577369 0.71812
-							 -180 0 0 -0.577355 0.718104 L0 1187.28 Z" class="st9"/>
-			</g>
-			<g id="shape1022-24" v:mID="1022" v:groupContext="groupContent">
-				<v:textBlock v:margins="rect(0,0,0,0)"/>
-				<v:textRect cx="17.28" cy="1220.4" width="69.12" height="64.8036"/>
-				<text x="-5.83" y="1196.1" class="st10" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Továbbítás a <tspan
-							x="-11.72" dy="1.2em" class="st11">paraméterekkel </tspan><tspan x="3.92" dy="1.2em" class="st11">ellátott </tspan><tspan
-							x="-16.67" dy="1.2em" class="st11">player1.html?sessi</tspan><tspan x="-15.27" dy="1.2em" class="st11">onID=&#60;sessionID&#62; </tspan><tspan
-							x="4.87" dy="1.2em" class="st11">URL</tspan>-re</text>			</g>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="8.66" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Eable Own UI</text>		</g>
+		<g id="shape5-7" v:mID="5" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-526.11)">
+			<title>Dinamikus összekötő.5</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="shape1028-31" v:mID="1028" v:groupContext="shape" v:layerMember="1" transform="translate(378.567,-775.57)">
-			<title>Dinamikus összekötő.1028</title>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
-		</g>
-		<g id="shape1027-36" v:mID="1027" v:groupContext="shape" v:layerMember="0" transform="translate(352.134,-706.05)">
-			<title>Folyamat.1027</title>
-			<desc>Publikus játékok lekérése</desc>
+		<g id="shape4-13" v:mID="4" v:groupContext="shape" v:layerMember="0" transform="translate(1008.6,-445.11)">
+			<title>Process.4</title>
+			<desc>Enable Fire UI</desc>
 			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
 			</v:custProps>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="70.87" height="42.5197"/>
-			<rect x="0" y="1145.48" width="70.8661" height="42.5197" class="st12"/>
-			<text x="6.82" y="1164.34" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Publikus játékok <tspan
-						x="21.02" dy="1.2em" class="st11">lekérése</tspan></text>		</g>
-		<g id="shape1036-40" v:mID="1036" v:groupContext="shape" v:layerMember="1" transform="translate(378.567,-706.05)">
-			<title>Dinamikus összekötő.1036</title>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="7.87" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Enable Fire UI</text>		</g>
+		<g id="shape7-16" v:mID="7" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-445.11)">
+			<title>Dinamikus összekötő.7</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="group1029-45" transform="translate(370.287,-650.25)" v:mID="1029" v:groupContext="group">
-			<title>BLOB-blokk.1029</title>
-			<desc>Játékok renderelése</desc>
-			<g id="shape1030-46" v:mID="1030" v:groupContext="shape">
-				<title>Lap.1030</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1166.83 L34.56 1166.83 L34.56 1186.8 A1.15471 1.19684 0 0 1 33.41 1188 L1.15 1188 A1.15471 1.19684 0
-							 0 1 0 1186.8 L0 1166.83 Z" class="st13"/>
-			</g>
-			<g id="shape1031-50" v:mID="1031" v:groupContext="shape" transform="translate(0,-21.168)">
-				<title>Lap.1031</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M1.16 1180.37 L33.4 1180.37 A1.15471 1.19684 0 0 1 34.55 1181.56 L34.55 1188 L0 1188 L0 1181.56 A1.15471
-							 1.19684 0 0 1 1.16 1180.37 Z" class="st8"/>
-			</g>
-			<g id="shape1032-52" v:mID="1032" v:groupContext="shape" transform="translate(3.71622,-11.3299)">
-				<title>Lap.1032</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M-0 1187.4 a0.575336 0.596326 -180 0 0 0.575322 0.596313 L12.19 1188 a0.575336 0.596326 -180 0 0 0.575322
-							 -0.596313 L12.77 1181.42 a0.575336 0.596326 -180 0 0 -0.575322 -0.596313 L0.58 1180.82 a0.575336 0.596326
-							 -180 0 0 -0.575322 0.596313 L0 1187.4 Z" class="st8"/>
-			</g>
-			<g id="shape1033-54" v:mID="1033" v:groupContext="shape" transform="translate(17.9631,-11.3299)">
-				<title>Lap.1033</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M-0 1187.4 a0.575336 0.596326 -180 0 0 0.575322 0.596313 L12.19 1188 a0.575336 0.596326 -180 0 0 0.575322
-							 -0.596313 L12.77 1181.42 a0.575336 0.596326 -180 0 0 -0.575322 -0.596313 L0.58 1180.82 a0.575336 0.596326
-							 -180 0 0 -0.575322 0.596313 L0 1187.4 Z" class="st14"/>
-			</g>
-			<g id="shape1034-56" v:mID="1034" v:groupContext="shape" transform="translate(3.65116,-2.73503)">
-				<title>Lap.1034</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M-0 1187.4 a0.575336 0.596326 -180 0 0 0.575322 0.596313 L12.19 1188 a0.575336 0.596326 -180 0 0 0.575322
-							 -0.596313 L12.77 1181.42 a0.575336 0.596326 -180 0 0 -0.575322 -0.596313 L0.58 1180.82 a0.575336 0.596326
-							 -180 0 0 -0.575322 0.596313 L0 1187.4 Z" class="st8"/>
-			</g>
-			<g id="shape1035-58" v:mID="1035" v:groupContext="shape" transform="translate(17.898,-2.73503)">
-				<title>Lap.1035</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M-0 1187.4 a0.575336 0.596326 -180 0 0 0.575322 0.596313 L12.19 1188 a0.575336 0.596326 -180 0 0 0.575322
-							 -0.596313 L12.77 1181.42 a0.575336 0.596326 -180 0 0 -0.575322 -0.596313 L0.58 1180.82 a0.575336 0.596326
-							 -180 0 0 -0.575322 0.596313 L0 1187.4 Z" class="st8"/>
-			</g>
-			<g id="shape1029-60" v:mID="1029" v:groupContext="groupContent">
-				<v:textBlock v:margins="rect(0,0,0,0)"/>
-				<v:textRect cx="17.28" cy="1198.8" width="69.12" height="21.6036"/>
-				<text x="3.48" y="1196.1" class="st10" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Játékok <tspan
-							x="-4.57" dy="1.2em" class="st11">renderelése</tspan></text>			</g>
-		</g>
-		<g id="group1037-63" transform="translate(370.287,-564.75)" v:mID="1037" v:groupContext="group">
-			<title>Előnézet.1037</title>
-			<desc>Előzetes verzió</desc>
-			<g id="shape1038-64" v:mID="1038" v:groupContext="shape" transform="translate(0,-0.10955)">
-				<title>Lap.1038</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M32.88 1153.55 L1.68 1153.55 A1.68457 1.16896 -180 0 0 0 1154.72 L0 1187.48 a0.842283 0.584482 -180 0 0
-							 1.36174 0.458217 L16.76 1179.56 a0.827609 0.574299 0 0 1 0.346304 -0.103863 L17.05 1179.43 L34.56 1169.96
-							 L34.56 1154.72 A1.68457 1.16896 -180 0 0 32.88 1153.55 Z" class="st15"/>
-			</g>
-			<g id="shape1039-68" v:mID="1039" v:groupContext="shape" transform="translate(17.054,-2.27374E-13)">
-				<title>Lap.1039</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1179.32 L17.51 1169.85 L17.51 1187.48 a0.842283 0.584482 0 0 1 -1.35587 0.46229 L0 1179.32 Z"
-						class="st16"/>
-			</g>
-			<g id="shape1037-70" v:mID="1037" v:groupContext="groupContent">
-				<v:textBlock v:margins="rect(0,0,0,0)"/>
-				<v:textRect cx="17.28" cy="1193.4" width="69.12" height="10.8036"/>
-				<text x="-9.89" y="1196.1" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Előzetes verzió</text>			</g>
-		</g>
-		<g id="shape1040-72" v:mID="1040" v:groupContext="shape" v:layerMember="1" transform="translate(378.567,-555.3)">
-			<title>Dinamikus összekötő.1040</title>
-			<path d="M9 1189.35 L9 1198.61" class="st3"/>
-		</g>
-		<g id="shape1041-77" v:mID="1041" v:groupContext="shape" v:layerMember="1" transform="translate(378.567,-628.646)">
-			<title>Dinamikus összekötő.1041</title>
-			<path d="M9 1188 L9 1211.3" class="st3"/>
-		</g>
-		<g id="shape1051-82" v:mID="1051" v:groupContext="shape" v:layerMember="1" transform="translate(378.567,-496.134)">
-			<title>Dinamikus összekötő.1051</title>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
-		</g>
-		<g id="group1042-87" transform="translate(370.287,-434.574)" v:mID="1042" v:groupContext="group">
-			<title>Bloblap.1042</title>
-			<desc>Kiválasztott játék</desc>
-			<g id="shape1043-88" v:mID="1043" v:groupContext="shape">
-				<title>Lap.1043</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1162.6 L34.56 1162.6 L34.56 1186.56 A1.15471 1.43621 0 0 1 33.41 1188 L1.15 1188 A1.15471 1.43621 0 0
-							 1 0 1186.56 L0 1162.6 Z" class="st13"/>
-			</g>
-			<g id="shape1044-91" v:mID="1044" v:groupContext="shape" transform="translate(0,-25.4017)">
-				<title>Lap.1044</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M1.16 1178.84 L33.4 1178.84 A1.15471 1.43621 0 0 1 34.55 1180.28 L34.55 1188 L0 1188 L0 1180.28 A1.15471
-							 1.43621 0 0 1 1.16 1178.84 Z" class="st17"/>
-			</g>
-			<g id="shape1045-93" v:mID="1045" v:groupContext="shape" transform="translate(18.2843,-4.44263)">
-				<title>Lap.1045</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M6.76 1169.97 L0.49 1169.97 a0.494005 0.614434 -180 0 0 -0.494005 0.614434 L0 1187.39 a0.494005 0.614434
-							 -180 0 0 0.494005 0.614434 L11.35 1188 a0.494005 0.614434 -180 0 0 0.496038 -0.614434 L11.85 1176.26
-							 a0.496038 0.616962 -180 0 0 -0.496038 -0.616962 L7.75 1175.64 a0.494005 0.614434 0 0 1 -0.494005 -0.616962
-							 L7.25 1170.58 a0.494005 0.614434 -180 0 0 -0.496038 -0.614434 Z" class="st14"/>
-			</g>
-			<g id="shape1046-95" v:mID="1046" v:groupContext="shape" transform="translate(18.2009,-4.30609)">
-				<title>Lap.1046</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M6.61 1170.62 L6.61 1174.84 A1.24619 1.54999 -180 0 0 7.86 1176.38 L11.28 1176.38 L11.28 1187.08 L0.74 1187.08
-							 L0.74 1170.62 L6.61 1170.62 ZM6.85 1169.69 L0.5 1169.69 a0.502136 0.624548 -180 0 0 -0.502136 0.624548
-							 L0 1187.38 a0.502136 0.624548 -180 0 0 0.502136 0.624548 L11.52 1188 a0.502136 0.624548 -180 0 0 0.502136
-							 -0.624548 L12.02 1176.09 a0.504169 0.627076 -180 0 0 -0.502136 -0.624548 L7.86 1175.46 a0.502136 0.624548
-							 0 0 1 -0.502136 -0.624548 L7.36 1170.32 a0.502136 0.624548 -180 0 0 -0.502136 -0.624548 L6.85 1169.69
-							 Z" class="st18"/>
-			</g>
-			<g id="shape1047-97" v:mID="1047" v:groupContext="shape" transform="translate(25.3833,-16.7212)">
-				<title>Lap.1047</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M4.64 1188 L0 1182.25 L0 1186.94 a0.849769 1.05693 -180 0 0 0.845704 1.06451 L4.64 1188 Z" class="st19"/>
-			</g>
-			<g id="shape1048-99" v:mID="1048" v:groupContext="shape" transform="translate(4.93192,-4.44263)">
-				<title>Lap.1048</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M6.76 1169.97 L0.49 1169.97 a0.494005 0.614434 -180 0 0 -0.494005 0.614434 L0 1187.39 a0.494005 0.614434
-							 -180 0 0 0.494005 0.614434 L11.35 1188 a0.494005 0.614434 -180 0 0 0.494005 -0.614434 L11.85 1176.26
-							 a0.494005 0.614434 -180 0 0 -0.494005 -0.616962 L7.75 1175.64 a0.494005 0.614434 0 0 1 -0.494005 -0.616962
-							 L7.25 1170.58 a0.494005 0.614434 -180 0 0 -0.494005 -0.614434 Z" class="st14"/>
-			</g>
-			<g id="shape1049-101" v:mID="1049" v:groupContext="shape" transform="translate(4.8445,-4.30609)">
-				<title>Lap.1049</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M6.62 1170.62 L6.62 1174.84 A1.24619 1.54999 -180 0 0 7.86 1176.38 L11.28 1176.38 L11.28 1187.08 L0.74 1187.08
-							 L0.74 1170.62 L6.62 1170.62 ZM6.86 1169.69 L0.5 1169.69 a0.500104 0.622019 -180 0 0 -0.502136 0.624548
-							 L0 1187.38 a0.500104 0.622019 -180 0 0 0.502136 0.624548 L11.52 1188 a0.500104 0.622019 -180 0 0 0.502136
-							 -0.624548 L12.02 1176.09 a0.502136 0.624548 -180 0 0 -0.502136 -0.624548 L7.86 1175.46 a0.504169 0.627076
-							 0 0 1 -0.508235 -0.624548 L7.35 1170.32 a0.500104 0.622019 -180 0 0 -0.502136 -0.624548 L6.86 1169.69
-							 Z" class="st18"/>
-			</g>
-			<g id="shape1050-103" v:mID="1050" v:groupContext="shape" transform="translate(12.0309,-16.7212)">
-				<title>Lap.1050</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M4.64 1188 L0 1182.25 L0 1186.94 a0.849769 1.05693 -180 0 0 0.845704 1.06451 L4.64 1188 Z" class="st19"/>
-			</g>
-			<g id="shape1042-105" v:mID="1042" v:groupContext="groupContent">
-				<v:textBlock v:margins="rect(0,0,0,0)"/>
-				<v:textRect cx="17.28" cy="1193.4" width="69.12" height="10.8036"/>
-				<text x="-13.94" y="1196.1" class="st10" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Kiválasztott játék</text>			</g>
-		</g>
-		<g id="shape1052-107" v:mID="1052" v:groupContext="shape" transform="translate(497.107,-500.386)">
-			<title>Felbukkanó.1052</title>
-			<desc>Add meg a kódot</desc>
-			<v:userDefs>
-				<v:ud v:nameU="min_width" v:val="VT0(0.94488188976378):1"/>
-				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="51.9843" cy="1170.99" width="103.97" height="34.0157"/>
-			<rect x="0" y="1153.98" width="103.969" height="34.0157" rx="9" ry="9" class="st20"/>
-			<text x="5.65" y="1174.59" class="st21" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Add meg a kódot</text>		</g>
-		<g id="shape1054-110" v:mID="1054" v:groupContext="shape" v:layerMember="1" transform="translate(540.091,-500.386)">
-			<title>Dinamikus összekötő.1054</title>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
-		</g>
-		<g id="shape1053-115" v:mID="1053" v:groupContext="shape" v:layerMember="0" transform="translate(513.658,-430.866)">
-			<title>Döntés.1053</title>
-			<desc>Létezik a kód?</desc>
+		<g id="shape6-21" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(1008.6,-364.11)">
+			<title>Process.6</title>
+			<desc>Enable Boats</desc>
 			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
 			</v:custProps>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="59.06" height="31.8898"/>
-			<path d="M0 1166.74 L35.43 1145.48 L70.87 1166.74 L35.43 1188 L0 1166.74 Z" class="st1"/>
-			<text x="10.54" y="1169.14" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Létezik a kód?</text>		</g>
-		<g id="shape1056-118" v:mID="1056" v:groupContext="shape" v:layerMember="1" transform="translate(584.524,-443.126)">
-			<title>Dinamikus összekötő.1056</title>
-			<desc>Nem</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="20.2221" cy="1179" width="40" height="17.6036"/>
-			<path d="M0 1179 L34.4 1179" class="st3"/>
-			<rect v:rectContext="textBkgnd" x="11.693" y="1174.2" width="17.0585" height="9.59985" class="st5"/>
-			<text x="11.69" y="1181.4" class="st6" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Nem</text>		</g>
-		<g id="shape1057-125" v:mID="1057" v:groupContext="shape" transform="translate(624.969,-435.118)">
-			<title>Felbukkanó.1057</title>
-			<desc>Hibás kód!</desc>
-			<v:userDefs>
-				<v:ud v:nameU="min_width" v:val="VT0(0.94488188976378):1"/>
-				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="min_width" v:prompt="" v:val="VT0(0.9406746619158):1"/>
-			</v:userDefs>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="34.0157" cy="1170.99" width="68.04" height="34.0157"/>
-			<rect x="0" y="1153.98" width="68.0315" height="34.0157" rx="9" ry="9" class="st20"/>
-			<text x="5.8" y="1174.59" class="st21" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Hibás kód!</text>		</g>
-		<g id="shape1058-128" v:mID="1058" v:groupContext="shape" v:layerMember="1" transform="translate(693,-442.187)">
-			<title>Dinamikus összekötő.1058</title>
-			<path d="M0 1180.19 L0 1177.81 L30.71 1177.81" class="st3"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="9.76" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Enable Boats</text>		</g>
+		<g id="shape9-24" v:mID="9" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-364.11)">
+			<title>Dinamikus összekötő.9</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="shape1060-133" v:mID="1060" v:groupContext="shape" v:layerMember="1" transform="translate(540.091,-430.866)">
-			<title>Dinamikus összekötő.1060</title>
-			<desc>Igen</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="9" cy="1201.5" width="40" height="17.6036"/>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
-			<rect v:rectContext="textBkgnd" x="1.22476" y="1196.7" width="15.5506" height="9.59985" class="st5"/>
-			<text x="1.22" y="1203.9" class="st6" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Igen</text>		</g>
-		<g id="shape1059-140" v:mID="1059" v:groupContext="shape" v:layerMember="0" transform="translate(513.658,-361.346)">
-			<title>Döntés.1059</title>
-			<desc>Elindult a játék?</desc>
+		<g id="shape8-29" v:mID="8" v:groupContext="shape" v:layerMember="0" transform="translate(1008.6,-283.11)">
+			<title>Process.8</title>
+			<desc>Enable Timer</desc>
 			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
 			</v:custProps>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="59.06" height="31.8898"/>
-			<path d="M0 1166.74 L35.43 1145.48 L70.87 1166.74 L35.43 1188 L0 1166.74 Z" class="st1"/>
-			<text x="19.13" y="1164.34" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Elindult a <tspan
-						x="25.2" dy="1.2em" class="st11">játék?</tspan></text>		</g>
-		<g id="shape1061-144" v:mID="1061" v:groupContext="shape" v:layerMember="1" transform="translate(716.251,-382.606)">
-			<title>Dinamikus összekötő.1061</title>
-			<path d="M0 1188 L13.5 1188 L13.5 780.86 L-287.21 780.86" class="st3"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="9.33" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Enable Timer</text>		</g>
+		<g id="shape28-32" v:mID="28" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-283.11)">
+			<title>Dinamikus összekötő.28</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="shape1062-149" v:mID="1062" v:groupContext="shape" transform="translate(601.718,-365.598)">
-			<title>Felbukkanó.1062</title>
-			<desc>A játék már elindult</desc>
-			<v:userDefs>
-				<v:ud v:nameU="min_width" v:val="VT0(0.94488188976378):1"/>
-				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-			</v:userDefs>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="57.2665" cy="1170.99" width="114.54" height="34.0157"/>
-			<rect x="0" y="1153.98" width="114.533" height="34.0157" rx="9" ry="9" class="st20"/>
-			<text x="5.65" y="1174.59" class="st21" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>A játék már elindult</text>		</g>
-		<g id="shape1063-152" v:mID="1063" v:groupContext="shape" v:layerMember="1" transform="translate(649.984,-390.614)">
-			<title>Dinamikus összekötő.1063</title>
-			<path d="M9 1179 L9 1170 L9 1172.96" class="st3"/>
-		</g>
-		<g id="shape1064-157" v:mID="1064" v:groupContext="shape" v:layerMember="1" transform="translate(584.121,-373.606)">
-			<title>Dinamikus összekötő.1064</title>
-			<desc>Igen</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="9" cy="1179" width="40" height="17.6036"/>
-			<path d="M0.4 1179 L11.56 1179" class="st3"/>
-			<rect v:rectContext="textBkgnd" x="1.22476" y="1174.2" width="15.5506" height="9.59985" class="st5"/>
-			<text x="1.22" y="1181.4" class="st6" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Igen</text>		</g>
-		<g id="shape1065-164" v:mID="1065" v:groupContext="shape" v:layerMember="1" transform="translate(404.847,-451.854)">
-			<title>Dinamikus összekötő.1065</title>
-			<path d="M0 1188 L61.16 1188 L61.16 1257.25 L102.77 1257.25" class="st3"/>
-		</g>
-		<g id="group1066-169" transform="translate(531.811,-315)" v:mID="1066" v:groupContext="group">
-			<title>Böngésző.1066</title>
-			<desc>Továbbítás a paraméterekkel ellátott player2.html?sessionID=&#60;...</desc>
-			<g id="shape1067-170" v:mID="1067" v:groupContext="shape">
-				<title>Lap.1067</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1162.6 L34.56 1162.6 L34.56 1186.56 A1.15471 1.43621 0 0 1 33.41 1188 L1.15 1188 A1.15471 1.43621 0 0
-							 1 0 1186.56 L0 1162.6 Z" class="st7"/>
-			</g>
-			<g id="shape1068-173" v:mID="1068" v:groupContext="shape" transform="translate(0,-25.4017)">
-				<title>Lap.1068</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M1.16 1178.84 L33.4 1178.84 A1.15471 1.43621 0 0 1 34.55 1180.28 L34.55 1188 L0 1188 L0 1180.28 A1.15471
-							 1.43621 0 0 1 1.16 1178.84 Z" class="st8"/>
-			</g>
-			<g id="shape1069-175" v:mID="1069" v:groupContext="shape" transform="translate(4.64934,-28.135)">
-				<title>Lap.1069</title>
-				<v:userDefs>
-					<v:ud v:nameU="msvDisableCustomConnectionPoints" v:prompt="" v:val="VT0(1):5"/>
-				</v:userDefs>
-				<path d="M0 1187.28 a0.577369 0.71812 -180 0 0 0.577355 0.718104 L24.68 1188 a0.577369 0.71812 -180 0 0 0.577355
-							 -0.718104 L25.26 1185.03 a0.577369 0.71812 -180 0 0 -0.577355 -0.718104 L0.58 1184.31 a0.577369 0.71812
-							 -180 0 0 -0.577355 0.718104 L0 1187.28 Z" class="st9"/>
-			</g>
-			<g id="shape1066-177" v:mID="1066" v:groupContext="groupContent">
-				<v:textBlock v:margins="rect(0,0,0,0)"/>
-				<v:textRect cx="17.28" cy="1220.4" width="69.12" height="64.8036"/>
-				<text x="-5.83" y="1196.1" class="st10" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Továbbítás a <tspan
-							x="-11.72" dy="1.2em" class="st11">paraméterekkel </tspan><tspan x="3.92" dy="1.2em" class="st11">ellátott </tspan><tspan
-							x="-16.67" dy="1.2em" class="st11">player2.html?sessi</tspan><tspan x="-15.27" dy="1.2em" class="st11">onID=&#60;sessionID&#62; </tspan><tspan
-							x="4.87" dy="1.2em" class="st11">URL</tspan>-re</text>			</g>
-		</g>
-		<g id="shape1070-184" v:mID="1070" v:groupContext="shape" v:layerMember="1" transform="translate(540.091,-364.453)">
-			<title>Dinamikus összekötő.1070</title>
-			<path d="M9 1191.11 L9 1196.85" class="st3"/>
-		</g>
-		<g id="shape1072-189" v:mID="1072" v:groupContext="shape" v:layerMember="1" transform="translate(352.134,-508.394)">
-			<title>Dinamikus összekötő.1072</title>
-			<path d="M0 1179 L-20.96 1179" class="st3"/>
-		</g>
-		<g id="shape1071-194" v:mID="1071" v:groupContext="shape" v:layerMember="0" transform="translate(254.268,-494.717)">
-			<title>Folyamat.1071</title>
-			<desc>Szeretnél egyedi session nevet? à bool RandomName</desc>
+		<g id="shape27-37" v:mID="27" v:groupContext="shape" v:layerMember="0" transform="translate(1008.6,-202.11)">
+			<title>Subprocess.27</title>
+			<desc>BoatPlaceing();</desc>
 			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="54" height="54"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89 Z" class="st6"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89" class="st7"/>
+			<path d="M9 841.89 L9 787.89" class="st7"/>
+			<path d="M63 841.89 L63 787.89" class="st7"/>
+			<text x="12.07" y="811.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>BoatPlacein<tspan
+						x="29.28" dy="1.2em" class="st8">g();</tspan></text>		</g>
+		<g id="shape33-44" v:mID="33" v:groupContext="shape" v:layerMember="0" transform="translate(1357.25,-763.913)">
+			<title>Subprocess.33</title>
+			<desc>StartGame();</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="49.5" cy="814.89" width="81" height="54"/>
+			<path d="M0 841.89 L99 841.89 L99 787.89 L0 787.89 L0 841.89 Z" class="st6"/>
+			<path d="M0 841.89 L99 841.89 L99 787.89 L0 787.89 L0 841.89" class="st7"/>
+			<path d="M9 841.89 L9 787.89" class="st7"/>
+			<path d="M90 841.89 L90 787.89" class="st7"/>
+			<text x="23.31" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>StartGame();</text>		</g>
+		<g id="shape39-50" v:mID="39" v:groupContext="shape" v:layerMember="1" transform="translate(1397.75,-695.513)">
+			<title>Dinamikus összekötő.39</title>
+			<desc>Fa</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="8.9964" cy="853.863" width="50" height="20.0036"/>
+			<path d="M9 841.89 L9 855.39 L9 855.39 L9 859.79" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="4.30408" y="847.864" width="9.3848" height="12.0001" class="st9"/>
+			<text x="4.3" y="856.86" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Fa</text>		</g>
+		<g id="shape38-57" v:mID="38" v:groupContext="shape" v:layerMember="0" transform="translate(1370.75,-617.573)">
+			<title>Subprocess.38</title>
+			<desc>Player1 Fire</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="54" height="54"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89 Z" class="st6"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89" class="st7"/>
+			<path d="M9 841.89 L9 787.89" class="st7"/>
+			<path d="M63 841.89 L63 787.89" class="st7"/>
+			<text x="12.04" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Player1 Fire</text>		</g>
+		<g id="shape41-63" v:mID="41" v:groupContext="shape" v:layerMember="1" transform="translate(1397.75,-617.573)">
+			<title>Dinamikus összekötő.41</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
+		</g>
+		<g id="shape40-68" v:mID="40" v:groupContext="shape" v:layerMember="0" transform="translate(1370.75,-536.573)">
+			<title>Subprocess.40</title>
+			<desc>DisplayShot(player1)</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="54" height="54"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89 Z" class="st11"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89" class="st12"/>
+			<path d="M9 841.89 L9 787.89" class="st12"/>
+			<path d="M63 841.89 L63 787.89" class="st12"/>
+			<text x="12.15" y="811.89" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>DisplayShot<tspan
+						x="17.77" dy="1.2em" class="st8">(player1)</tspan></text>		</g>
+		<g id="shape45-75" v:mID="45" v:groupContext="shape" v:layerMember="1" transform="translate(1415.75,-765.713)">
+			<title>Dinamikus összekötő.45</title>
+			<path d="M-9 843.69 L-9 850.44 L-9 850.44 L-9 852.05" class="st4"/>
+		</g>
+		<g id="shape44-80" v:mID="44" v:groupContext="shape" v:layerMember="0" transform="translate(1370.75,-695.513)">
+			<title>Decision.44</title>
+			<desc>IsGameEnd</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
 			</v:custProps>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.62992125984252):24"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1165.32" width="70.87" height="45.3543"/>
-			<rect x="0" y="1142.65" width="70.8661" height="45.3543" class="st20"/>
-			<text x="6.35" y="1153.25" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Szeretnél egyedi <tspan
-						x="5.05" dy="1.213em" class="st11">session nevet? </tspan><tspan class="st22">à</tspan> <tspan x="27.43"
-						dy="1.204em" class="st11">bool </tspan><tspan x="10.03" dy="1.2em" class="st11">RandomName</tspan></text>		</g>
-		<g id="shape1074-201" v:mID="1074" v:groupContext="shape" v:layerMember="1" transform="translate(280.701,-495.948)">
-			<title>Dinamikus összekötő.1074</title>
-			<path d="M9 1189.23 L9 1198.73" class="st3"/>
+			<v:textRect cx="36" cy="814.89" width="60" height="40.5"/>
+			<path d="M0 814.89 L36 787.89 L72 814.89 L36 841.89 L0 814.89 Z" class="st1"/>
+			<text x="13.06" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>IsGameEnd</text>		</g>
+		<g id="shape47-83" v:mID="47" v:groupContext="shape" v:layerMember="1" transform="translate(1442.75,-713.513)">
+			<title>Dinamikus összekötő.47</title>
+			<desc>Tr</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="13.5" cy="832.89" width="50" height="20.0036"/>
+			<path d="M0 832.89 L20.96 832.89" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="9.32047" y="826.89" width="8.35922" height="12.0001" class="st9"/>
+			<text x="9.32" y="835.89" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Tr</text>		</g>
+		<g id="shape46-90" v:mID="46" v:groupContext="shape" v:layerMember="0" transform="translate(1469.75,-695.513)">
+			<title>Subprocess.46</title>
+			<desc>EndGame();</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="53.9352" cy="814.89" width="89.88" height="54"/>
+			<path d="M0 841.89 L107.87 841.89 L107.87 787.89 L0 787.89 L0 841.89 Z" class="st6"/>
+			<path d="M0 841.89 L107.87 841.89 L107.87 787.89 L0 787.89 L0 841.89" class="st7"/>
+			<path d="M9 841.89 L9 787.89" class="st7"/>
+			<path d="M98.87 841.89 L98.87 787.89" class="st7"/>
+			<text x="29.84" y="817.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>EndGame();</text>		</g>
+		<g id="shape50-96" v:mID="50" v:groupContext="shape" v:layerMember="1" transform="translate(1397.75,-536.573)">
+			<title>Dinamikus összekötő.50</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="shape1073-206" v:mID="1073" v:groupContext="shape" v:layerMember="0" transform="translate(254.268,-425.321)">
-			<title>Folyamat.1073</title>
-			<desc>Szeretnéd hogy megjelenjen a publikus játékok listájában? à b...</desc>
+		<g id="shape49-101" v:mID="49" v:groupContext="shape" v:layerMember="0" transform="translate(1370.75,-455.573)">
+			<title>Subprocess.49</title>
+			<desc>PlayerFire(2)</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="54" height="54"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89 Z" class="st11"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89" class="st12"/>
+			<path d="M9 841.89 L9 787.89" class="st12"/>
+			<path d="M63 841.89 L63 787.89" class="st12"/>
+			<text x="11.65" y="811.89" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>PlayerFire(2<tspan
+						x="34.48" dy="1.2em" class="st8">)</tspan></text>		</g>
+		<g id="shape52-108" v:mID="52" v:groupContext="shape" v:layerMember="1" transform="translate(1397.75,-455.573)">
+			<title>Dinamikus összekötő.52</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
+		</g>
+		<g id="shape51-113" v:mID="51" v:groupContext="shape" v:layerMember="0" transform="translate(1370.75,-374.573)">
+			<title>Subprocess.51</title>
+			<desc>DisplayShot(player1)</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="54" height="54"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89 Z" class="st6"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89" class="st7"/>
+			<path d="M9 841.89 L9 787.89" class="st7"/>
+			<path d="M63 841.89 L63 787.89" class="st7"/>
+			<text x="12.15" y="811.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>DisplayShot<tspan
+						x="17.77" dy="1.2em" class="st8">(player1)</tspan></text>		</g>
+		<g id="shape53-120" v:mID="53" v:groupContext="shape" v:layerMember="1" transform="translate(1406.75,-374.573)">
+			<title>Dinamikus összekötő.53</title>
+			<path d="M0 841.89 L0 855.39 L-63 855.39 L-63 425.55 L-55.54 425.55" class="st4"/>
+		</g>
+		<g id="shape54-125" v:mID="54" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-760.89)">
+			<title>Subprocess.54</title>
+			<desc>PlayerFire(sessionID, target, targetor)</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="54" height="54"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89 Z" class="st11"/>
+			<path d="M0 841.89 L72 841.89 L72 787.89 L0 787.89 L0 841.89" class="st14"/>
+			<path d="M9 841.89 L9 787.89" class="st14"/>
+			<path d="M63 841.89 L63 787.89" class="st14"/>
+			<text x="12.23" y="799.89" class="st15" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>PlayerFire(s<tspan
+						x="17.61" dy="1.2em" class="st8">essionID, </tspan><tspan x="22.42" dy="1.2em" class="st8">target, </tspan><tspan
+						x="17.77" dy="1.2em" class="st8">targetor)</tspan></text>		</g>
+		<g id="shape55-134" v:mID="55" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-613.05)">
+			<title>Process.55</title>
+			<desc>GetClickedPosition();</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="3.07" y="811.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>GetClickedPositi<tspan
+						x="26.37" dy="1.2em" class="st8">on();</tspan></text>		</g>
+		<g id="shape57-138" v:mID="57" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-525.39)">
+			<title>External Data.57</title>
+			<desc>GetTalalatfajta(sessionID, target);</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="58.5" height="54"/>
+			<path d="M6.75 787.89 L72 787.89 A57.375 57.375 -180 0 0 72 841.89 L6.75 841.89 A57.375 57.375 0 0 1 6.75 787.89 Z"
+					class="st16"/>
+			<text x="9.97" y="805.89" class="st15" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>GetTalalatfaj<tspan
+						x="10.06" dy="1.2em" class="st8">ta(sessionID, </tspan><tspan x="20.82" dy="1.2em" class="st8">target);</tspan></text>		</g>
+		<g id="shape58-143" v:mID="58" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-613.05)">
+			<title>Dinamikus összekötő.58</title>
+			<path d="M9 841.89 L9 869.51" class="st4"/>
+		</g>
+		<g id="shape60-148" v:mID="60" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-525.39)">
+			<title>Dinamikus összekötő.60</title>
+			<path d="M9 841.89 L9 871.49" class="st4"/>
+		</g>
+		<g id="shape59-153" v:mID="59" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-435.75)">
+			<title>Decision.59</title>
+			<desc>Talált?</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="60" height="40.5"/>
+			<path d="M0 814.89 L36 787.89 L72 814.89 L36 841.89 L0 814.89 Z" class="st16"/>
+			<text x="22.49" y="817.89" class="st15" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Talált?</text>		</g>
+		<g id="shape62-156" v:mID="62" v:groupContext="shape" v:layerMember="1" transform="translate(1849.02,-453.75)">
+			<title>Dinamikus összekötő.62</title>
+			<desc>Talált</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="20.7" cy="832.89" width="50" height="20.0036"/>
+			<path d="M0 832.89 L35.36 832.89" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="9.5035" y="826.89" width="22.3929" height="12.0001" class="st17"/>
+			<text x="9.5" y="835.89" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Talált</text>		</g>
+		<g id="shape61-163" v:mID="61" v:groupContext="shape" v:layerMember="0" transform="translate(1890.42,-435.75)">
+			<title>Process.61</title>
+			<desc>SetLovesCellaIcon(posF, talalat);</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="2.24" y="811.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SetLovesCellaIco<tspan
+						x="4.28" dy="1.2em" class="st8">n(posF, talalat);</tspan></text>		</g>
+		<g id="shape64-167" v:mID="64" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-435.75)">
+			<title>Dinamikus összekötő.64</title>
+			<desc>Nem talált</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="9" cy="859.71" width="52.82" height="20.0036"/>
+			<path d="M9 841.89 L9 871.49" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="-12.2746" y="853.71" width="42.5495" height="12.0001" class="st9"/>
+			<text x="-12.27" y="862.71" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Nem talált</text>		</g>
+		<g id="shape63-174" v:mID="63" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-346.11)">
+			<title>Process.63</title>
+			<desc>SetLovesCellaIcon(posF, nemtalalt);</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="2.24" y="805.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SetLovesCellaIco<tspan
+						x="21.09" dy="1.2em" class="st8">n(posF, </tspan><tspan x="13.6" dy="1.2em" class="st8">nemtalalt);</tspan></text>		</g>
+		<g id="shape66-179" v:mID="66" v:groupContext="shape" v:layerMember="1" transform="translate(1777.02,-453.75)">
+			<title>Dinamikus összekötő.66</title>
+			<desc>Süllyedt</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="-26.46" cy="832.89" width="50" height="20.0036"/>
+			<path d="M0 832.89 L-46.88 832.89" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="-42.7322" y="826.89" width="32.5445" height="12.0001" class="st17"/>
+			<text x="-42.73" y="835.89" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Süllyedt</text>		</g>
+		<g id="shape65-186" v:mID="65" v:groupContext="shape" v:layerMember="0" transform="translate(1652.1,-435.75)">
+			<title>Process.65</title>
+			<desc>SetLovesCellaIcon(posF, sullyedt)</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="2.24" y="811.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SetLovesCellaIco<tspan
+						x="2.52" dy="1.2em" class="st8">n(posF, sullyedt)</tspan></text>		</g>
+		<g id="shape68-190" v:mID="68" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-346.11)">
+			<title>Dinamikus összekötő.68</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
+		</g>
+		<g id="shape67-195" v:mID="67" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-265.11)">
+			<title>Process.67</title>
+			<desc>DisableControl();</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="72" height="54"/>
+			<rect x="0" y="787.89" width="72" height="54" class="st3"/>
+			<text x="3" y="811.89" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>DisableControl()<tspan
+						x="34.66" dy="1.2em" class="st8">;</tspan></text>		</g>
+		<g id="shape69-199" v:mID="69" v:groupContext="shape" v:layerMember="1" transform="translate(1688.1,-435.75)">
+			<title>Dinamikus összekötő.69</title>
+			<path d="M0 841.89 L0 945.03 L124.92 945.03 L124.92 952.49" class="st4"/>
+		</g>
+		<g id="shape70-204" v:mID="70" v:groupContext="shape" v:layerMember="1" transform="translate(1926.42,-435.75)">
+			<title>Dinamikus összekötő.70</title>
+			<path d="M0 841.89 L0 945.03 L-113.4 945.03 L-113.4 952.49" class="st4"/>
+		</g>
+		<g id="shape73-209" v:mID="73" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-265.11)">
+			<title>Dinamikus összekötő.73</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
+		</g>
+		<g id="shape72-214" v:mID="72" v:groupContext="shape" v:layerMember="0" transform="translate(1777.02,-184.11)">
+			<title>Data.72</title>
+			<desc>Várakozás a 2. játékosra</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Process Number" v:prompt="" v:type="2" v:format="" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Owner" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Function" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Start Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="End Date" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Not Started;In Progress;Completed;Deferred;Waiting on Input" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1033" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(1):0"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.75):0"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.75):0"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)"/>
+			<v:textRect cx="36" cy="814.89" width="48.01" height="54"/>
+			<path d="M-13.5 841.89 L58.5 841.89 L85.5 787.89 L13.5 787.89 L-13.5 841.89 Z" class="st18"/>
+			<text x="15.39" y="805.89" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Várakozás <tspan
+						x="28.68" dy="1.2em" class="st8">a 2. </tspan><tspan x="17.24" dy="1.2em" class="st8">játékosra</tspan></text>		</g>
+		<g id="shape75-219" v:mID="75" v:groupContext="shape" transform="translate(2114.09,-505.613)">
+			<title>Rectangle.75</title>
+			<desc>Változók: sessionID  = localJSON.sessionID target        = az...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="129.006" cy="725.502" width="258.02" height="232.776"/>
+			<rect x="0" y="609.114" width="258.012" height="232.776" class="st19"/>
+			<text x="4" y="662.5" class="st20" v:langID="1033"><v:paragraph/><v:tabList/>Változók:<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">sessionID</tspan>  = localJSON.sessionID<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">target</tspan>        = az célpont akire lövünk<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">targetor</tspan>    = az aki a lövéseket kezdeményezi<v:newlineChar/><v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="2.4em" class="st8">player1 or player2 = {<v:newlineChar/><v:paragraph/></tspan><tspan x="4"
+						dy="1.2em" class="st8">posF</tspan>          = az akutális lövés koordinátája<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">posFs</tspan>         = a lövések koordinátája<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">posB</tspan>          = a hajó koordinátája<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">posBs</tspan>        = a hajók koordinátája egy tömbben<v:newlineChar/><v:paragraph/><tspan
+						x="4" dy="1.2em" class="st8">}</tspan><v:newlineChar/></text>		</g>
+		<g id="shape1018-231" v:mID="1018" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-760.89)">
+			<title>Dinamikus összekötő.1018</title>
+			<path d="M9 841.89 L9 858.71" class="st4"/>
+		</g>
+		<g id="shape1017-236" v:mID="1017" v:groupContext="shape" v:layerMember="2" transform="translate(1777.02,-694.832)">
+			<title>Döntés.1017</title>
+			<desc>Következik a játékos(player)</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
 						v:langID="1038" v:cal="0"/>
@@ -646,57 +916,25 @@
 				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.74803149606299):24"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1161.07" width="70.87" height="53.8583"/>
-			<rect x="0" y="1134.14" width="70.8661" height="53.8583" class="st20"/>
-			<text x="7.86" y="1144.2" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Szeretnéd hogy <tspan
-						x="10.7" dy="1.2em" class="st11">megjelenjen a </tspan><tspan x="6.71" dy="1.2em" class="st11">publikus játékok </tspan><tspan
-						x="2.84" dy="1.213em" class="st11">listájában? </tspan><tspan class="st22">à</tspan> bool <tspan x="22.13"
-						dy="1.204em" class="st11">isPublic</tspan></text>		</g>
-		<g id="shape1076-214" v:mID="1076" v:groupContext="shape" v:layerMember="1" transform="translate(280.701,-425.321)">
-			<title>Dinamikus összekötő.1076</title>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
-		</g>
-		<g id="shape1075-219" v:mID="1075" v:groupContext="shape" v:layerMember="0" transform="translate(254.268,-355.801)">
-			<title>Döntés.1075</title>
-			<desc>RandomName</desc>
-			<v:custProps>
-				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
-						v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="ProcessNumber" v:lbl="Folyamat száma" v:prompt="" v:type="2" v:format="" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Owner" v:lbl="Tulajdonos" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Function" v:lbl="Funkció" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-				<v:cp v:nameU="StartDate" v:lbl="Kezdő dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="EndDate" v:lbl="Záró dátum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
-						v:ask="false" v:langID="1038" v:cal="0"/>
-				<v:cp v:nameU="Status" v:lbl="Állapot" v:prompt="" v:type="4"
-						v:format=";Nem kezdődött el;Folyamatban;Befejeződött;Elhalasztva;Adatbevitelre vár" v:sortKey=""
-						v:invis="false" v:ask="false" v:langID="1038" v:cal="0" v:val="VT4()"/>
-			</v:custProps>
-			<v:userDefs>
-				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
-				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
-				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-			</v:userDefs>
-			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="59.06" height="31.8898"/>
-			<path d="M0 1166.74 L35.43 1145.48 L70.87 1166.74 L35.43 1188 L0 1166.74 Z" class="st1"/>
-			<text x="10.03" y="1169.14" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>RandomName</text>		</g>
-		<g id="shape1078-222" v:mID="1078" v:groupContext="shape" v:layerMember="1" transform="translate(254.268,-368.061)">
-			<title>Dinamikus összekötő.1078</title>
+			<v:textRect cx="36" cy="820.29" width="60" height="32.4"/>
+			<path d="M0 820.29 L36 798.69 L72 820.29 L36 841.89 L0 820.29 Z" class="st1"/>
+			<text x="8.49" y="811.29" class="st21" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Következik a <tspan
+						x="9.78" dy="1.2em" class="st8">játékos(play</tspan><tspan x="30.14" dy="1.2em" class="st8">er)</tspan></text>		</g>
+		<g id="shape1019-241" v:mID="1019" v:groupContext="shape" v:layerMember="1" transform="translate(1804.02,-694.832)">
+			<title>Dinamikus összekötő.1019</title>
 			<desc>Igen</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
-			<v:textRect cx="-13.5" cy="1179" width="40" height="17.6036"/>
-			<path d="M0 1179 L-20.96 1179" class="st3"/>
-			<rect v:rectContext="textBkgnd" x="-21.2752" y="1174.2" width="15.5506" height="9.59985" class="st5"/>
-			<text x="-21.28" y="1181.4" class="st6" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Igen</text>		</g>
-		<g id="shape1077-229" v:mID="1077" v:groupContext="shape" v:layerMember="0" transform="translate(156.402,-355.801)">
-			<title>Folyamat.1077</title>
-			<desc>Adj meg egy játéknevet à sessionID</desc>
+			<v:textRect cx="9" cy="855.781" width="50" height="20.0036"/>
+			<path d="M9 841.89 L9 863.63" class="st4"/>
+			<rect v:rectContext="textBkgnd" x="-0.719391" y="849.781" width="19.4387" height="12.0001" class="st9"/>
+			<text x="-0.72" y="858.78" class="st22" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Igen</text>		</g>
+		<g id="shape1021-248" v:mID="1021" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-778.11)">
+			<title>Dinamikus összekötő.1021</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
+		</g>
+		<g id="shape1020-253" v:mID="1020" v:groupContext="shape" v:layerMember="2" transform="translate(1009.17,-708.591)">
+			<title>Folyamat.1020</title>
+			<desc>SetGameStated(sessionID)</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
 						v:langID="1038" v:cal="0"/>
@@ -721,18 +959,17 @@
 				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="70.87" height="42.5197"/>
-			<rect x="0" y="1145.48" width="70.8661" height="42.5197" class="st20"/>
-			<text x="13.06" y="1159.47" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Adj meg egy <tspan
-						x="12.26" dy="1.213em" class="st11">játéknevet </tspan><tspan class="st22">à</tspan> <tspan x="18.8"
-						dy="1.204em" class="st11">sessionID</tspan></text>		</g>
-		<g id="shape1080-235" v:mID="1080" v:groupContext="shape" v:layerMember="1" transform="translate(325.134,-368.061)">
-			<title>Dinamikus összekötő.1080</title>
-			<path d="M0 1179 L20.96 1179" class="st3"/>
+			<v:textRect cx="35.4331" cy="820.63" width="70.87" height="42.5197"/>
+			<rect x="0" y="799.37" width="70.8661" height="42.5197" class="st16"/>
+			<text x="4.37" y="817.63" class="st23" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>SetGameState<tspan
+						x="8.68" dy="1.2em" class="st8">d(sessionID)</tspan></text>		</g>
+		<g id="shape1023-257" v:mID="1023" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-708.591)">
+			<title>Dinamikus összekötő.1023</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="shape1079-240" v:mID="1079" v:groupContext="shape" v:layerMember="0" transform="translate(352.134,-355.801)">
-			<title>Folyamat.1079</title>
-			<desc>sessionID = „random”</desc>
+		<g id="shape1022-262" v:mID="1022" v:groupContext="shape" v:layerMember="2" transform="translate(1009.17,-639.071)">
+			<title>Folyamat.1022</title>
+			<desc>SendStartTime(sessionID)</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
 						v:langID="1038" v:cal="0"/>
@@ -757,17 +994,17 @@
 				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1166.74" width="70.87" height="42.5197"/>
-			<rect x="0" y="1145.48" width="70.8661" height="42.5197" class="st20"/>
-			<text x="14.97" y="1164.34" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>sessionID = <tspan
-						x="18.58" dy="1.2em" class="st11">„</tspan>random”</text>		</g>
-		<g id="shape1082-244" v:mID="1082" v:groupContext="shape" v:layerMember="1" transform="translate(191.835,-355.801)">
-			<title>Dinamikus összekötő.1082</title>
-			<path d="M0 1188 L0 1201.5 L97.87 1201.5 L97.87 1208.96" class="st3"/>
+			<v:textRect cx="35.4331" cy="820.63" width="70.87" height="42.5197"/>
+			<rect x="0" y="799.37" width="70.8661" height="42.5197" class="st16"/>
+			<text x="3.31" y="817.63" class="st23" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>SendStartTime<tspan
+						x="11.63" dy="1.2em" class="st8">(sessionID)</tspan></text>		</g>
+		<g id="shape1025-266" v:mID="1025" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-202.11)">
+			<title>Dinamikus összekötő.1025</title>
+			<path d="M9 841.89 L9 862.85" class="st4"/>
 		</g>
-		<g id="shape1081-249" v:mID="1081" v:groupContext="shape" v:layerMember="0" transform="translate(254.268,-246.596)">
-			<title>Külső adatok.1081</title>
-			<desc>API HTTPPost: New_Game(sessionID,RandomName, isPublic); Vissz...</desc>
+		<g id="shape1024-271" v:mID="1024" v:groupContext="shape" v:layerMember="2" transform="translate(1009.17,-132.591)">
+			<title>Folyamat.1024</title>
+			<desc>Hajó készen vanak</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Költség" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
 						v:langID="1038" v:cal="0"/>
@@ -790,24 +1027,15 @@
 				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
 				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
 				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
-				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(1.1417322834646):24"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
-			<v:textRect cx="35.4331" cy="1146.9" width="53.15" height="82.2047"/>
-			<path d="M8.86 1105.8 L70.87 1105.8 A99.7866 99.7866 -180 0 0 70.87 1188 L8.86 1188 A99.7866 99.7866 0 0 1 8.86 1105.8
-						 Z" class="st12"/>
-			<text x="29.55" y="1115.7" class="st2" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>API <tspan x="17.66"
-						dy="1.2em" class="st11">HTTPPost: </tspan><tspan x="12.58" dy="1.2em" class="st11">New_Game(s</tspan><tspan
-						x="12.94" dy="1.2em" class="st11">essionID,Ran</tspan><tspan x="15.86" dy="1.2em" class="st11">domName, </tspan><tspan
-						x="20.05" dy="1.2em" class="st11">isPublic); <v:newlineChar/></tspan><tspan x="15.25" dy="1.2em"
-						class="st11">Visszatérés: </tspan><tspan x="14.55" dy="1.2em" class="st11">sessioID</tspan>-val</text>		</g>
-		<g id="shape1083-259" v:mID="1083" v:groupContext="shape" v:layerMember="1" transform="translate(387.567,-355.801)">
-			<title>Dinamikus összekötő.1083</title>
-			<path d="M0 1188 L0 1201.5 L-97.87 1201.5 L-97.87 1208.96" class="st3"/>
-		</g>
-		<g id="shape1084-264" v:mID="1084" v:groupContext="shape" v:layerMember="1" transform="translate(280.701,-246.596)">
-			<title>Dinamikus összekötő.1084</title>
-			<path d="M9 1188 L9 1208.96" class="st3"/>
+			<v:textRect cx="35.4331" cy="820.63" width="70.87" height="42.5197"/>
+			<rect x="0" y="799.37" width="70.8661" height="42.5197" class="st3"/>
+			<text x="8.9" y="817.63" class="st21" v:langID="1038"><v:paragraph v:horizAlign="1"/><v:tabList/>Hajó készen <tspan
+						x="22.63" dy="1.2em" class="st8">vanak</tspan></text>		</g>
+		<g id="shape1026-275" v:mID="1026" v:groupContext="shape" v:layerMember="1" transform="translate(1035.6,-639.071)">
+			<title>Dinamikus összekötő.1026</title>
+			<path d="M9 841.89 L9 894.81" class="st4"/>
 		</g>
 	</g>
 </svg>
