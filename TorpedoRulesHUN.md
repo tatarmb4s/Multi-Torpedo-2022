@@ -18,7 +18,7 @@ A "Kész vagyok" gomb megnyomása után még van öt másodpercünk, hogy a ját
 
 Ezt követően öt másodperc után a rendszer lezár, és onnantól nem tudunk a tengeralattjárók állásán változtatni.
 
-## A szabályok
+## A Szabályok
 
 - A tengeralattjárók között minimum egy kocka távolságnak kell lennie, és a sarkaik sem érhetnek össze. A tengeralattjáró lehet a tábla legszélén, de nem lóghat a tábláról ki.
 

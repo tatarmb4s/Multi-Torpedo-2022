@@ -1,0 +1,110 @@
+const fill = document.querySelector('.fill');
+const empties = document.querySelectorAll('.empty');
+const player1table = document.querySelector('#player1');
+const player2table = document.querySelector('#player2');
+
+//Fill listeners
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+
+// Loop trough empties and call drag events
+for(const empty of empties) {
+    empty.addEventListener('dragover', dragOver);
+    empty.addEventListener('dragenter', dragEnter);
+    empty.addEventListener('dragleave', dragLeave);
+    empty.addEventListener('drop', dragDrop);
+}
+
+
+// Darag funtcions
+function dragStart () {
+    console.log('start')
+    this.className += ' hold';
+    setTimeout(() => (this.className = ' invisible'), 0); 
+}
+
+function dragEnd() {
+    console.log('end')
+    this.className = "fill";
+}
+
+function dragOver(e) {
+    e.preventDefault();
+    console.log('over');
+}
+function dragEnter(e) {
+    e.preventDefault();
+    console.log('enter');
+    this.className += ' hovered';
+}
+function dragLeave(e) {
+    console.log('leave');
+    this.className = 'empty';
+}
+function dragDrop(e) {
+    console.log('drop');
+    this.className = ' empty';
+    this.append(fill);
+}
+
+tableMake(player1table, 1)
+tableMake(player2table, 2)
+
+function tableMake(table, spId) {
+    var thead = ``;
+    
+    for (let i = 0; i < 11; i++) {
+        var txt = i;
+        if (i === 0) {
+            txt = "";
+        } 
+        thead += `<th>${txt}</th>`;
+    }
+    
+    
+    var tbody = ``;
+    
+    for (let index = 1; index < 11; index++) {
+        let row = spId+numToSSColumn(index);
+        var tableCol = ``;
+        for (let col = 0; col < 11; col++) {
+            var id =  row+col;
+            var txt = id;
+            if (col === 0) {
+                txt = row.toUpperCase();
+            }     
+            console.log(id);
+            tableCol += `<th id="${id}">${txt}</th>`;        
+        }
+        tableRow = `<tr id="${row}">${tableCol}</tr>`; 
+        tbody += tableRow;
+    }
+    
+    var playerTable = `
+    <thead>
+        <tr>${thead}</tr>
+    </thead>
+    <tbody>
+        ${tbody}
+    </tbody>
+    `;
+    
+    table.innerHTML = playerTable;
+}
+
+
+
+// converts numbers to spreadsheet letter columns eg. 1 -> A
+function numToSSColumn(num){
+    let s = '', t;
+  
+    while (num > 0) {
+      t = (num - 1) % 26;
+      s = String.fromCharCode(65 + t) + s;
+      num = (num - t)/26 | 0;
+    }
+    return s.toLowerCase() || undefined;
+  }
+  
+
+
