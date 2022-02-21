@@ -256,7 +256,7 @@ namespace TorpedoAPIv001.Controllers
             //Ha a koordinátához nem tartozik hajó
             if (ifFired)
             {
-                return BadRequest("Ide már lőttek!");
+                return BadRequest("Ide már lőttek!" + target);
                 
             }
             //Ha a koordinátához nem tartozik hajó
@@ -339,7 +339,7 @@ namespace TorpedoAPIv001.Controllers
                         };
                     }
 
-                    Console.WriteLine(response);
+                    Console.WriteLine(response + target);
                 }
             }
 
@@ -361,7 +361,7 @@ namespace TorpedoAPIv001.Controllers
             }
             
 
-            return Ok(response);
+            return Ok(games[sessionID].PlayerData[target]);
         }
 
         [HttpPost("playerJoin")]
@@ -473,23 +473,8 @@ namespace TorpedoAPIv001.Controllers
             return HajCon;
         }
 
-
-        public static dynamic NewGame(string sessionID, bool isPublic)
+        public static Dictionary<string, dynamic> NewCords()
         {
-
-            if (isPublic)
-            {
-                PublicSessonsList.Add(sessionID);
-            }
-            
-            PlayerData.Player1.coords tabelCoords = new PlayerData.Player1.coords("none", false);
-
-            /*var sessions = new List<PlayerData>
-            {
-                new PlayerData {
-                    sessionID = sessionID
-                }
-            };*/
 
             PlayerData.Player1.coords a1 = new PlayerData.Player1.coords("none", false);
             PlayerData.Player1.coords a2 = new PlayerData.Player1.coords("none", false);
@@ -609,8 +594,6 @@ namespace TorpedoAPIv001.Controllers
             PlayerData.Player1.coords j8 = new PlayerData.Player1.coords("none", false);
             PlayerData.Player1.coords j9 = new PlayerData.Player1.coords("none", false);
             PlayerData.Player1.coords j10 = new PlayerData.Player1.coords("none", false);
-            PlayerData.Player1.coords xy = new PlayerData.Player1.coords("none", false);
-
 
             Dictionary<string, dynamic> crds = new Dictionary<string, dynamic>();
             crds.Add("a1", ConCr(a1));
@@ -722,6 +705,99 @@ namespace TorpedoAPIv001.Controllers
             crds.Add("j8", ConCr(j8));
             crds.Add("j9", ConCr(j9));
             crds.Add("j10", ConCr(j10));
+
+            return crds;
+        }
+
+        public static Dictionary<string, dynamic> NewBoats()
+        {
+            PlayerData.Player1.boats.egyes.first egy1 = new PlayerData.Player1.boats.egyes.first("", false);
+
+            List<dynamic> egyes = new List<dynamic>();
+            egyes.Add(BoatConv(egy1));
+
+            PlayerData.Player1.boats.kettes1.first kett11 = new PlayerData.Player1.boats.kettes1.first("", false);
+            PlayerData.Player1.boats.kettes1.second kett12 = new PlayerData.Player1.boats.kettes1.second("", false);
+            List<dynamic> kettes1 = new List<dynamic>();
+            kettes1.Add(BoatConv(kett11));
+            kettes1.Add(BoatConv(kett12));
+
+            PlayerData.Player1.boats.kettes2.first kett21 = new PlayerData.Player1.boats.kettes2.first("", false);
+            PlayerData.Player1.boats.kettes2.second kett22 = new PlayerData.Player1.boats.kettes2.second("", false);
+            List<dynamic> kettes2 = new List<dynamic>();
+            kettes2.Add(BoatConv(kett21));
+            kettes2.Add(BoatConv(kett22));
+
+            PlayerData.Player1.boats.harmas1.first harm11 = new PlayerData.Player1.boats.harmas1.first("", false);
+            PlayerData.Player1.boats.harmas1.second harm12 = new PlayerData.Player1.boats.harmas1.second("", false);
+            PlayerData.Player1.boats.harmas1.third harm13 = new PlayerData.Player1.boats.harmas1.third("", false);
+            List<dynamic> harmas1 = new List<dynamic>();
+            harmas1.Add(BoatConv(harm11));
+            harmas1.Add(BoatConv(harm12));
+            harmas1.Add(BoatConv(harm13));
+
+            PlayerData.Player1.boats.harmas2.first harm21 = new PlayerData.Player1.boats.harmas2.first("", false);
+            PlayerData.Player1.boats.harmas2.second harm22 = new PlayerData.Player1.boats.harmas2.second("", false);
+            PlayerData.Player1.boats.harmas2.third harm23 = new PlayerData.Player1.boats.harmas2.third("", false);
+            List<dynamic> harmas2 = new List<dynamic>();
+            harmas2.Add(BoatConv(harm21));
+            harmas2.Add(BoatConv(harm22));
+            harmas2.Add(BoatConv(harm23));
+
+            PlayerData.Player1.boats.negyes.first negy1 = new PlayerData.Player1.boats.negyes.first("", false);
+            PlayerData.Player1.boats.negyes.second negy2 = new PlayerData.Player1.boats.negyes.second("", false);
+            PlayerData.Player1.boats.negyes.third negy3 = new PlayerData.Player1.boats.negyes.third("", false);
+            PlayerData.Player1.boats.negyes.fourth negy4 = new PlayerData.Player1.boats.negyes.fourth("", false);
+
+            List<dynamic> negyes = new List<dynamic>();
+            negyes.Add(BoatConv(negy1));
+            negyes.Add(BoatConv(negy2));
+            negyes.Add(BoatConv(negy3));
+            negyes.Add(BoatConv(negy4));
+
+
+            PlayerData.Player1.boats.otos.first ot1 = new PlayerData.Player1.boats.otos.first("", false);
+            PlayerData.Player1.boats.otos.second ot2 = new PlayerData.Player1.boats.otos.second("", false);
+            PlayerData.Player1.boats.otos.third ot3 = new PlayerData.Player1.boats.otos.third("", false);
+            PlayerData.Player1.boats.otos.fourth ot4 = new PlayerData.Player1.boats.otos.fourth("", false);
+            PlayerData.Player1.boats.otos.fiveth ot5 = new PlayerData.Player1.boats.otos.fiveth("", false);
+
+            List<dynamic> otos = new List<dynamic>();
+            otos.Add(BoatConv(ot1));
+            otos.Add(BoatConv(ot2));
+            otos.Add(BoatConv(ot3));
+            otos.Add(BoatConv(ot4));
+            otos.Add(BoatConv(ot5));
+
+            Dictionary<string, dynamic> boats = new Dictionary<string, dynamic>();
+            boats.Add("egyes", egyes);
+            boats.Add("kettes1", kettes1);
+            boats.Add("kettes2", kettes2);
+            boats.Add("harmas1", harmas1);
+            boats.Add("harmas2", harmas2);
+            boats.Add("negyes", negyes);
+            boats.Add("otos", otos);
+            
+            return boats;
+        }
+
+
+        public static dynamic NewGame(string sessionID, bool isPublic)
+        {
+
+            if (isPublic)
+            {
+                PublicSessonsList.Add(sessionID);
+            }
+            
+            PlayerData.Player1.coords tabelCoords = new PlayerData.Player1.coords("none", false);
+
+            /*var sessions = new List<PlayerData>
+            {
+                new PlayerData {
+                    sessionID = sessionID
+                }
+            };*/
             /*
             //x
             crds.Add("x1", ConCr(x1));
@@ -818,15 +894,16 @@ namespace TorpedoAPIv001.Controllers
 
             var player1 = new
             {
-                coords = crds,
-                boats = boats,
+                //coords = crds,
+                coords = NewCords(),
+                boats = NewBoats(),
                 joined = false
             };
 
             var player2 = new
             {
-                coords = crds,
-                boats = boats,
+                coords = NewCords(),
+                boats = NewBoats(),
                 joined = false
             };
 
