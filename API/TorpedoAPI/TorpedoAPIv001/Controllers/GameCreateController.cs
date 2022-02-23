@@ -256,7 +256,7 @@ namespace TorpedoAPIv001.Controllers
             //Ha a koordinátához nem tartozik hajó
             if (ifFired)
             {
-                return BadRequest("Ide már lőttek!" + target);
+                return BadRequest("Ide már lőttek!");
                 
             }
             //Ha a koordinátához nem tartozik hajó
@@ -361,7 +361,7 @@ namespace TorpedoAPIv001.Controllers
             }
             
 
-            return Ok(games[sessionID].PlayerData[target]);
+            return Ok(result);
         }
 
         [HttpPost("playerJoin")]

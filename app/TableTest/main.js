@@ -73,8 +73,8 @@ function tableMake(table, spId) {
             if (col === 0) {
                 txt = row.toUpperCase();
             }     
-            console.log(id);
-            tableCol += `<th id="${id}">${txt}</th>`;        
+            //console.log(id);
+            tableCol += `<th id="${id}" class="pl1Cell">${txt}</th>`;        
         }
         tableRow = `<tr id="${row}">${tableCol}</tr>`; 
         tbody += tableRow;
@@ -105,6 +105,31 @@ function numToSSColumn(num){
     }
     return s.toLowerCase() || undefined;
   }
-  
 
+  cellOnclick('.pl1Cell');
+  
+  function cellOnclick(className) {
+        const p1cellak = document.querySelectorAll(className);
+        //console.log(p1cellak)
+        for (const cell of p1cellak) {
+            //console.log(cell.id);
+            //cell.addEventListener("click", egyesHere(cell.id));
+
+            cell.onclick = function (e) {
+                egyesHere(cell.id);
+                //fnc();
+            }
+        }   
+    }
+
+    function egyesHere(pos) {
+        console.log(pos);
+    }
+
+    //const cella = document.getElementById('1a1');
+    
+    /*cella.onclick = function (e) {
+        e.preventDefault()
+        console.log("pos");
+    }*/
 
