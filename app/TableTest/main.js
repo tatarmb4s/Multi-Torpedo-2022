@@ -3,6 +3,30 @@ const empties = document.querySelectorAll('.empty');
 const player1table = document.querySelector('#player1');
 const player2table = document.querySelector('#player2');
 
+var sessionID = "jsgame";
+let getId = new XMLHttpRequest;
+//getId.open("GET", )
+
+
+const data = { username: 'example' };
+
+fetch('https://api.torpedo.ml/api/GameCreate/New-Game?sessionID=sessionnev&RandomName=false&isPublic=true', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+
+
+
 //Fill listeners
 fill.addEventListener('dragstart', dragStart);
 fill.addEventListener('dragend', dragEnd);
