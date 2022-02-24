@@ -149,6 +149,11 @@ namespace TorpedoAPIv001.Controllers
         public async Task<IActionResult> Status(string sessionID)
         {
             return Ok(games[sessionID].status);
+        }        
+        [HttpGet("ownData")]
+        public async Task<ActionResult<List<Games>>> ownData(string sessionID, string player)
+        {
+            return Ok(games[sessionID].PlayerData[player]);
         }
 
         [HttpGet("sessions")]

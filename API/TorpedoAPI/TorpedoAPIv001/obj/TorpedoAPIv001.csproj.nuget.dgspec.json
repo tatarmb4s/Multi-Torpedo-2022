@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\!School\\Torpedo\\Torpedo\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj": {}
+    "C:\\Users\\Administrator\\Documents\\GitHub\\Multi-Torpedo-2022\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj": {}
   },
   "projects": {
-    "G:\\!School\\Torpedo\\Torpedo\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj": {
+    "C:\\Users\\Administrator\\Documents\\GitHub\\Multi-Torpedo-2022\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\!School\\Torpedo\\Torpedo\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\Multi-Torpedo-2022\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj",
         "projectName": "TorpedoAPIv001",
-        "projectPath": "G:\\!School\\Torpedo\\Torpedo\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj",
-        "packagesPath": "C:\\Users\\W11_Ent_22483\\.nuget\\packages\\",
-        "outputPath": "G:\\!School\\Torpedo\\Torpedo\\API\\TorpedoAPI\\TorpedoAPIv001\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\Multi-Torpedo-2022\\API\\TorpedoAPI\\TorpedoAPIv001\\TorpedoAPIv001.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\Multi-Torpedo-2022\\API\\TorpedoAPI\\TorpedoAPIv001\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\W11_Ent_22483\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,28 +3,64 @@ const empties = document.querySelectorAll('.empty');
 const player1table = document.querySelector('#player1');
 const player2table = document.querySelector('#player2');
 
-var sessionID = "jsgame";
-let getId = new XMLHttpRequest;
+let sessionID = "jsgame";
+let isPublic = true;
+let RandomName = false;
+let player = "player1";
 //getId.open("GET", )
 
+// Játékosok adatai
+var playersData = "";
 
-const data = { username: 'example' };
 
-fetch('https://api.torpedo.ml/api/GameCreate/New-Game?sessionID=sessionnev&RandomName=false&isPublic=true', {
+const data = { 
+    username: 'example' 
+};
+
+const urlm = 'https://localhost:7091'
+//const urlm = 'https://api.torpedo.ml'
+
+fetch(urlm+'/api/GameCreate/sessions')
+.then(response => response.json())
+.then(data => console.log(data));
+
+//fetch(urlm+`/api/GameCreate/New-Game?sessionID=${sessionID}&RandomName=${RandomName}&isPublic=${isPublic}` )
+
+fetch(urlm+`/api/GameCreate/New-Game?sessionID=${sessionID}&RandomName=${RandomName}&isPublic=${isPublic}`, {
   method: 'POST', // or 'PUT'
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'text/json',
   },
-  body: JSON.stringify(data),
+  body: null,
 })
-.then(response => response.json())
+.then(response => response.text())
 .then(data => {
-  console.log('Success:', data);
+    console.log(data)
+    GetOwnData()
 })
 .catch((error) => {
   console.error('Error:', error);
 });
 
+function GetOwnData() {
+    fetch(urlm+`/api/GameCreate/ownData?sessionID=${sessionID}&player=${player}`, {
+        method: 'GET', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: null,
+      })
+      .then(response => response.json())
+      .then(
+          data => {
+                console.log(data);
+                playersData = data;
+          }
+        )
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+}
 
 
 //Fill listeners
@@ -148,6 +184,7 @@ function numToSSColumn(num){
 
     function egyesHere(pos) {
         console.log(pos);
+
     }
 
     //const cella = document.getElementById('1a1');
