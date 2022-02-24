@@ -183,7 +183,8 @@ function numToSSColumn(num){
     }
 
     function egyesHere(pos) {
-        console.log(pos);
+        console.log(pos.slice(1, 5));
+
 
     }
 
