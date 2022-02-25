@@ -4,7 +4,7 @@
 
 # Huge Thanks to
 
-- For the [netJS WebSocket JavaScript Libary] and for lots of help: [WarstekHUN]
+- [WarstekHUN]: For the [netJS WebSocket JavaScript Libary] and for lots of help
 
 [netJS WebSocket JavaScript Libary]:https://github.com/WarstekHUN/netJS
 [WarstekHUN]:https://github.com/WarstekHUN
