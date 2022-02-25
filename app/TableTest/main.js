@@ -132,9 +132,13 @@ function tableMake(table, spId) {
             var txt = id;
             if (col === 0) {
                 txt = row.toUpperCase();
+                tableCol += `<th id="${id}" class="0pl1Cell">${txt}</th>`;        
+            }
+            else {
+                tableCol += `<th id="${id}" class="pl1Cell">${txt}</th>`;        
             }     
             //console.log(id);
-            tableCol += `<th id="${id}" class="pl1Cell">${txt}</th>`;        
+            
         }
         tableRow = `<tr id="${row}">${tableCol}</tr>`; 
         tbody += tableRow;
@@ -184,6 +188,7 @@ function numToSSColumn(num){
 
     function egyesHere(pos) {
         console.log(pos.slice(1, 5));
+
 
 
     }
