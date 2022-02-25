@@ -1,0 +1,11 @@
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.exe
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.dll
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.deps.json
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.runtimeconfig.json
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\TorpedoAPIv001.pdb
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Administrator\Documents\GitHub\Multi-Torpedo-2022\API\TorpedoAPI\TorpedoAPIv001\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
