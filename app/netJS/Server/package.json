@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+        "https": "^1.0.0",
+        "ws": "^8.5.0"
+    }
+}
