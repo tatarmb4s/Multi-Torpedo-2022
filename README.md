@@ -2,6 +2,12 @@
  The multiplayer Torpedo / Battleship game.
 <hr>
 
+# Huge Thanks to
+
+- For the [netJS WebSocket JavaScript Libary] and for lots of help: [WarstekHUN]
+
+[netJS WebSocket JavaScript Libary]:https://github.com/WarstekHUN/netJS
+[WarstekHUN]:https://github.com/WarstekHUN
 # Mi a torpedó?
 
 *A torpedó egy saját hajtással és robanófejjel ellátott fegyver, ami leggyakrabban a hadihajókon és tengeralattjáról indítják, de előfordult már, hogy repülőről vettték be. A torpedó a céltárgyat a víz alatt közelíti meg, amikor eléri azt, vagy nekiütközik, felrobban. Ezzel okozva kárt a célpontban. Ezt a fegyvert általában tengerelettjárók és hadihajók ellen vetik be.*
