@@ -11,7 +11,7 @@ function NewGame (sessionID, isRandom, isPublic) {
     a = "nincs";
     siker = true;
     NewGameGenerate(sessionID, isPublic);
-    /*if (isRandom) {
+    if (isRandom) {
         sessionID = generateUID()
     }
     else {
@@ -30,7 +30,7 @@ function NewGame (sessionID, isRandom, isPublic) {
     while (!siker) {
         console.log("porpg")
         
-    }*/
+    }
     
 }
 
