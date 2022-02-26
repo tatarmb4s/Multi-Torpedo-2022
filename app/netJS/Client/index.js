@@ -19,5 +19,10 @@ ws.onopen = ()=>{
 
 }
 function NewGame(sessionID, isRandom, isPublic) {
-    EmitEvents.sendMessage(new EmitData('NewGame', sessionID, isRandom, isPublic));
+    var session = {
+        sessionID: sessionID,
+        isPublic: isPublic,
+        isRandom: isRandom
+    }
+    EmitEvents.sendMessage(new EmitData('NewGame', session));
 }

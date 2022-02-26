@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dbd5c4ff-8047-4658-8f1e-02f6bb4dcd1f": {
+      "ProjectGuid": "dbd5c4ff-8047-4658-8f1e-02f6bb4dcd1f",
+      "DisplayName": "TorpedoAPIv001",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -8,6 +8,7 @@ var publicSessions = [];
 
 function NewGame (sessionID, isRandom, isPublic) {
     let siker = false;
+    console.log(sessionID, isRandom, isPublic);
     var a = "nincs";
     var response = "Létezik a név. Addjon meg egy újat!";
     a = "nincs";
@@ -151,10 +152,11 @@ wsa.EmitEvents.registerEventHandler('TESZT_EVENT', (socket, data) =>{
     wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games), socket);
 });
 
-wsa.EmitEvents.registerEventHandler('NewGame', (socket, sessionID, isRandom, isPublic) =>{
-    console.log(JSON.stringify(sessionID, isRandom, isPublic));
-    NewGame("node", false, false);
-    wsa.EmitEvents.sendMessage(new wsa.EmitData('NewGame', sessionID, isRandom, isPublic), socket);
+wsa.EmitEvents.registerEventHandler('NewGame', (socket, session) =>{
+    //var jsession = JSON.stringify(session);
+
+    var sessionID = NewGame(session.sessionID, session.isRandom, session.isPublic);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('NewGame', sessionID), socket);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games, publicSessions), socket);
 });
 
