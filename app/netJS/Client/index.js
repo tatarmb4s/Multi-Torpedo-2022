@@ -8,8 +8,16 @@ const valami = {
 ws.onopen = ()=>{
     EmitEvents.sendMessage(new EmitData('TESZT_EVENT', valami));
 
-    EmitEvents.registerEventHandler('TESZT_CLIENT', (data) =>{
-        document.write(data);
-        console.log(data)
+    EmitEvents.registerEventHandler('TESZT_CLIENT', (games, publicSessions) =>{
+        document.write(publicSessions);
+        console.log(games)
     });
+    EmitEvents.registerEventHandler('NewGame', (sessionID, isRandom, isPublic) =>{
+        document.write(sessionID, isRandom, isPublic);
+        console.log("NewGame:", sessionID, isRandom, isPublic)
+    });
+
+}
+function NewGame(sessionID, isRandom, isPublic) {
+    EmitEvents.sendMessage(new EmitData('NewGame', sessionID, isRandom, isPublic));
 }

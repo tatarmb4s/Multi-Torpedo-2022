@@ -4,33 +4,35 @@ var games = {
     
 }
 
+var publicSessions = [];
+
 function NewGame (sessionID, isRandom, isPublic) {
     let siker = false;
     var a = "nincs";
     var response = "Létezik a név. Addjon meg egy újat!";
     a = "nincs";
-    siker = true;
-    NewGameGenerate(sessionID, isPublic);
+    siker = false;
     if (isRandom) {
         sessionID = generateUID()
     }
-    else {
-        try {
-            a = games[sessionID];
-            sessionID = sessionID+generateUID();
-        }
-        catch {
-            if (a === "nincs")
-            {
-                siker = true;
-                NewGameGenerate(sessionID, isPublic);
+    while (!siker) {
+        if (sessionID in games) {
+            if (isRandom) {
+                sessionID = generateUID()
+            }
+            else {
+                sessionID = sessionID+generateUID();
             }
         }
-    }
-    while (!siker) {
+        else {
+            siker = true;
+        }
         console.log("porpg")
         
     }
+    NewGameGenerate(sessionID, isPublic);
+    response = sessionID;
+    return response;
     
 }
 
@@ -112,7 +114,9 @@ function NewGameGenerate (sessionID, isPublic) {
                     negyes:MakeBoatCell(4),
         
                     otos:MakeBoatCell(5),
-                }
+                },
+                joined: false,
+                ready: false,
             },
             player2 : {
                 coords : MakeCoords(),
@@ -128,10 +132,15 @@ function NewGameGenerate (sessionID, isPublic) {
                     negyes:MakeBoatCell(4),
         
                     otos:MakeBoatCell(5),
-                }
+                },
+                joined: false,
+                ready: false,
             },
-        }
+        },
+        status: 0,
     }
+
+    if (isPublic) {publicSessions.push(sessionID)};
 }
 
 wsa.initilaliseWebSocketServer();
@@ -140,6 +149,13 @@ wsa.EmitEvents.registerEventHandler('TESZT_EVENT', (socket, data) =>{
     console.log(JSON.stringify(data));
     NewGame("node", false, false);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games), socket);
+});
+
+wsa.EmitEvents.registerEventHandler('NewGame', (socket, sessionID, isRandom, isPublic) =>{
+    console.log(JSON.stringify(sessionID, isRandom, isPublic));
+    NewGame("node", false, false);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('NewGame', sessionID, isRandom, isPublic), socket);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games, publicSessions), socket);
 });
 
 
