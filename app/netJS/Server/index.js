@@ -1,11 +1,49 @@
 import wsa from './websocketAPI.js';
 
+var games = {}
+
+function NewGame (sessionID, isRandom, isPublic) {
+    let siker = false;
+    var a = "nincs";
+    while (!siker) {
+        if (isRandom) {
+            
+        }
+        else {
+            try {
+                var vansession = games[sessionID]
+            }
+            catch {
+                
+            }
+        }
+        
+    }
+    
+}
+
+function generateUID() {
+    // I generate the UID from two parts here 
+    // to ensure the random number provide enough bits.
+    var firstPart = (Math.random() * 46656) | 0;
+    var secondPart = (Math.random() * 46656) | 0;
+    firstPart = ("000" + firstPart.toString(36)).slice(-3);
+    secondPart = ("000" + secondPart.toString(36)).slice(-3);
+    return firstPart + secondPart.toUpperCase();
+}
+
+function NewGameGenerate (sessionID, isPublic) {
+
+}
+
 wsa.initilaliseWebSocketServer();
 
 wsa.EmitEvents.registerEventHandler('TESZT_EVENT', (socket, data) =>{
     console.log(JSON.stringify(data));
-    wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', 'ÜZENET A SZERVERTŐL'), socket);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', 'ÜZENET A SZERVERTŐL:'+generateUID()), socket);
 });
+
+
 
 // Az adatokat hova tehetem meg úgy az egész kódot majd? (Követem a kulzorod, szóval látom)
 
