@@ -10,5 +10,6 @@ ws.onopen = ()=>{
 
     EmitEvents.registerEventHandler('TESZT_CLIENT', (data) =>{
         document.write(data);
+        console.log(data)
     });
 }
