@@ -289,6 +289,16 @@ function fancyLog(msg1, color1, msg2, color2) {
     )
 }
 
+function codeValid(sessionID) {
+    /*if (sessionID in games) {
+        return true;
+    }
+    else {
+        return false;
+    }*/
+    return (sessionID in games);
+}
+
 
 
 wsa.initilaliseWebSocketServer();
@@ -326,8 +336,14 @@ wsa.EmitEvents.registerEventHandler('Admin', (socket, data) => {
 
 wsa.EmitEvents.registerEventHandler('sessions', (socket, data) => {
     wsa.EmitEvents.sendMessage(new wsa.EmitData('sessions', publicSessions), socket);
-})
+});
+wsa.EmitEvents.registerEventHandler('codeValid', (socket, data) => {
+    // REVIEW: console.log(data);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('codeValid', codeValid(data)), socket);    
+});
 
+
+// NOTE:
 // Az adatokat hova tehetem meg úgy az egész kódot majd? (Követem a kulzorod, szóval látom)
 
 //Adatokat? Miről beszélsz?

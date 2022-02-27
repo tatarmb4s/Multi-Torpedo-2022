@@ -21,6 +21,9 @@ ws.onopen = ()=>{
     EmitEvents.registerEventHandler('sessions', (response) => {
         console.log(response);
     });
+    EmitEvents.registerEventHandler('codeValid', (response) => {
+        console.log(response);
+    });
 
 }
 function NewGame(sessionID, isRandom, isPublic) {
@@ -68,4 +71,8 @@ function Admin () {
 
 function sessions() {
     EmitEvents.sendMessage(new EmitData('sessions', ""));
+}
+
+function codeValid(sessionID) {
+    EmitEvents.sendMessage(new EmitData('codeValid', sessionID));
 }
