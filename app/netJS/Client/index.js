@@ -1,12 +1,5 @@
-const valami = {
-    valamiszoveg: 'asdasdassad',
-    valaminumber: 1,
-    bool: true
-}
-
-
 ws.onopen = ()=>{
-    EmitEvents.sendMessage(new EmitData('TESZT_EVENT', valami));
+    EmitEvents.sendMessage(new EmitData('TESZT_EVENT', "valami"));
 
     EmitEvents.registerEventHandler('TESZT_CLIENT', (games, publicSessions) =>{
         document.write(publicSessions);
@@ -18,10 +11,16 @@ ws.onopen = ()=>{
     });
     EmitEvents.registerEventHandler('PutBoat', (response) =>{
         console.log(response)
-    })
+    });
     EmitEvents.registerEventHandler("Fire", (response) =>{
         console.log(response);
-    })
+    });
+    EmitEvents.registerEventHandler('Admin', (response) => {
+        console.log(response);
+    });
+    EmitEvents.registerEventHandler('sessions', (response) => {
+        console.log(response);
+    });
 
 }
 function NewGame(sessionID, isRandom, isPublic) {
@@ -60,4 +59,13 @@ function fancyLog(msg1, color1, msg2, color2) {
         'color: '+color1+'; background: black; font-size: 30px', 
         'color: '+color2+'; background: black; font-size: 30px'
     )
+}
+
+function Admin () {
+    var data = "";
+    EmitEvents.sendMessage(new EmitData('Admin', data));
+}
+
+function sessions() {
+    EmitEvents.sendMessage(new EmitData('sessions', ""));
 }

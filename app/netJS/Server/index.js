@@ -12,7 +12,7 @@ var publicSessions = [];
 
 function NewGame (sessionID, isRandom, isPublic) {
     let siker = false;
-    console.log(sessionID, isRandom, isPublic);
+    //console.log(sessionID, isRandom, isPublic);
     var a = "nincs";
     var response = "Létezik a név. Addjon meg egy újat!";
     a = "nincs";
@@ -32,10 +32,11 @@ function NewGame (sessionID, isRandom, isPublic) {
         else {
             siker = true;
         }
-        console.log("porpg")
+        //console.log("porpg")
         
     }
     NewGameGenerate(sessionID, isPublic);
+    //if (isPublic) {publicSessions.push(sessionID)};
     response = sessionID;
     return response;
     
@@ -214,6 +215,7 @@ function Fire(sessionID, target, fCor) {
     var ifFired = games[sessionID].PlayerData[target].coords[fCor].fired;
     if (ifFired){
         console.warn("Ide már lőttek!");
+        result = "Ide már lőttek!";
     }
     //Ha a koordinátához nem tartozik hajó
     else if (fn === "none")
@@ -292,7 +294,7 @@ function fancyLog(msg1, color1, msg2, color2) {
 wsa.initilaliseWebSocketServer();
 
 wsa.EmitEvents.registerEventHandler('TESZT_EVENT', (socket, data) =>{
-    console.log(JSON.stringify(data));
+    //console.log(JSON.stringify(data));
     NewGame("node", false, false);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games), socket);
 });
@@ -316,9 +318,15 @@ wsa.EmitEvents.registerEventHandler('Fire', (socket, data) => {
     console.log(data);
     var response = Fire(data.sessionID, data.target, data.fCor);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('Fire', response), socket);
+});
+
+wsa.EmitEvents.registerEventHandler('Admin', (socket, data) => {
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('Admin', games), socket);
+});
+
+wsa.EmitEvents.registerEventHandler('sessions', (socket, data) => {
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('sessions', publicSessions), socket);
 })
-
-
 
 // Az adatokat hova tehetem meg úgy az egész kódot majd? (Követem a kulzorod, szóval látom)
 
