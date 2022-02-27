@@ -275,7 +275,7 @@ function Fire(sessionID, target, fCor) {
                     result = "Sullyedt";
                 }
         
-                if (result === "Sullyedt")
+                if (result === "sullyedt")
                 {
                     boats = games[sessionID].PlayerData[target].boats;
                     console.log(games[sessionID].PlayerData[target].boats[fn][fp].fired);
@@ -288,13 +288,13 @@ function Fire(sessionID, target, fCor) {
                         coords: games[sessionID].PlayerData[target].boats[fn]
                     }
                 }
-                else if (result === "Talalt") {
+                else if (result === "talalt") {
                     boats = games[sessionID].PlayerData[target].boats;
                     fancyLog("Eltalálta a hajót: ", "white", fn, "rgba(20, 245, 106)")
                     result = {
                         result: result,
                         bType: "nemismert",
-                        coords: []
+                        coords: fCor
                     }
                 }
                 else {
@@ -314,7 +314,7 @@ function Fire(sessionID, target, fCor) {
             //console.log(games[sessionID].PlayerData[target].boats);
             console.log("Játék vége: "+isEnded(sessionID));
             games[sessionID].actualPlayer = target.slice(6,7);
-            wsa.EmitEvents.sendMessage(new wsa.EmitData('youTurn', "Te következel!"), games[sessionID].PlayerData[target].socket);
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('youTurn', result), games[sessionID].PlayerData[target].socket);
             return(result);
         }
         else {
@@ -500,7 +500,9 @@ wsa.EmitEvents.registerEventHandler('status', (socket, data) => {
     wsa.EmitEvents.sendMessage(new wsa.EmitData('status', games[data].status), socket);
 });
 
-
+wsa.EmitEvents.registerEventHandler('ownData', (socket, data) => {
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('ownData', games[data.sessionID].PlayerData[data.source]), socket);
+})
 
 wsa.EmitEvents.registerEventHandler('reset', (socket, data) => {
     games = {};

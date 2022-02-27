@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(212, 252, 255);
+}
+
+
+
+table {
+    height: 528px;
+    width: 528px;
+    border-spacing: 0;
+}
+
+#test {
+    height: 480px;
+    width: 480px;
+}
+
+#player2 {
+    margin-left: 538px;
+    margin-top: -528px;
+}
+
+thead {
+    height: 48px;
+}
+
+th {
+    width: 48px;
+    border: black solid 2px;
+}
+
+.fired-boat {
+    background-color: red;
+}
+
+.fired-cell {
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+.sullyedt {
+    background-color: brown;
+}
+
+.boat {
+    background-color: gray;
+}
