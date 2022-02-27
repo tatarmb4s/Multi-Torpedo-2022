@@ -142,9 +142,10 @@ function NewGameGenerate (sessionID, isPublic) {
                 },
                 joined: false,
                 ready: false,
-                socket: null
+                socket: null,
             },
         },
+        actualPlayer: 1,
         status: 0,
     }
 
@@ -196,113 +197,129 @@ function PutBoat(sessionID, targetor, bType, bCells) {
 
 function Fire(sessionID, target, fCor) {
     if (bothReady(sessionID)) {
-        // Lövés koordinátája
-        //var fCor = document.getElementById("fcor").value;
-        console.log(fCor);
-    
-        // Végeredmény maghatározása
-        var result = "";
-    
-        //Elsüllyedés vizsgálata
-        var sullyedt = true;
-    
-        // Az objektumban lévő sorszám
-        var fp = "Semmi";
-    
-        // A koordinátán lévő hajónév lekérése
-        //fn = Get(fCor).value;
-        //fn = playersData.player2.coords[fCor].boat;
-        var fn = games[sessionID].PlayerData[target].coords[fCor].boat;
-        fancyLog("FN:", "red", fn, "green")
-        // Lőttek e már arra a mezőre?
-        var ifFired = games[sessionID].PlayerData[target].coords[fCor].fired;
-        if (ifFired){
-            console.warn("Ide már lőttek!");
-            result = "Ide már lőttek!";
-        }
-        //Ha a koordinátához nem tartozik hajó
-        else if (fn === "none")
-        {
-            result = "nemtalalt";
-            result = {
-                result: result,
-                bType: "nemismert",
-                coords: []
+        let targetor = inversePlayer(target);
+        //console.log(games[sessionID].actualPlayer);
+        //console.log(targetor.slice(6, 7));
+        if (targetor.slice(6, 7) == games[sessionID].actualPlayer) {            
+            // Lövés koordinátája
+            //var fCor = document.getElementById("fcor").value;
+            //console.log(fCor);
+        
+            // Végeredmény maghatározása
+            var result = "";
+        
+            //Elsüllyedés vizsgálata
+            var sullyedt = true;
+        
+            // Az objektumban lévő sorszám
+            var fp = "Semmi";
+        
+            // A koordinátán lévő hajónév lekérése
+            //fn = Get(fCor).value;
+            //fn = playersData.player2.coords[fCor].boat;
+            var fn = games[sessionID].PlayerData[target].coords[fCor].boat;
+            //fancyLog("FN:", "red", fn, "green")
+            // Lőttek e már arra a mezőre?
+            var ifFired = games[sessionID].PlayerData[target].coords[fCor].fired;
+            if (ifFired){
+                //console.warn("Ide már lőttél!");
+                result = "Ide már lőttél!";
+                result = {
+                    result: result,
+                    bType: "nemismert",
+                    coords: []
+                }
+                return result;
             }
-            console.log("Eredmény: ",result);
-            fancyLog("Nem találta el a hajót!", "rgb(255, 0, 0)", '', "rgb(255, 0, 0)")
-        }
-        else 
-        {
-            // A hajón a találat beírása, és visszatérés vagy találtal, vagy süllyedtel
-            var boats = games[sessionID].PlayerData[target].boats;
-            console.log(boats)
-            for(var fps in boats[fn])
+            //Ha a koordinátához nem tartozik hajó
+            else if (fn === "none")
             {
-                console.log(fps);
-                //Ha a lövés helye egyezik a hajó egyik koordináta értékével
-                if (fCor === boats[fn][fps].pos) {
-                    //Sorszám átadása
+                result = "nemtalalt";
+                result = {
+                    result: result,
+                    bType: "nemismert",
+                    coords: []
+                }
+                console.log("Eredmény: ",result);
+                fancyLog("Nem találta el a hajót!", "rgb(255, 0, 0)", '', "rgb(255, 0, 0)")
+            }
+            else 
+            {
+                // A hajón a találat beírása, és visszatérés vagy találtal, vagy süllyedtel
+                var boats = games[sessionID].PlayerData[target].boats;
+                console.log(boats)
+                for(var fps in boats[fn])
+                {
                     console.log(fps);
-                    fp = fps;
-                    // Ha a hajó azon részére még nem lőttek akkor
+                    //Ha a lövés helye egyezik a hajó egyik koordináta értékével
+                    if (fCor === boats[fn][fps].pos) {
+                        //Sorszám átadása
+                        console.log(fps);
+                        fp = fps;
+                        // Ha a hajó azon részére még nem lőttek akkor
+                        if (boats[fn][fps].fired === false) {
+                            // A hajó ezen részére legyen igaz az hogy lőttek rá
+                            games[sessionID].PlayerData[target].boats[fn][fps].fired = true;
+                            boats = games[sessionID].PlayerData[target].boats;
+                            result = "Talalt";
+                        }
+                    }
+                    //Ha a hajó koordinátáján nincs lövés legyen false
                     if (boats[fn][fps].fired === false) {
-                        // A hajó ezen részére legyen igaz az hogy lőttek rá
-                        games[sessionID].PlayerData[target].boats[fn][fps].fired = true;
-                        boats = games[sessionID].PlayerData[target].boats;
-                        result = "Talalt";
+                        var sullyedt = false;
                     }
                 }
-                //Ha a hajó koordinátáján nincs lövés legyen false
-                if (boats[fn][fps].fired === false) {
-                    var sullyedt = false;
+                // Ha elsullyedt akkor legyen az eredmény süllyedt
+                if (sullyedt)
+                {
+                    result = "Sullyedt";
                 }
-            }
-            // Ha elsullyedt akkor legyen az eredmény süllyedt
-            if (sullyedt)
-            {
-                result = "Sullyedt";
-            }
-    
-            if (result === "Sullyedt")
-            {
-                boats = games[sessionID].PlayerData[target].boats;
-                console.log(games[sessionID].PlayerData[target].boats[fn][fp].fired);
-                fancyLog("Elsüllyesztette a hajót: ", "white", fn, "rgba(20, 245, 106)")
-                //console.log(sullyedt);
-                //console.log(fp);
-                result = {
-                    result: result,
-                    bType: fn,
-                    coords: games[sessionID].PlayerData[target].boats[fn]
-                }
-            }
-            else if (result === "Talalt") {
-                boats = games[sessionID].PlayerData[target].boats;
-                fancyLog("Eltalálta a hajót: ", "white", fn, "rgba(20, 245, 106)")
-                result = {
-                    result: result,
-                    bType: "nemismert",
-                    coords: []
-                }
-            }
-            else {
-                result = "nemtalalt";
-                fancyLog("Nem találta el a hajót: ", "rgb(255, 0, 0)", fn, "rgb(255, 0, 0)")
-                result = {
-                    result: result,
-                    bType: "nemismert",
-                    coords: []
-                }
-            }
         
+                if (result === "Sullyedt")
+                {
+                    boats = games[sessionID].PlayerData[target].boats;
+                    console.log(games[sessionID].PlayerData[target].boats[fn][fp].fired);
+                    fancyLog("Elsüllyesztette a hajót: ", "white", fn, "rgba(20, 245, 106)")
+                    //console.log(sullyedt);
+                    //console.log(fp);
+                    result = {
+                        result: result,
+                        bType: fn,
+                        coords: games[sessionID].PlayerData[target].boats[fn]
+                    }
+                }
+                else if (result === "Talalt") {
+                    boats = games[sessionID].PlayerData[target].boats;
+                    fancyLog("Eltalálta a hajót: ", "white", fn, "rgba(20, 245, 106)")
+                    result = {
+                        result: result,
+                        bType: "nemismert",
+                        coords: []
+                    }
+                }
+                else {
+                    result = "nemtalalt";
+                    fancyLog("Nem találta el a hajót: ", "rgb(255, 0, 0)", fn, "rgb(255, 0, 0)")
+                    result = {
+                        result: result,
+                        bType: "nemismert",
+                        coords: []
+                    }
+                }
+            
+            }
+            games[sessionID].PlayerData[target].coords[fCor].fired = true;
+            //console.log(result);
+            //console.log("Hajók állása");
+            //console.log(games[sessionID].PlayerData[target].boats);
+            console.log("Játék vége: "+isEnded(sessionID));
+            games[sessionID].actualPlayer = target.slice(6,7);
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('youTurn', "Te következel!"), games[sessionID].PlayerData[target].socket);
+            return(result);
         }
-        games[sessionID].PlayerData[target].coords[fCor].fired = true;
-        //console.log(result);
-        //console.log("Hajók állása");
-        //console.log(games[sessionID].PlayerData[target].boats);
-        console.log("Játék vége: "+isEnded(sessionID));
-        return(result);   
+        else {
+            return ("Nem te következel");
+        }
     }
     else {
         return("Nincs mindkét fél készen "+false);

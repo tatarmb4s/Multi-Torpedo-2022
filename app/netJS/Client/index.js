@@ -55,6 +55,9 @@ ws.onopen = ()=>{
     EmitEvents.registerEventHandler('endGame', (response) => {
         console.log(response);
     });
+    EmitEvents.registerEventHandler('youTurn', (response) => {
+        fancyLog(response, "green", "", "")
+    });
 
     // TODO: Ki kell etzeket venni:
     //playerJoin();
