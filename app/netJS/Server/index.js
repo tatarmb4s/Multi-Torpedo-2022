@@ -306,6 +306,23 @@ function canJoin(sessionID, source) {
 }
 
 function playerJoin(sessionID, source, socket) {
+    let source2 = inversePlayer(source);
+    if (canJoin(sessionID, source)) {
+        games[sessionID].PlayerData[source].joined = true
+        games[sessionID].PlayerData[source].socket = socket;
+        wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', ""), games[sessionID].PlayerData[source].socket);
+        if (games[sessionID].PlayerData[source2].joined) {
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source].socket);
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source2].socket);
+        }
+        return true;
+    } 
+    else {
+        return false;
+    }
+}
+
+function inversePlayer(source) {
     let source2 = null;
     if (source === 'player2') {
         source2 = 'player1';
@@ -313,17 +330,24 @@ function playerJoin(sessionID, source, socket) {
     if (source === 'player1') {
         source2 = 'player2';
     }
-    if (canJoin(sessionID, source)) {
-        games[sessionID].PlayerData[source].joined = true
-        games[sessionID].PlayerData[source].socket = socket;
-        wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', ""), games[sessionID].PlayerData[source].socket);
-        if (games[sessionID].PlayerData[source2].joined) {
-            wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source2].socket);
+    return source2;
+}
+
+function Ready(sessionID, source) {
+    let source2 = inversePlayer(source);
+    games[sessionID].PlayerData[source].ready = true;
+    if (games[sessionID].PlayerData[source2].joined) {
+        if (games[sessionID].PlayerData[source2].ready) {
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "A játék indulhat"), games[sessionID].PlayerData[source].socket);
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "A játék indulhat"), games[sessionID].PlayerData[source2].socket);
         }
-        return true;
-    } 
+        else {
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "Belépés Sikeres!"), games[sessionID].PlayerData[source].socket);
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "Belépés 2 sikeres!"), games[sessionID].PlayerData[source2].socket);
+        }
+    }
     else {
-        return false;
+        wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "Várakozás a 2. játékosra"), games[sessionID].PlayerData[source].socket);
     }
 }
 
@@ -375,6 +399,11 @@ wsa.EmitEvents.registerEventHandler('canJoin', (socket, data) => {
 
 wsa.EmitEvents.registerEventHandler('playerJoin', (socket, data) => {
     wsa.EmitEvents.sendMessage(new wsa.EmitData('playerJoin', playerJoin(data.sessionID, data.source, socket)), socket);
+})
+
+wsa.EmitEvents.registerEventHandler('Ready', (socket, data) => {
+    Ready(data.sessionID, data.source);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "Végrehajtva."), socket);
 })
 
 wsa.EmitEvents.registerEventHandler('reset', (socket, data) => {

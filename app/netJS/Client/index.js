@@ -44,10 +44,18 @@ ws.onopen = ()=>{
         console.log(response);
     });
     EmitEvents.registerEventHandler('secondJoined', (response) => {
-        tartalom.innerHTML = "A 2. belépett";
+        tartalom.innerHTML += "\r A 2. belépett";
+    });
+    EmitEvents.registerEventHandler('readySet2', (response) => {
+        tartalom.innerHTML += response;
     });
 
 }
+
+function Ready() {
+    EmitEvents.sendMessage(new EmitData('Ready', sesdata));
+}
+
 function NewGame(sessionID, isRandom, isPublic) {
     var session = {
         sessionID: sessionID,
