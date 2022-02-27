@@ -49,8 +49,19 @@ ws.onopen = ()=>{
     EmitEvents.registerEventHandler('readySet2', (response) => {
         tartalom.innerHTML += response;
     });
+    EmitEvents.registerEventHandler('status', (response) => {
+        console.log(response);
+    });
+    EmitEvents.registerEventHandler('endGame', (response) => {
+        console.log(response);
+    });
 
+    // TODO: Ki kell etzeket venni:
+    //playerJoin();
+    //Ready();
+    //Fire("a1");
 }
+
 
 function Ready() {
     EmitEvents.sendMessage(new EmitData('Ready', sesdata));
@@ -115,4 +126,8 @@ function canJoin() {
 function playerJoin() {
     //console.log(sesdata.sessionID)
     EmitEvents.sendMessage(new EmitData('playerJoin', sesdata));
+}
+
+function status() {
+    EmitEvents.sendMessage(new EmitData('status', sesdata.sessionID));
 }
