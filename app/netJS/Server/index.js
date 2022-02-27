@@ -1,8 +1,12 @@
+console.log("-----------------------------------------------");
+console.clear();
 import wsa from './websocketAPI.js';
 
 var games = {
     
 }
+
+var boatTypes = ["egyes", "kettes1", "kettes2", "harmas1", "harmas2", "negyes", "otos"];
 
 var publicSessions = [];
 
@@ -88,7 +92,7 @@ function NewGameGenerate (sessionID, isPublic) {
 
         for (let i = 0; i <= times-1; i++) {
             var elem = {
-                pos: "a1",   // Hajó egyik koordinátája
+                pos: "",   // Hajó egyik koordinátája
                 fired: false // Eltalálták e már
             }
             boatCells.push(elem);
@@ -100,7 +104,7 @@ function NewGameGenerate (sessionID, isPublic) {
     }
     
     games[sessionID] = {
-        playersData: {
+        PlayerData: {
             player1 : {
                 coords : MakeCoords(),
                 boats : {
@@ -144,6 +148,147 @@ function NewGameGenerate (sessionID, isPublic) {
     if (isPublic) {publicSessions.push(sessionID)};
 }
 
+function PutBoat(sessionID, targetor, bType, bCells) {
+    console.log("Server function:");
+    console.log(sessionID, targetor, bType, bCells);
+    var validB = false;
+    let crds = [];
+    for (var bTypes in boatTypes)
+    {
+        if (bType === boatTypes[bTypes])
+        {
+            validB = true;
+        }
+        //console.log(boatTypes[bTypes]);
+    }
+
+    if (validB)
+    {
+        console.debug("Jo a hajónév")
+        try {
+            for (let i = 0; i < bCells.length; i++) {
+                const e = bCells[i];
+                games[sessionID].PlayerData[targetor].coords[e] = {
+                    boat: bType,
+                    fired: false,
+                }
+
+                games[sessionID].PlayerData[targetor].boats[bType][i] = {
+                    pos: e,   // Hajó egyik koordinátája
+                    fired: false // Eltalálták e már
+                }
+                crds[i] = games[sessionID].PlayerData[targetor].coords[e];              
+            }
+          } catch (error) {
+            console.log("Hiba!")
+            console.error(error);
+          }
+    }
+    else {
+        console.warn("Rossz hajónevet adott meg!")
+    }
+
+    return crds;
+}
+
+function Fire(sessionID, target, fCor) {
+    // Lövés koordinátája
+    //var fCor = document.getElementById("fcor").value;
+    console.log(fCor);
+
+    // Végeredmény maghatározása
+    var result = "";
+
+    //Elsüllyedés vizsgálata
+    var sullyedt = true;
+
+    // Az objektumban lévő sorszám
+    var fp = "Semmi";
+
+    // A koordinátán lévő hajónév lekérése
+    //fn = Get(fCor).value;
+    //fn = playersData.player2.coords[fCor].boat;
+    var fn = games[sessionID].PlayerData[target].coords[fCor].boat;
+    fancyLog("FN:", "red", fn, "green")
+    // Lőttek e már arra a mezőre?
+    var ifFired = games[sessionID].PlayerData[target].coords[fCor].fired;
+    if (ifFired){
+        console.warn("Ide már lőttek!");
+    }
+    //Ha a koordinátához nem tartozik hajó
+    else if (fn === "none")
+    {
+        result = "nemtalalt";
+        console.log("Eredmény: ",result);
+        fancyLog("Nem találta el a hajót!", "rgb(255, 0, 0)", '', "rgb(255, 0, 0)")
+    }
+    else 
+    {
+        // A hajón a találat beírása, és visszatérés vagy találtal, vagy süllyedtel
+        var boats = games[sessionID].PlayerData[target].boats;
+        console.log(boats)
+        for(var fps in boats[fn])
+        {
+            console.log(fps);
+            //Ha a lövés helye egyezik a hajó egyik koordináta értékével
+            if (fCor === boats[fn][fps].pos) {
+                //Sorszám átadása
+                console.log(fps);
+                fp = fps;
+                // Ha a hajó azon részére még nem lőttek akkor
+                if (boats[fn][fps].fired === false) {
+                    // A hajó ezen részére legyen igaz az hogy lőttek rá
+                    games[sessionID].PlayerData[target].boats[fn][fps].fired = true;
+                    boats = games[sessionID].PlayerData[target].boats;
+                    result = "Talalt";
+                }
+            }
+            //Ha a hajó koordinátáján nincs lövés legyen false
+            if (boats[fn][fps].fired === false) {
+                var sullyedt = false;
+            }
+        }
+        // Ha elsullyedt akkor legyen az eredmény süllyedt
+        if (sullyedt)
+        {
+            result = "Sullyedt";
+        }
+
+        if (result === "Sullyedt")
+        {
+            boats = games[sessionID].PlayerData[target].boats;
+            console.log(games[sessionID].PlayerData[target].boats[fn][fp].fired);
+            fancyLog("Elsüllyesztette a hajót: ", "white", fn, "rgba(20, 245, 106)")
+            //console.log(sullyedt);
+            //console.log(fp);
+        }
+        else if (result === "Talalt") {
+            boats = games[sessionID].PlayerData[target].boats;
+            fancyLog("Eltalálta a hajót: ", "white", fn, "rgba(20, 245, 106)")
+        }
+        else {
+            result = "nemtalalt";
+            fancyLog("Nem találta el a hajót: ", "rgb(255, 0, 0)", fn, "rgb(255, 0, 0)")
+        }
+    
+    }
+    games[sessionID].PlayerData[target].coords[fCor].fired = true;
+    console.log(result);
+    console.log("Hajók állása");
+    console.log(games[sessionID].PlayerData[target].boats);
+    return(result);
+}
+
+function fancyLog(msg1, color1, msg2, color2) {
+    console.log(
+        '%c'+msg1+'%c'+msg2, 
+        'color: '+color1+'; background: black; font-size: 30px', 
+        'color: '+color2+'; background: black; font-size: 30px'
+    )
+}
+
+
+
 wsa.initilaliseWebSocketServer();
 
 wsa.EmitEvents.registerEventHandler('TESZT_EVENT', (socket, data) =>{
@@ -159,6 +304,19 @@ wsa.EmitEvents.registerEventHandler('NewGame', (socket, session) =>{
     wsa.EmitEvents.sendMessage(new wsa.EmitData('NewGame', sessionID), socket);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games, publicSessions), socket);
 });
+
+wsa.EmitEvents.registerEventHandler('PutBoat', (socket, data) => {
+    console.log(data);
+    var response = PutBoat(data.sessionID, data.targetor, data.bType, data.bCells)
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('PutBoat', response), socket);
+});
+
+wsa.EmitEvents.registerEventHandler('Fire', (socket, data) => {
+    console.clear();
+    console.log(data);
+    var response = Fire(data.sessionID, data.target, data.fCor);
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('Fire', response), socket);
+})
 
 
 
