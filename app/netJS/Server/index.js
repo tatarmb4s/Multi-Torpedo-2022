@@ -234,6 +234,7 @@ function Fire(sessionID, target, fCor) {
             //Ha a koordinátához nem tartozik hajó
             else if (fn === "none")
             {
+                console.log(fn);
                 result = "nemtalalt";
                 result = {
                     result: result,
@@ -261,7 +262,7 @@ function Fire(sessionID, target, fCor) {
                             // A hajó ezen részére legyen igaz az hogy lőttek rá
                             games[sessionID].PlayerData[target].boats[fn][fps].fired = true;
                             boats = games[sessionID].PlayerData[target].boats;
-                            result = "Talalt";
+                            result = "talalt";
                         }
                     }
                     //Ha a hajó koordinátáján nincs lövés legyen false
@@ -272,7 +273,7 @@ function Fire(sessionID, target, fCor) {
                 // Ha elsullyedt akkor legyen az eredmény süllyedt
                 if (sullyedt)
                 {
-                    result = "Sullyedt";
+                    result = "sullyedt";
                 }
         
                 if (result === "sullyedt")
@@ -468,7 +469,13 @@ wsa.EmitEvents.registerEventHandler('PutBoat', (socket, data) => {
 wsa.EmitEvents.registerEventHandler('Fire', (socket, data) => {
     console.clear();
     console.log(data);
-    var response = Fire(data.sessionID, data.target, data.fCor);
+    var response = null;
+    try {
+        response = Fire(data.sessionID, data.target, data.fCor);
+    }
+    catch (e) {
+        console.log(e);
+    }
     wsa.EmitEvents.sendMessage(new wsa.EmitData('Fire', response), socket);
 });
 

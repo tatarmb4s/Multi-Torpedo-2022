@@ -30,7 +30,7 @@ th {
 }
 
 .fired-boat {
-    background-color: red;
+    background-color: red !important;
 }
 
 .fired-cell {
@@ -38,7 +38,7 @@ th {
 }
 
 .sullyedt {
-    background-color: brown;
+    background-color: brown !important;
 }
 
 .boat {

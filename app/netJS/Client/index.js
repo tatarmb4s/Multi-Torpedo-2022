@@ -16,11 +16,13 @@ var ownDatas = {};
 const tartalom = document.querySelector('#tartalom');
 tartalom.innerHTML = "\r Hali!";
 ws.onopen = ()=>{
+    setTimeout(() => {        
+        if (sesdata.source === "player1") {
+            EmitEvents.sendMessage(new EmitData('reset', "data"));
+            NewGame(sesdata.sessionID, false, true);
+        }
+    }, 30);
     //EmitEvents.sendMessage(new EmitData('NewGame', "valami"));
-    if (sesdata.source === "player1") {
-        EmitEvents.sendMessage(new EmitData('reset', "data"));
-        NewGame(sesdata.sessionID, false, true);
-    }
 
     EmitEvents.registerEventHandler('TESZT_CLIENT', () =>{
         tartalom.innerHTML += "\r TESZT_CLIENT!";
@@ -32,23 +34,26 @@ ws.onopen = ()=>{
     });
     EmitEvents.registerEventHandler('PutBoat', (response) =>{
         console.log(response)
-    });
+    });    
     EmitEvents.registerEventHandler("Fire", (response) =>{
         console.log(response);
         if (response.result === "nemtalalt") {
-            tartalom.innerHTML = "Nemtalált az ellenfél lövése"
+            tartalom.innerHTML = "Nem talált a lövés a következő koordinátára:"+response.coords;
+            document.getElementById(`2${response.coords}`).className += " fired-cell";
         }
         if (response.result === "talalt") {
-            tartalom.innerHTML = "Az ellenfél eltalálta a "+response.coords+" koordinátát"
-            document.getElementById(`1${response.coords}`).className += " fired-boat";
+            tartalom.innerHTML = "Eltaláltad a következő koordinátát: "+response.coords
+            document.getElementById(`2${response.coords}`).className += " fired-boat";
         }
         if (response.result === "sullyedt") {
             var talalatok = ""
             for (crd in response.coords) {
-                talalatok += crd + " "
-                document.getElementById(`1${crd}`).className += " sullyedt";
+                crd = response.coords[crd].pos;
+                talalatok += crd + ", "
+                console.log(crd)
+                document.getElementById(`2${crd}`).className += " sullyedt";
             }
-            tartalom.innerHTML = "Az elsüllyesztette a "+response.coords+" koordinátát"
+            tartalom.innerHTML = "Elsüllyesztetted a következő koordinátákon lévő "+response.bType+" hajót: "+talalatok
         }
     });
     EmitEvents.registerEventHandler('Admin', (response) => {
@@ -78,28 +83,58 @@ ws.onopen = ()=>{
     EmitEvents.registerEventHandler('endGame', (response) => {
         console.log(response);
     });
-    EmitEvents.registerEventHandler('youTurn', (result) => {
-        //fancyLog(response, "green", result, "")
-        console.log(result);
+    EmitEvents.registerEventHandler('youTurn', (response) => {
+        console.log(response);
+        if (response.result === "nemtalalt") {
+            tartalom.innerHTML = "Nem talált az ellenfél lövése a következő koordinátára:"+response.coords;
+            document.getElementById(`1${response.coords}`).className += " fired-cell";
+        }
+        if (response.result === "talalt") {
+            tartalom.innerHTML = "Az ellenfél eltalálta a következő koordinátát: "+response.coords
+            document.getElementById(`1${response.coords}`).className += " fired-boat";
+        }
+        if (response.result === "sullyedt") {
+            var talalatok = ""
+            for (crd in response.coords) {
+                crd = response.coords[crd].pos;
+                talalatok += crd + ", "
+                console.log(crd)
+                document.getElementById(`1${crd}`).className += " sullyedt";
+            }
+            //tartalom.innerHTML = "Az elsüllyesztette a "+response.coords+" koordinátát"
+            tartalom.innerHTML = "Az elsüllyesztette a következő koordinátákon lévő "+response.bType+" hajót: "+talalatok
+        }
     });
     EmitEvents.registerEventHandler('ownData', (response) => {
         console.log(response)
         ownDatas = response;
     });
+    EmitEvents.registerEventHandler('endGame', (response) => {
+        Alert(response)
+        const thk = document.getElementsByTagName('th');
+        for (th in thk) {
+            th.onclick = function () {
+
+            }
+        }
+    });
+
 
     // TODO: Ki kell etzeket venni:
     //playerJoin();
     //Ready();
     //Fire("a1");
-    EmitEvents.sendMessage(new EmitData('ownData', sesdata));
+    setTimeout(() => {
+        EmitEvents.sendMessage(new EmitData('ownData', sesdata));
+        btnJoin.onclick = function() {
+            playerJoin();
+        }
+        btnReady.onclick = function() {
+            Ready();
+        }
+    }, 50);
 }
 
-btnJoin.onclick = function() {
-    playerJoin();
-}
-btnReady.onclick = function() {
-    Ready();
-}
 
 
 function Ready() {
@@ -235,9 +270,9 @@ function numToSSColumn(num){
     return s.toLowerCase() || undefined;
 }
 
-cellOnclickEgyes('.pl1Cell');
+cellOnclick('.pl2Cell');
   
-function cellOnclickEgyes(className) {
+function cellOnclick(className) {
     const p1cellak = document.querySelectorAll(className);
     //console.log(p1cellak)
     for (const cell of p1cellak) {
@@ -245,30 +280,36 @@ function cellOnclickEgyes(className) {
         //cell.addEventListener("click", egyesHere(cell.id));
 
         cell.onclick = function (e) {
-            cell.className += " boat"
+            cell.className =+ " boat"
             clickAction(cell.id);
         }
     }   
     function clickAction(pos) {
         pos = pos.slice(1, 5);
-        PutBoat("egyes", [pos])
-        cellOnclickKettes1('.pl1Cell', "kettes1", 2);
+        Fire(pos);
     }
 }
 
+cellOnclickKettes1('.pl1Cell', "egyes", 1);
+
 function cellOnclickKettes1(className, bType, cellNumber) {
     let cellak = [];
-    const p1cellak = document.querySelectorAll(className);
     //console.log(p1cellak)
-    for (const cell of p1cellak) {
-        //console.log(cell.id);
-        //cell.addEventListener("click", egyesHere(cell.id));
-
-        cell.onclick = function (e) {
-            clickAction(cell.id);
-            cell.className += " boat"
+    clickActions()
+    function clickActions() {
+        const p1cellak = document.querySelectorAll(className);
+        for (const cell of p1cellak) {
+            //console.log(cell.id);
+            //cell.addEventListener("click", egyesHere(cell.id));
+    
+            cell.onclick = function (e) {
+                cell.className = " boat"
+                cell.onclick = function(e) {};
+                clickActions();
+                clickAction(cell.id);
+            }
         }
-    }   
+    } 
     vege = false;
     function clickAction(pos) {
         pos = pos.slice(1, 5);
@@ -279,28 +320,35 @@ function cellOnclickKettes1(className, bType, cellNumber) {
             switch (bType) {
                 case "egyes":
                     bType = "kettes1"
+                    clickActions()
                     cellNumber++;
                     break;
                 case "kettes1":
                     bType = "kettes2"
+                    clickActions()
                     break;
                 case "kettes2":
                     bType = "harmas1"
+                    clickActions()
                     cellNumber++;
                     break;
                 case "harmas1":
                     bType = "harmas2"
+                    clickActions()
                     break;
                 case "harmas2":
                     bType = "negyes"
+                    clickActions()
                     cellNumber++;
                     break;
                 case "negyes":
                     bType = "otos"
+                    clickActions()
                     cellNumber++;
                     break;
                 case "otos":
                     vege = true;
+                    const p1cellak = document.querySelectorAll(className);
                     for (const cell of p1cellak) {
                         //console.log(cell.id);
                         //cell.addEventListener("click", egyesHere(cell.id));
