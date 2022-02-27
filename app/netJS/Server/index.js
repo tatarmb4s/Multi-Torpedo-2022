@@ -123,6 +123,7 @@ function NewGameGenerate (sessionID, isPublic) {
                 },
                 joined: false,
                 ready: false,
+                socket: null
             },
             player2 : {
                 coords : MakeCoords(),
@@ -141,6 +142,7 @@ function NewGameGenerate (sessionID, isPublic) {
                 },
                 joined: false,
                 ready: false,
+                socket: null
             },
         },
         status: 0,
@@ -299,6 +301,32 @@ function codeValid(sessionID) {
     return (sessionID in games);
 }
 
+function canJoin(sessionID, source) {
+    if (games[sessionID].PlayerData[source].joined === true) {return false} else {return true};
+}
+
+function playerJoin(sessionID, source, socket) {
+    let source2 = null;
+    if (source === 'player2') {
+        source2 = 'player1';
+    }
+    if (source === 'player1') {
+        source2 = 'player2';
+    }
+    if (canJoin(sessionID, source)) {
+        games[sessionID].PlayerData[source].joined = true
+        games[sessionID].PlayerData[source].socket = socket;
+        wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', ""), games[sessionID].PlayerData[source].socket);
+        if (games[sessionID].PlayerData[source2].joined) {
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source2].socket);
+        }
+        return true;
+    } 
+    else {
+        return false;
+    }
+}
+
 
 
 wsa.initilaliseWebSocketServer();
@@ -314,7 +342,7 @@ wsa.EmitEvents.registerEventHandler('NewGame', (socket, session) =>{
 
     var sessionID = NewGame(session.sessionID, session.isRandom, session.isPublic);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('NewGame', sessionID), socket);
-    wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games, publicSessions), socket);
+    //wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', games, publicSessions), socket);
 });
 
 wsa.EmitEvents.registerEventHandler('PutBoat', (socket, data) => {
@@ -338,10 +366,20 @@ wsa.EmitEvents.registerEventHandler('sessions', (socket, data) => {
     wsa.EmitEvents.sendMessage(new wsa.EmitData('sessions', publicSessions), socket);
 });
 wsa.EmitEvents.registerEventHandler('codeValid', (socket, data) => {
-    // REVIEW: console.log(data);
     wsa.EmitEvents.sendMessage(new wsa.EmitData('codeValid', codeValid(data)), socket);    
 });
 
+wsa.EmitEvents.registerEventHandler('canJoin', (socket, data) => {
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('canJoin', canJoin(data.sessionID, data.source)), socket);
+})
+
+wsa.EmitEvents.registerEventHandler('playerJoin', (socket, data) => {
+    wsa.EmitEvents.sendMessage(new wsa.EmitData('playerJoin', playerJoin(data.sessionID, data.source, socket)), socket);
+})
+
+wsa.EmitEvents.registerEventHandler('reset', (socket, data) => {
+    games = {};
+})
 
 // NOTE:
 // Az adatokat hova tehetem meg úgy az egész kódot majd? (Követem a kulzorod, szóval látom)

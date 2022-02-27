@@ -1,13 +1,26 @@
+const sesdata = {
+    sessionID: document.currentScript.getAttribute("sessionID"),
+    source: document.currentScript.getAttribute("source"),
+    targetor: document.currentScript.getAttribute("targetor"),
+    // TODO: Át kell állítani majd player 2 re!
+    target: document.currentScript.getAttribute("target"),
+}
+const tartalom = document.querySelector('#tartalom');
+tartalom.innerHTML = "\r Hali!";
 ws.onopen = ()=>{
-    EmitEvents.sendMessage(new EmitData('TESZT_EVENT', "valami"));
+    //EmitEvents.sendMessage(new EmitData('NewGame', "valami"));
+    if (sesdata.source === "player1") {
+        EmitEvents.sendMessage(new EmitData('reset', "data"));
+        NewGame(sesdata.sessionID, false, true);
+    }
 
-    EmitEvents.registerEventHandler('TESZT_CLIENT', (games, publicSessions) =>{
-        document.write(publicSessions);
-        console.log(games)
+    EmitEvents.registerEventHandler('TESZT_CLIENT', () =>{
+        tartalom.innerHTML += "\r TESZT_CLIENT!";
     });
     EmitEvents.registerEventHandler('NewGame', (sessionID, isRandom, isPublic) =>{
-        document.write(sessionID, isRandom, isPublic);
+        //document.write(sessionID, isRandom, isPublic);
         console.log("NewGame:", sessionID, isRandom, isPublic)
+        sesdata.sessionID = sessionID;
     });
     EmitEvents.registerEventHandler('PutBoat', (response) =>{
         console.log(response)
@@ -24,6 +37,15 @@ ws.onopen = ()=>{
     EmitEvents.registerEventHandler('codeValid', (response) => {
         console.log(response);
     });
+    EmitEvents.registerEventHandler('canJoin', (response) => {
+        console.log(response);
+    });
+    EmitEvents.registerEventHandler('playerJoin', (response) => {
+        console.log(response);
+    });
+    EmitEvents.registerEventHandler('secondJoined', (response) => {
+        tartalom.innerHTML = "A 2. belépett";
+    });
 
 }
 function NewGame(sessionID, isRandom, isPublic) {
@@ -35,10 +57,10 @@ function NewGame(sessionID, isRandom, isPublic) {
     EmitEvents.sendMessage(new EmitData('NewGame', session));
 }
 
-function PutBoat(sessionID, targetor, bType, bCells) {
+function PutBoat(bType, bCells) {
     var data = {
-        sessionID: sessionID,
-        targetor: targetor,
+        sessionID: sesdata.sessionID,
+        targetor: sesdata.targetor,
         bType: bType,
         bCells: bCells,        
     }
@@ -46,10 +68,10 @@ function PutBoat(sessionID, targetor, bType, bCells) {
     EmitEvents.sendMessage(new EmitData('PutBoat', data));
 }
 
-function Fire(sessionID, target, fCor) {
+function Fire(fCor) {
     var data = {
-        sessionID: sessionID,
-        target: target,
+        sessionID: sesdata.sessionID,
+        target: sesdata.target,
         fCor: fCor
     }
     EmitEvents.sendMessage(new EmitData('Fire', data));
@@ -73,6 +95,16 @@ function sessions() {
     EmitEvents.sendMessage(new EmitData('sessions', ""));
 }
 
-function codeValid(sessionID) {
-    EmitEvents.sendMessage(new EmitData('codeValid', sessionID));
+function codeValid() {
+    EmitEvents.sendMessage(new EmitData('codeValid', sesdata.sessionID));
+}
+
+function canJoin() {
+    //console.log(sesdata.sessionID)
+    EmitEvents.sendMessage(new EmitData('canJoin', sesdata));
+}
+
+function playerJoin() {
+    //console.log(sesdata.sessionID)
+    EmitEvents.sendMessage(new EmitData('playerJoin', sesdata));
 }
