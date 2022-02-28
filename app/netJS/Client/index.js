@@ -9,7 +9,8 @@ const sesdata = {
 const player1table = document.querySelector('#player1');
 const player2table = document.querySelector('#player2');
 const btnJoin = document.querySelector('#join');
-const btnReady = document.querySelector('#ready');
+//const btnReady = document.querySelector('#ready');
+const lblActual = document.querySelector('#actualPlayer');
 
 var ownDatas = {};
 
@@ -25,7 +26,7 @@ ws.onopen = ()=>{
     //EmitEvents.sendMessage(new EmitData('NewGame', "valami"));
 
     EmitEvents.registerEventHandler('TESZT_CLIENT', () =>{
-        tartalom.innerHTML += "\r TESZT_CLIENT!";
+        //tartalom.innerHTML += "\r TESZT_CLIENT!";
     });
     EmitEvents.registerEventHandler('NewGame', (sessionID, isRandom, isPublic) =>{
         //document.write(sessionID, isRandom, isPublic);
@@ -37,6 +38,10 @@ ws.onopen = ()=>{
     });    
     EmitEvents.registerEventHandler("Fire", (response) =>{
         console.log(response);
+        if (response === "Nem te következel") {
+            window.alert(response);
+            document.getElementById(`2${response.coords}`).className = " pl2Cell";
+        }
         if (response.result === "nemtalalt") {
             tartalom.innerHTML = "Nem talált a lövés a következő koordinátára:"+response.coords;
             document.getElementById(`2${response.coords}`).className += " fired-cell";
@@ -55,6 +60,8 @@ ws.onopen = ()=>{
             }
             tartalom.innerHTML = "Elsüllyesztetted a következő koordinátákon lévő "+response.bType+" hajót: "+talalatok
         }
+        //cellOnclickDisable(".pl2Cell")
+        lblActual.innerHTML = "Ellenfél";
     });
     EmitEvents.registerEventHandler('Admin', (response) => {
         console.log(response);
@@ -75,7 +82,11 @@ ws.onopen = ()=>{
         tartalom.innerHTML += "\r A 2. belépett";
     });
     EmitEvents.registerEventHandler('readySet2', (response) => {
-        tartalom.innerHTML += response;
+        if (response === 'A játék indulhat') {
+            tartalom.innerHTML = "A játék indulhat";            
+            tableMake(player2table, 2);
+            cellOnclick('.pl2Cell');
+        }
     });
     EmitEvents.registerEventHandler('status', (response) => {
         console.log(response);
@@ -102,15 +113,17 @@ ws.onopen = ()=>{
                 document.getElementById(`1${crd}`).className += " sullyedt";
             }
             //tartalom.innerHTML = "Az elsüllyesztette a "+response.coords+" koordinátát"
-            tartalom.innerHTML = "Az elsüllyesztette a következő koordinátákon lévő "+response.bType+" hajót: "+talalatok
+            tartalom.innerHTML = "Az  ellenfél elsüllyesztette a következő koordinátákon lévő "+response.bType+" hajót: "+talalatok
         }
+        //cellOnclick(".pl2Cell")
+        lblActual.innerHTML = "Te";
     });
     EmitEvents.registerEventHandler('ownData', (response) => {
         console.log(response)
         ownDatas = response;
     });
     EmitEvents.registerEventHandler('endGame', (response) => {
-        Alert(response)
+        window.alert("A nyertes: "+response)
         const thk = document.getElementsByTagName('th');
         for (th in thk) {
             th.onclick = function () {
@@ -128,13 +141,20 @@ ws.onopen = ()=>{
         EmitEvents.sendMessage(new EmitData('ownData', sesdata));
         btnJoin.onclick = function() {
             playerJoin();
-        }
+            tableMake(player1table, 1);
+            cellOnclickKettes1('.pl1Cell', "egyes", 1);
+        }/*
         btnReady.onclick = function() {
             Ready();
-        }
+        }*/
     }, 50);
 }
 
+
+//TODO: window.alert("Kezd el felpakolni a hajókat!")
+
+
+tartalom.innerHTML = "Helyezd el az egyes hajót"
 
 
 function Ready() {
@@ -210,16 +230,13 @@ function ownData() {
     EmitEvents.sendMessage(new EmitData('ownData', sesdata));
 }
 
-tableMake(player1table, 1)
-tableMake(player2table, 2)
-
 function tableMake(table, spId) {
     var thead = ``;
     
     for (let i = 0; i < 11; i++) {
         var txt = i;
         if (i === 0) {
-            txt = "";
+            txt = "Player: "+spId;
         } 
         thead += `<th>${txt}</th>`;
     }
@@ -270,7 +287,6 @@ function numToSSColumn(num){
     return s.toLowerCase() || undefined;
 }
 
-cellOnclick('.pl2Cell');
   
 function cellOnclick(className) {
     const p1cellak = document.querySelectorAll(className);
@@ -280,7 +296,7 @@ function cellOnclick(className) {
         //cell.addEventListener("click", egyesHere(cell.id));
 
         cell.onclick = function (e) {
-            cell.className =+ " boat"
+            cell.className += " boat"
             clickAction(cell.id);
         }
     }   
@@ -289,8 +305,24 @@ function cellOnclick(className) {
         Fire(pos);
     }
 }
+function cellOnclickDisable(className) {
+    const p1cellak = document.querySelectorAll(className);
+    //console.log(p1cellak)
+    for (const cell of p1cellak) {
+        //console.log(cell.id);
+        //cell.addEventListener("click", egyesHere(cell.id));
 
-cellOnclickKettes1('.pl1Cell', "egyes", 1);
+        cell.onclick = function (e) {
+            cell.className += " boat"
+            clickAction(cell.id);
+        }
+    }   
+    function clickAction(pos) {
+        pos = pos.slice(1, 5);
+        //Fire(pos);
+    }
+}
+
 
 function cellOnclickKettes1(className, bType, cellNumber) {
     let cellak = [];
@@ -321,33 +353,41 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                 case "egyes":
                     bType = "kettes1"
                     clickActions()
+                    tartalom.innerHTML = "Helyezd el a kettes1 hajót"
                     cellNumber++;
                     break;
                 case "kettes1":
                     bType = "kettes2"
+                    tartalom.innerHTML = "Helyezd el a kettes2 hajót"
                     clickActions()
                     break;
                 case "kettes2":
                     bType = "harmas1"
                     clickActions()
+                    tartalom.innerHTML = "Helyezd el a harmas1 hajót"
                     cellNumber++;
                     break;
                 case "harmas1":
                     bType = "harmas2"
+                    tartalom.innerHTML = "Helyezd el a harmas2 hajót"
                     clickActions()
                     break;
                 case "harmas2":
                     bType = "negyes"
+                    tartalom.innerHTML = "Helyezd el a negyes hajót"
                     clickActions()
                     cellNumber++;
                     break;
                 case "negyes":
                     bType = "otos"
+                    tartalom.innerHTML = "Helyezd el a otos hajót"
                     clickActions()
                     cellNumber++;
                     break;
                 case "otos":
                     vege = true;
+                    tartalom.innerHTML = "Várakozás a másik játékosra..."
+                    Ready();
                     const p1cellak = document.querySelectorAll(className);
                     for (const cell of p1cellak) {
                         //console.log(cell.id);

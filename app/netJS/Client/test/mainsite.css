@@ -1,0 +1,55 @@
+.mainsite {
+    background-image: url(img/bckMain.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    padding-bottom: 10rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cim {
+    display: inline;
+}
+@media (max-width: 529px) {
+    .cim {
+        display: block;
+    }
+  }
+
+.ycenter {
+    margin-top: 10rem;
+}
+
+@media (min-width: 887px) {
+    .mainsite {
+        padding-bottom: 20rem;
+    }
+  }
+
+@media (min-width: 1200px) {
+.mainsite {
+    padding-bottom: 25rem;
+}
+}
+
+
+.hatsoszin {
+    background-color: rgba(0, 31, 39, 0.568);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.hatsocim {
+    font-size: 2rem;
+}
+
+li {
+    font-size: 1.2rem;
+}
+
+.noblur {
+    backdrop-filter: blur(10px);
+}

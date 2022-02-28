@@ -1,9 +1,16 @@
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(212, 252, 255);
 }
 
-
-
+thead {
+    height: 48px;
+}
+th {
+    width: 48px;
+    border: black solid 3px;
+    text-align: center;
+}
 table {
     height: 528px;
     width: 528px;
@@ -20,13 +27,18 @@ table {
     margin-top: -528px;
 }
 
-thead {
-    height: 48px;
+#tartalom {
+    text-align: center;
+    background-color: aliceblue;
+    font-size: 2rem;
 }
 
-th {
-    width: 48px;
-    border: black solid 2px;
+.cim {
+    color: rgb(1, 70, 1);
+}
+
+.kiemeles {
+    color: aqua;
 }
 
 .fired-boat {

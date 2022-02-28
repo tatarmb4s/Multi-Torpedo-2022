@@ -1,0 +1,164 @@
+/*
+font-family: 'Encode Sans', sans-serif;
+font-family: 'Hahmlet', serif;
+font-family: 'Lora', serif;
+font-family: 'Nunito', sans-serif;
+*/
+root {
+    
+}
+
+body {
+    margin-bottom: 60px;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    font-family: 'Hahmlet', serif;
+    background-color: rgb(0, 24, 37);
+    color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+html {
+    font-size: calc(0.575rem + 1.5vw);
+    position: relative;
+    min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    }
+
+nav {
+    font-family: 'Nunito', sans-serif;
+} 
+
+#maindiv {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    text-align: justify;
+}
+
+@media (min-width: 1200px) {
+    #maindiv {
+        padding-top: 2.5rem;
+        padding-right: 7.5rem;
+        padding-left: 7.5rem;
+    }
+  }
+
+h2 h3 h4 h5 h6 {
+    font-family: 'Lora', serif;
+    text-align: right;
+}    
+
+h1 {
+    font-family: 'Encode Sans', sans-serif;
+}    
+
+.focimnev {
+    color: rgb(238, 71, 29);
+}        
+
+h2 {
+    /*color: rgb(0, 255, 115);*/
+    color: rgb(0, 255, 90);
+    text-align: left;
+}    
+
+h3 {
+    color: rgb(255, 166, 0);
+    text-align: left;
+}    
+
+h4 {
+    color: rgb(255, 0, 0); 
+    text-align: left;  
+} 
+
+h5 {
+    color: rgb(252, 255, 79);
+    text-align: left;
+}    
+
+a {
+color: #03cfd6;    
+}
+
+p {
+    font-size: 1.2rem;
+    text-indent: 2rem;
+}
+
+.nagylista {
+    font-size: 1.2rem;
+    text-indent: 1rem;
+    text-align: justify; 
+}
+
+figure {
+    margin-bottom: 4.5rem;
+}
+
+.mitjelent {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.img-kocka {
+    width: 50rem;
+} 
+@media (max-width: 528px) {
+    .img-kocka {
+        width: 30rem;
+    }    
+}  
+
+.img-termek {
+    width: 20rem;
+
+}
+
+
+.ajanlo-title {
+    font-size: calc(0.675rem + 1.5vw);
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: underline;
+    /*padding-bottom: 40PX;*/
+    
+}
+@media (min-width: 1200px) {
+    .ajanlo-title {
+          font-size: 1.4rem;
+        }
+}
+
+.kiemelt {
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.codaszok {
+    font-family: 'Nunito', sans-serif;  
+    color: hsl(185, 100%, 50%);;
+    font-size: calc(2rem + 2.1vw);
+}
+footer {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}

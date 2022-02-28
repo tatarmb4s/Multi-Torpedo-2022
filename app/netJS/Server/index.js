@@ -227,7 +227,7 @@ function Fire(sessionID, target, fCor) {
                 result = {
                     result: result,
                     bType: "nemismert",
-                    coords: []
+                    coords: fCor
                 }
                 return result;
             }
@@ -239,7 +239,7 @@ function Fire(sessionID, target, fCor) {
                 result = {
                     result: result,
                     bType: "nemismert",
-                    coords: []
+                    coords: fCor
                 }
                 console.log("Eredmény: ",result);
                 fancyLog("Nem találta el a hajót!", "rgb(255, 0, 0)", '', "rgb(255, 0, 0)")
@@ -304,7 +304,7 @@ function Fire(sessionID, target, fCor) {
                     result = {
                         result: result,
                         bType: "nemismert",
-                        coords: []
+                        coords: fCor
                     }
                 }
             
@@ -500,7 +500,7 @@ wsa.EmitEvents.registerEventHandler('playerJoin', (socket, data) => {
 
 wsa.EmitEvents.registerEventHandler('Ready', (socket, data) => {
     Ready(data.sessionID, data.source);
-    wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "Végrehajtva."), socket);
+    //wsa.EmitEvents.sendMessage(new wsa.EmitData('readySet2', "Végrehajtva."), socket);
 })
 
 wsa.EmitEvents.registerEventHandler('status', (socket, data) => {
