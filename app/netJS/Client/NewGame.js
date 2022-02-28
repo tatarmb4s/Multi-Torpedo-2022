@@ -27,10 +27,6 @@ ws.onopen = ()=>{
             chkRandomName = document.querySelector('#chkRandomName');
             chkPublic = document.querySelector('#chkPublic');
             NewGame(txtsessionID.value, chkRandomName.checked,chkPublic.checked);
-            setTimeout(() => {               
-                var url = `player1.html?sessionID=${txtsessionID.value}&randomName=${chkRandomName.checked}&public=${chkPublic.checked}&newgame=${true}`;
-                window.location.href = url;
-            }, 30);
             
         }
         btnJoin.onclick = (e)=> {
@@ -54,6 +50,11 @@ ws.onopen = ()=>{
         //document.write(sessionID, isRandom, isPublic);
         console.log("NewGame:", sessionID, isRandom, isPublic)
         sesdata.sessionID = sessionID;
+        window.alert(sesdata.sessionID)
+        setTimeout(() => {               
+            var url = `player1.html?sessionID=${sessionID}&randomName=${chkRandomName.checked}&public=${chkPublic.checked}&newgame=${true}`;
+            window.location.href = url;
+        }, 30);
     });
     EmitEvents.registerEventHandler('Admin', (response) => {
         console.log(response);

@@ -334,7 +334,6 @@ function Fire(sessionID, target, fCor) {
 
 function isEnded(sessionID) {
     try {
-
         let isEnded = true;
         let nyertes = "senki";
         for (var item in games[sessionID].PlayerData.player1.boats){
@@ -343,35 +342,46 @@ function isEnded(sessionID) {
                 //console.log("Cellak: "+cellak);
                 if (games[sessionID].PlayerData.player1.boats[item][cellak].fired === false) {
                     isEnded = false;
+                    console.log("Porgesben1 :" + games[sessionID].PlayerData.player1.boats[item][cellak].fired);
                 }
                 //console.log(isEnded);
             }
-            if (isEnded){
-                nyertes = "player1";
-            }
+            console.log("Egyesnel: "+isEnded);
         }
-        for (var item in games[sessionID].PlayerData.player2.boats){
-            //console.log("Item: "+ item);
-            for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
-                //console.log("Cellak: "+cellak);
-                if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
-                    isEnded = false;
-                }
-                //console.log(isEnded);
-            }
-            if (isEnded){
-                nyertes = "player2"
-            }
-        }
-        if (isEnded) {
+        if (isEnded === true) {
+            nyertes = "player1";
+            console.log("Egyesbement");
             games[sessionID].status = 2;
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player1.socket)
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player2.socket)
+            return (isEnded);
+        }
+        else {
+            for (var item in games[sessionID].PlayerData.player2.boats){
+                //console.log("Item: "+ item);
+                for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
+                    //console.log("Cellak: "+cellak);
+                    if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
+                        console.log("Porgesben2 :" + games[sessionID].PlayerData.player2.boats[item][cellak].fired);
+                        isEnded = false;
+                    }
+                    //console.log(isEnded);
+                }
+            }
+            console.log("Kettesnel: "+isEnded);
+            if (isEnded){nyertes = "player2"}
+        }
+
+        if (isEnded === true) {
+            games[sessionID].status = 2;
+            console.log("Kettesbe");
             wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player1.socket)
             wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player2.socket)
         }
         return (isEnded);
     }
     catch (e) {
-        return false;
+        return "catchelve";
     }
 }
 
