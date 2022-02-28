@@ -346,22 +346,22 @@ function isEnded(sessionID) {
                 }
                 //console.log(isEnded);
             }
-        }
-        if (isEnded){
-            nyertes = "player1";
-        }
-        else {
-            for (var item in games[sessionID].PlayerData.player2.boats){
-                //console.log("Item: "+ item);
-                for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
-                    //console.log("Cellak: "+cellak);
-                    if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
-                        isEnded = false;
-                    }
-                    //console.log(isEnded);
-                }
+            if (isEnded){
+                nyertes = "player1";
             }
-            if (isEnded){nyertes = "player2"}
+        }
+        for (var item in games[sessionID].PlayerData.player2.boats){
+            //console.log("Item: "+ item);
+            for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
+                //console.log("Cellak: "+cellak);
+                if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
+                    isEnded = false;
+                }
+                //console.log(isEnded);
+            }
+            if (isEnded){
+                nyertes = "player2"
+            }
         }
         if (isEnded) {
             games[sessionID].status = 2;
