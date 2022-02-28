@@ -1,5 +1,13 @@
+var url_string = window.location.href; //window.location.href
+var url = new URL(url_string);
+var prmSessionID = url.searchParams.get("sessionID");
+var prmRandomName = url.searchParams.get("randomName");
+var prmPublic = url.searchParams.get("public");
+var prmNewgame = url.searchParams.get("newgame");
+
+
 const sesdata = {
-    sessionID: document.currentScript.getAttribute("sessionID"),
+    sessionID: prmSessionID,
     source: document.currentScript.getAttribute("source"),
     targetor: document.currentScript.getAttribute("targetor"),
     // TODO: Át kell állítani majd player 2 re!
@@ -19,8 +27,10 @@ tartalom.innerHTML = "\r Hali!";
 ws.onopen = ()=>{
     setTimeout(() => {        
         if (sesdata.source === "player1") {
-            EmitEvents.sendMessage(new EmitData('reset', "data"));
-            NewGame(sesdata.sessionID, false, true);
+            //EmitEvents.sendMessage(new EmitData('reset', "data"));
+            //NewGame(sesdata.sessionID, false, true);
+            if (prmNewgame) {
+            }
         }
     }, 30);
     //EmitEvents.sendMessage(new EmitData('NewGame', "valami"));

@@ -153,46 +153,51 @@ function NewGameGenerate (sessionID, isPublic) {
 }
 
 function PutBoat(sessionID, targetor, bType, bCells) {
-    console.log("Server function:");
-    console.log(sessionID, targetor, bType, bCells);
-    var validB = false;
-    let crds = [];
-    for (var bTypes in boatTypes)
-    {
-        if (bType === boatTypes[bTypes])
+    try {
+        console.log("Server function:");
+        console.log(sessionID, targetor, bType, bCells);
+        var validB = false;
+        let crds = [];
+        for (var bTypes in boatTypes)
         {
-            validB = true;
-        }
-        //console.log(boatTypes[bTypes]);
-    }
-
-    if (validB)
-    {
-        console.debug("Jo a hajónév")
-        try {
-            for (let i = 0; i < bCells.length; i++) {
-                const e = bCells[i];
-                games[sessionID].PlayerData[targetor].coords[e] = {
-                    boat: bType,
-                    fired: false,
-                }
-
-                games[sessionID].PlayerData[targetor].boats[bType][i] = {
-                    pos: e,   // Hajó egyik koordinátája
-                    fired: false // Eltalálták e már
-                }
-                crds[i] = games[sessionID].PlayerData[targetor].coords[e];              
+            if (bType === boatTypes[bTypes])
+            {
+                validB = true;
             }
-          } catch (error) {
-            console.log("Hiba!")
-            console.error(error);
-          }
+            //console.log(boatTypes[bTypes]);
+        }
+    
+        if (validB)
+        {
+            console.debug("Jo a hajónév")
+            try {
+                for (let i = 0; i < bCells.length; i++) {
+                    const e = bCells[i];
+                    games[sessionID].PlayerData[targetor].coords[e] = {
+                        boat: bType,
+                        fired: false,
+                    }
+    
+                    games[sessionID].PlayerData[targetor].boats[bType][i] = {
+                        pos: e,   // Hajó egyik koordinátája
+                        fired: false // Eltalálták e már
+                    }
+                    crds[i] = games[sessionID].PlayerData[targetor].coords[e];              
+                }
+              } catch (error) {
+                console.log("Hiba!")
+                console.error(error);
+              }
+        }
+        else {
+            console.warn("Rossz hajónevet adott meg!")
+        }
+    
+        return crds;
     }
-    else {
-        console.warn("Rossz hajónevet adott meg!")
+    catch (e) {
+        return e;
     }
-
-    return crds;
 }
 
 function Fire(sessionID, target, fCor) {
@@ -328,44 +333,55 @@ function Fire(sessionID, target, fCor) {
 }
 
 function isEnded(sessionID) {
-    let isEnded = true;
-    let nyertes = "senki";
-    for (var item in games[sessionID].PlayerData.player1.boats){
-        //console.log("Item: "+ item);
-        for (var cellak in games[sessionID].PlayerData.player1.boats[item]) {
-            //console.log("Cellak: "+cellak);
-            if (games[sessionID].PlayerData.player1.boats[item][cellak].fired === false) {
-                isEnded = false;
-            }
-            //console.log(isEnded);
-        }
-    }
-    if (isEnded){
-        nyertes = "player1";
-    }
-    else {
-        for (var item in games[sessionID].PlayerData.player2.boats){
+    try {
+
+        let isEnded = true;
+        let nyertes = "senki";
+        for (var item in games[sessionID].PlayerData.player1.boats){
             //console.log("Item: "+ item);
-            for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
+            for (var cellak in games[sessionID].PlayerData.player1.boats[item]) {
                 //console.log("Cellak: "+cellak);
-                if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
+                if (games[sessionID].PlayerData.player1.boats[item][cellak].fired === false) {
                     isEnded = false;
                 }
                 //console.log(isEnded);
             }
         }
-        if (isEnded){nyertes = "player2"}
+        if (isEnded){
+            nyertes = "player1";
+        }
+        else {
+            for (var item in games[sessionID].PlayerData.player2.boats){
+                //console.log("Item: "+ item);
+                for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
+                    //console.log("Cellak: "+cellak);
+                    if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
+                        isEnded = false;
+                    }
+                    //console.log(isEnded);
+                }
+            }
+            if (isEnded){nyertes = "player2"}
+        }
+        if (isEnded) {
+            games[sessionID].status = 2;
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player1.socket)
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player2.socket)
+        }
+        return (isEnded);
     }
-    if (isEnded) {
-        games[sessionID].status = 2;
-        wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player1.socket)
-        wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player2.socket)
+    catch (e) {
+        return false;
     }
-    return (isEnded);
 }
 
 function bothReady(sessionID) {
-    return games[sessionID].PlayerData.player1.ready && games[sessionID].PlayerData.player2.ready;
+    try {
+        return games[sessionID].PlayerData.player1.ready && games[sessionID].PlayerData.player2.ready;
+    }
+    catch (e) {
+        return false;
+    }
 }
 
 function fancyLog(msg1, color1, msg2, color2) {
@@ -387,23 +403,33 @@ function codeValid(sessionID) {
 }
 
 function canJoin(sessionID, source) {
-    if (games[sessionID].PlayerData[source].joined === true) {return false} else {return true};
+    try {
+        if (games[sessionID].PlayerData[source].joined === true) {return false} else {return true};
+    }
+    catch (e) {
+        return false;
+    }
 }
 
 function playerJoin(sessionID, source, socket) {
-    let source2 = inversePlayer(source);
-    if (canJoin(sessionID, source)) {
-        games[sessionID].PlayerData[source].joined = true
-        games[sessionID].PlayerData[source].socket = socket;
-        wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', ""), games[sessionID].PlayerData[source].socket);
-        if (games[sessionID].PlayerData[source2].joined) {
-            wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source].socket);
-            wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source2].socket);
+    try {
+        let source2 = inversePlayer(source);
+        if (canJoin(sessionID, source)) {
+            games[sessionID].PlayerData[source].joined = true
+            games[sessionID].PlayerData[source].socket = socket;
+            wsa.EmitEvents.sendMessage(new wsa.EmitData('TESZT_CLIENT', ""), games[sessionID].PlayerData[source].socket);
+            if (games[sessionID].PlayerData[source2].joined) {
+                wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source].socket);
+                wsa.EmitEvents.sendMessage(new wsa.EmitData('secondJoined', ""), games[sessionID].PlayerData[source2].socket);
+            }
+            return true;
+        } 
+        else {
+            return false;
         }
-        return true;
-    } 
-    else {
-        return false;
+    }
+    catch (e) {
+        console.log(e);
     }
 }
 
@@ -508,11 +534,18 @@ wsa.EmitEvents.registerEventHandler('status', (socket, data) => {
 });
 
 wsa.EmitEvents.registerEventHandler('ownData', (socket, data) => {
-    wsa.EmitEvents.sendMessage(new wsa.EmitData('ownData', games[data.sessionID].PlayerData[data.source]), socket);
+    try {
+        wsa.EmitEvents.sendMessage(new wsa.EmitData('ownData', games[data.sessionID].PlayerData[data.source]), socket);
+
+    }
+    catch (e) {
+        console.log(e);
+    }
 })
 
 wsa.EmitEvents.registerEventHandler('reset', (socket, data) => {
     games = {};
+    publicSessions = [];
 })
 
 // NOTE:
