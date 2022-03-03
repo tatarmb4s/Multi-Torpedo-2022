@@ -253,14 +253,14 @@ function Fire(sessionID, target, fCor) {
             {
                 // A hajón a találat beírása, és visszatérés vagy találtal, vagy süllyedtel
                 var boats = games[sessionID].PlayerData[target].boats;
-                console.log(boats)
+                //console.log(boats)
                 for(var fps in boats[fn])
                 {
-                    console.log(fps);
+                    //console.log(fps);
                     //Ha a lövés helye egyezik a hajó egyik koordináta értékével
                     if (fCor === boats[fn][fps].pos) {
                         //Sorszám átadása
-                        console.log(fps);
+                        //console.log(fps);
                         fp = fps;
                         // Ha a hajó azon részére még nem lőttek akkor
                         if (boats[fn][fps].fired === false) {
@@ -284,10 +284,10 @@ function Fire(sessionID, target, fCor) {
                 if (result === "sullyedt")
                 {
                     boats = games[sessionID].PlayerData[target].boats;
-                    console.log(games[sessionID].PlayerData[target].boats[fn][fp].fired);
+                    //console.log(games[sessionID].PlayerData[target].boats[fn][fp].fired);
                     fancyLog("Elsüllyesztette a hajót: ", "white", fn, "rgba(20, 245, 106)")
-                    //console.log(sullyedt);
-                    //console.log(fp);
+                    ////console.log(sullyedt);
+                    ////console.log(fp);
                     result = {
                         result: result,
                         bType: fn,
@@ -315,9 +315,9 @@ function Fire(sessionID, target, fCor) {
             
             }
             games[sessionID].PlayerData[target].coords[fCor].fired = true;
-            //console.log(result);
-            //console.log("Hajók állása");
-            //console.log(games[sessionID].PlayerData[target].boats);
+            ////console.log(result);
+            ////console.log("Hajók állása");
+            ////console.log(games[sessionID].PlayerData[target].boats);
             console.log("Játék vége: "+isEnded(sessionID));
             games[sessionID].actualPlayer = target.slice(6,7);
             wsa.EmitEvents.sendMessage(new wsa.EmitData('youTurn', result), games[sessionID].PlayerData[target].socket);
@@ -334,51 +334,60 @@ function Fire(sessionID, target, fCor) {
 
 function isEnded(sessionID) {
     try {
-        let isEnded = true;
+        let isEnded1 = true;
+        let isEnded2 = true;
         let nyertes = "senki";
+        console.log("Egyest elkezdi: " + isEnded1);
         for (var item in games[sessionID].PlayerData.player1.boats){
             //console.log("Item: "+ item);
             for (var cellak in games[sessionID].PlayerData.player1.boats[item]) {
                 //console.log("Cellak: "+cellak);
                 if (games[sessionID].PlayerData.player1.boats[item][cellak].fired === false) {
-                    isEnded = false;
+                    isEnded1 = false;
                     console.log("Porgesben1 :" + games[sessionID].PlayerData.player1.boats[item][cellak].fired);
                 }
                 //console.log(isEnded);
             }
-            console.log("Egyesnel: "+isEnded);
+            console.log("Egyesnel: "+isEnded1);
         }
-        if (isEnded === true) {
-            nyertes = "player1";
+        console.log("Egyes kör után: " + isEnded1);
+        if (isEnded1 === true) {
+            nyertes = "player2";
             console.log("Egyesbement");
             games[sessionID].status = 2;
             wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player1.socket)
             wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player2.socket)
             return (isEnded);
         }
-        else {
+        
+        else if (isEnded1 === false) {
+            console.log("A kettesben van elért és: " + isEnded1);
             for (var item in games[sessionID].PlayerData.player2.boats){
                 //console.log("Item: "+ item);
                 for (var cellak in games[sessionID].PlayerData.player2.boats[item]) {
                     //console.log("Cellak: "+cellak);
                     if (games[sessionID].PlayerData.player2.boats[item][cellak].fired === false) {
                         console.log("Porgesben2 :" + games[sessionID].PlayerData.player2.boats[item][cellak].fired);
-                        isEnded = false;
+                        isEnded2 = false;
                     }
-                    //console.log(isEnded);
+                    console.log(isEnded2);
                 }
             }
-            console.log("Kettesnel: "+isEnded);
-            if (isEnded){nyertes = "player2"}
+            console.log("Kettesnel: "+isEnded2);
+            if (isEnded){nyertes = "player1"}
+            console.log("A kettesben végzett: " + isEnded2);
         }
-
-        if (isEnded === true) {
+        
+        if (isEnded2 === true) {
+            console.log("Utolso ifben van: " + isEnded2);
             games[sessionID].status = 2;
-            console.log("Kettesbe");
+            console.log("Kettesbe");4  
             wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player1.socket)
             wsa.EmitEvents.sendMessage(new wsa.EmitData('endGame', nyertes), games[sessionID].PlayerData.player2.socket)
         }
-        return (isEnded);
+        console.log("Utolsó If után: " + isEnded2);
+        console.log(nyertes);
+        return (isEnded2);
     }
     catch (e) {
         return "catchelve";
@@ -497,14 +506,14 @@ wsa.EmitEvents.registerEventHandler('NewGame', (socket, session) =>{
 });
 
 wsa.EmitEvents.registerEventHandler('PutBoat', (socket, data) => {
-    console.log(data);
+    //console.log(data);
     var response = PutBoat(data.sessionID, data.targetor, data.bType, data.bCells)
     wsa.EmitEvents.sendMessage(new wsa.EmitData('PutBoat', response), socket);
 });
 
 wsa.EmitEvents.registerEventHandler('Fire', (socket, data) => {
     console.clear();
-    console.log(data);
+    //console.log(data);
     var response = null;
     try {
         response = Fire(data.sessionID, data.target, data.fCor);

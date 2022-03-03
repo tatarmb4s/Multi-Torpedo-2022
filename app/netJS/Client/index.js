@@ -55,6 +55,7 @@ ws.onopen = ()=>{
         if (response.result === "nemtalalt") {
             tartalom.innerHTML = "Nem talált a lövés a következő koordinátára:"+response.coords;
             document.getElementById(`2${response.coords}`).className += " fired-cell";
+            //latestFired.className += " ";
         }
         if (response.result === "talalt") {
             tartalom.innerHTML = "Eltaláltad a következő koordinátát: "+response.coords
@@ -297,7 +298,7 @@ function numToSSColumn(num){
     return s.toLowerCase() || undefined;
 }
 
-  
+var latestFired;
 function cellOnclick(className) {
     const p1cellak = document.querySelectorAll(className);
     //console.log(p1cellak)
@@ -306,7 +307,8 @@ function cellOnclick(className) {
         //cell.addEventListener("click", egyesHere(cell.id));
 
         cell.onclick = function (e) {
-            cell.className += " boat"
+            //cell.className += " boat"
+            latestFired = cell;
             clickAction(cell.id);
         }
     }   
