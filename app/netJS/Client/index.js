@@ -246,10 +246,12 @@ function tableMake(table, spId) {
     
     for (let i = 0; i < 11; i++) {
         var txt = i;
+        var classTh = "";
         if (i === 0) {
             txt = "Player: "+spId;
+            classTh = "firstCol"
         } 
-        thead += `<th>${txt}</th>`;
+        thead += `<th class="${classTh}">${txt}</th>`;
     }
     
     
@@ -257,13 +259,14 @@ function tableMake(table, spId) {
     
     for (let index = 1; index < 11; index++) {
         let row = spId+numToSSColumn(index);
+        let textRow = numToSSColumn(index);
         var tableCol = ``;
         for (let col = 0; col < 11; col++) {
             var id =  row+col;
-            var txt = id;
+            var txt = textRow+col;
             if (col === 0) {
-                txt = row.toUpperCase();
-                tableCol += `<th id="${id}" class="0pl${spId}Cell">${txt}</th>`;        
+                txt = textRow.toUpperCase();
+                tableCol += `<th id="${id}" class="0pl${spId}Cell tleft">${txt}</th>`;        
             }
             else {
                 tableCol += `<th id="${id}" class="pl${spId}Cell">${txt}</th>`;        

@@ -2,57 +2,65 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(212, 252, 255);
 }
-
+/*A táblbázat teteje (az első sor) ahol az 1-10 van*/
 thead {
     height: 48px;
 }
+/*Az első cella tartalma "Player 1" vagy "Player 2*/
+.firstCol {
+    color: blue;
+}
+/*A táblázat bal oldalsó első oszlopa ahol az A B ... J van*/
+.tleft {
+    color: red;
+}
+/* Egy cella */
 th {
     width: 48px;
     border: black solid 3px;
     text-align: center;
 }
+
+/* Táblázatok alapterülete */
 table {
     height: 528px;
     width: 528px;
     border-spacing: 0;
 }
 
-#test {
-    height: 480px;
-    width: 480px;
-}
-
+/* második játékos területe */
 #player2 {
     margin-left: 538px;
     margin-top: -528px;
 }
-
+/*Az a hely ahova az utasítások lés az információk vannak kiadva*/
 #tartalom {
     text-align: center;
     background-color: aliceblue;
     font-size: 2rem;
 }
-
+/*"A soron lévő játékos" kiírás*/
 .cim {
     color: rgb(1, 70, 1);
 }
-
+/*Maga a soron évő játékos (vagy Te, vagy Ellenfél)*/
 .kiemeles {
     color: rgb(0, 54, 54);
 }
-
+/*Eltalált de el nem süllyedt hajók*/
 .fired-boat {
     background-color: red !important;
 }
-
+/*Cella amire lőttek de nem talált*/
 .fired-cell {
     background-color: rgba(0, 0, 0, 0.26);
 }
-
+/* Elsüllyedt hajó */
 .sullyedt {
     background-color: brown !important;
 }
 
+/* Lehelyezett és sértetlen hajó */
 .boat {
     background-color: gray;
 }
