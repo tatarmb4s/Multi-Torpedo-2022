@@ -65,7 +65,7 @@ ws.onopen = ()=>{
             for (i in response) {
                 console.log(response[i]);
                 publicSessions.innerHTML += `
-                <a name="" id="" class="btn btn-info" href="#" role="button" value="${response[i]}">${response[i]}</a>
+                <a name="" id="" class="btn btn-info" href="#" role="button" onclick="publicJoin('${response[i]}')" value="${response[i]}">${response[i]}</a>
                 `
             }
         }
@@ -119,7 +119,10 @@ ws.onopen = ()=>{
     }, 50);*/
 }
 
-
+function publicJoin(sessionIDc) {
+    sesdata.sessionID = sessionIDc;
+    codeValid();
+}
 
 function NewGame(sessionID, isRandom, isPublic) {
     var session = {

@@ -4,7 +4,7 @@ var prmSessionID = url.searchParams.get("sessionID");
 var prmRandomName = url.searchParams.get("randomName");
 var prmPublic = url.searchParams.get("public");
 var prmNewgame = url.searchParams.get("newgame");
-
+const gombok = document.querySelector("#gombok")
 
 const sesdata = {
     sessionID: prmSessionID,
@@ -402,6 +402,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                 case "otos":
                     vege = true;
                     tartalom.innerHTML = "Várakozás a másik játékosra..."
+                    gombok
                     Ready();
                     const p1cellak = document.querySelectorAll(className);
                     for (const cell of p1cellak) {

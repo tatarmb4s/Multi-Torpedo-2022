@@ -394,9 +394,21 @@ function isEnded(sessionID) {
     }
 }
 
+function removePubliocGame(game) {
+    for (let i = 0; i < publicSessions.length; i++) {
+        if (publicSessions[i] === game) {
+            publicSessions.splice(i, 1);
+        }
+    }
+}
+
 function bothReady(sessionID) {
     try {
-        return games[sessionID].PlayerData.player1.ready && games[sessionID].PlayerData.player2.ready;
+        let isReady = games[sessionID].PlayerData.player1.ready && games[sessionID].PlayerData.player2.ready;
+        if (isReady) {
+            removePubliocGame(sessionID);
+            return isReady;
+        }
     }
     catch (e) {
         return false;
