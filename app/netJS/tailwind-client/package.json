@@ -1,0 +1,16 @@
+{
+  "name": "basic-template-TailwindCSS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build -c ./tailwind.config.js src/tailwind.css -o assets/css/tailwind.css -w",
+    "build": "npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o .assets/css/tailwind.css --watch "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
