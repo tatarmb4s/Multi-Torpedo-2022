@@ -328,14 +328,21 @@ function cellOnclickDisable(className) {
         //cell.addEventListener("click", egyesHere(cell.id));
 
         cell.onclick = function (e) {
-            cell.className += " boat"
-            clickAction(cell.id);
         }
-    }   
-    function clickAction(pos) {
-        pos = pos.slice(1, 5);
-        //Fire(pos);
-    }
+    } 
+}
+
+
+function csakEgyesesClick(cella) {
+    const p1cellak = document.querySelectorAll(className);
+    //console.log(p1cellak)
+    for (const cell of p1cellak) {
+        //console.log(cell.id);
+        //cell.addEventListener("click", egyesHere(cell.id));
+
+        cell.onclick = function (e) {
+        }
+    } 
 }
 
 
@@ -431,10 +438,266 @@ function cellOnclickKettes1(className, bType, cellNumber) {
             }
         }
     }
+    function clickAction2(pos) {
+        pos = pos.slice(1, 5);
+        cellak.push(pos); 
+        switch (bType) {
+            case "egyes":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    bType = "kettes1"
+                    clickActions()
+                    tartalom.innerHTML = "Helyezd el a kettes1 hajót"
+                    cellNumber++;
+                }
+                break;
+            case "kettes1":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    bType = "kettes2"
+                    tartalom.innerHTML = "Helyezd el a kettes2 hajót"
+                    clickActions()
+                }
+                break;
+            case "kettes2":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    bType = "harmas1"
+                    clickActions()
+                    tartalom.innerHTML = "Helyezd el a harmas1 hajót"
+                    cellNumber++;
+                }
+                break;
+            case "harmas1":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    bType = "harmas2"
+                    tartalom.innerHTML = "Helyezd el a harmas2 hajót"
+                    clickActions()
+                }
+                break;
+            case "harmas2":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    bType = "negyes"
+                    tartalom.innerHTML = "Helyezd el a negyes hajót"
+                    clickActions()
+                    cellNumber++;
+                }
+                break;
+            case "negyes":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    bType = "otos"
+                    tartalom.innerHTML = "Helyezd el a otos hajót"
+                    clickActions()
+                    cellNumber++;
+                    break;
+                }
+            case "otos":
+                if (cellak.length == cellNumber) {
+                    PutBoat(bType, cellak);
+                    cellak = [];
+                    vege = true;
+                    tartalom.innerHTML = "Várakozás a másik játékosra..."
+                    gombok
+                    Ready();
+                    const p1cellak = document.querySelectorAll(className);
+                    for (const cell of p1cellak) {
+                        //console.log(cell.id);
+                        //cell.addEventListener("click", egyesHere(cell.id));
+                
+                        cell.onclick = function (e) {
+                            //clickAction(cell.id);
+                            //cell.className += " boat"
+                        }
+                    }
+                }
+                break;
+        
+            default:
+                break;
+        }
+    }
     if (vege) {
         return null;
     }
 }
 
 
+function letToNum(letter) {
+    let a = "nincs";
+    for (i=0; a != letter; i++) {
+        a = numToSSColumn(i);
+        console.log(a)
+    }
+    return i-1;
+}
 
+
+function GetOtherCoords (coord) {
+    clear();
+    let isPreRow = true;
+    let isPreCol = true;
+    let isNextRow = true;
+    let isNextCol = true;
+
+    const row = coord.slice(1, 2);
+    const column = parseInt(coord.slice(2, 5));
+    console.log("A sor: "+row);
+    console.log("Az oszlop: "+column);
+    const sorszam = letToNum(row);
+
+    let nextCol;
+    let nextRow;
+    let preCol;
+    let preRow;
+
+    if (row === "a") {
+        console.log("----Az első sor--------");
+        isPreRow = false;
+        nextRow = numToSSColumn(sorszam+1);
+    }
+    else if (row === "j") {
+        console.log("----Az utolsó sor--------");
+        isNextRow = false;
+        preRow = numToSSColumn(sorszam-1);
+    }
+    else {
+        console.log("----Nem az első sor és nem az utolsó--------");
+        nextRow = numToSSColumn(sorszam+1);
+        preRow = numToSSColumn(sorszam-1);
+    }
+
+    if (column == 1) {
+        console.log("----Az első oszlop--------");
+        isPreCol = false;
+        nextCol = column+1
+    }
+    else if (column == 10){
+        console.log("----Az utolsó oszlop--------");
+        isNextCol = false;
+        preCol = column-1;
+    }
+    else {
+        console.log("----Nem az első oszlop és nem az utolsó--------");
+        nextCol = column+1;
+        preCol = column-1;
+    }
+
+    console.log("Előző sor: "+preRow);
+    console.log("Előző oszlop: "+preCol);
+    console.log("Következő sor: "+nextRow);
+    console.log("Következő oszlop: "+nextCol);
+
+    let preRowPreCol;
+    let preRowSameCol;
+    let preRowNextCol;
+
+    let sameRowPreCol;
+    let sameRowSameCol = coord;
+    let sameRowNextCol;
+
+    let nextRowPreCol;
+    let nextRowSameCol;
+    let nextRowNextCol;
+
+    console.log("--------------");
+    console.log("Előző sor: "+isPreRow);
+    console.log("Előző oszlop: "+isPreCol);
+    console.log("Következő sor: "+isNextRow);
+    console.log("Következő oszlop: "+isNextCol);
+
+    if (isPreRow) {
+        if (isPreCol) {
+            preRowPreCol = preRow+preCol.toString();
+        }
+        else {
+            preRowPreCol = false;
+        }
+
+        preRowSameCol = preRow+column;
+
+        if (isNextCol) {
+            preRowNextCol = preRow+nextCol.toString();
+    
+        }
+        else {
+            preRowNextCol = false;
+        }
+    }
+
+    if (isPreCol) { //4
+        sameRowPreCol = row+preCol.toString();
+    }
+    else {
+        sameRowPreCol = false;
+    }
+
+    if (isNextCol) { //5
+        sameRowNextCol = row+nextCol.toString();
+    }
+    else {
+        sameRowNextCol = false;
+    }
+
+    if (isNextRow) {
+        if (isPreCol) { //7
+            nextRowPreCol = nextRow+preCol.toString();
+        }
+        else {
+            nexRowPrevCol = false;
+        }
+        nextRowSameCol = nextRow+column; //8
+        if(isNextCol){ //9
+            nextRowNextCol = nextRow+nextCol.toString();
+        }
+        else {
+            nextRowNextCol = false;
+        }
+    }
+
+    var atloban = [];
+
+    console.log("Ha megvan határozva: " + preRowPreCol);
+
+    if (preRowPreCol !== false && preRowPreCol !== undefined) {
+        console.log("preRowPreCol");
+        atloban.push(preRowPreCol);
+    }
+    if (preRowNextCol !== false && preRowNextCol !== undefined) {
+        console.log("preRowNextCol");
+        atloban.push(preRowNextCol);
+    }
+    if (nextRowPreCol !== false && nextRowPreCol !== undefined) {
+        console.log("nextRowPreCol");
+        atloban.push(nextRowPreCol);
+    }
+    if (nextRowNextCol !== false && nextRowNextCol !== undefined) {
+        console.log("nextRowNextCol");
+        atloban.push(nextRowNextCol);
+    }
+
+    var keresztben = [];
+    if (preRowSameCol !== false && preRowSameCol !== undefined) {
+        keresztben.push(preRowSameCol);
+    }
+    console.log("sameRowPreCol "+sameRowPreCol)
+    if (sameRowPreCol !== false && sameRowPreCol !== undefined) {
+        keresztben.push(sameRowPreCol);
+    }
+    if (sameRowNextCol !== false && sameRowNextCol !== undefined) {
+        keresztben.push(sameRowNextCol);
+    }
+    if (nextRowSameCol !== false && nextRowSameCol !== undefined) {
+        keresztben.push(nextRowSameCol);
+    }
+
+    return ({atloban: atloban, keresztben: keresztben});
+}
