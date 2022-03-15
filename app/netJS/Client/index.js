@@ -333,21 +333,22 @@ function cellOnclickDisable(className) {
 }
 
 
-function csakEgyesesClick(cella) {
-    const p1cellak = document.querySelectorAll(className);
+function csakEgyesesClick(cellak, funkcio) {
     //console.log(p1cellak)
-    for (const cell of p1cellak) {
+    for (let cell of cellak) {
+        const cella = document.querySelectorAll("#1"+cella[cell]);
         //console.log(cell.id);
         //cell.addEventListener("click", egyesHere(cell.id));
 
-        cell.onclick = function (e) {
+        cella.onclick = function (e) {
+            funkcio();
         }
     } 
 }
 
 
+let cellak = [];
 function cellOnclickKettes1(className, bType, cellNumber) {
-    let cellak = [];
     //console.log(p1cellak)
     clickActions()
     function clickActions() {
@@ -376,70 +377,9 @@ function cellOnclickKettes1(className, bType, cellNumber) {
     Ha azt megint elérte megy ez előről. Az ötös hajóná ér csak véget
     */
     function clickAction(pos) {
+        let pozicio = pos;
         pos = pos.slice(1, 5);
-        cellak.push(pos); 
-        if (cellak.length == cellNumber) {
-            PutBoat(bType, cellak);
-            cellak = [];
-            switch (bType) {
-                case "egyes":
-                    bType = "kettes1"
-                    clickActions()
-                    tartalom.innerHTML = "Helyezd el a kettes1 hajót"
-                    cellNumber++;
-                    break;
-                case "kettes1":
-                    bType = "kettes2"
-                    tartalom.innerHTML = "Helyezd el a kettes2 hajót"
-                    clickActions()
-                    break;
-                case "kettes2":
-                    bType = "harmas1"
-                    clickActions()
-                    tartalom.innerHTML = "Helyezd el a harmas1 hajót"
-                    cellNumber++;
-                    break;
-                case "harmas1":
-                    bType = "harmas2"
-                    tartalom.innerHTML = "Helyezd el a harmas2 hajót"
-                    clickActions()
-                    break;
-                case "harmas2":
-                    bType = "negyes"
-                    tartalom.innerHTML = "Helyezd el a negyes hajót"
-                    clickActions()
-                    cellNumber++;
-                    break;
-                case "negyes":
-                    bType = "otos"
-                    tartalom.innerHTML = "Helyezd el a otos hajót"
-                    clickActions()
-                    cellNumber++;
-                    break;
-                case "otos":
-                    vege = true;
-                    tartalom.innerHTML = "Várakozás a másik játékosra..."
-                    gombok
-                    Ready();
-                    const p1cellak = document.querySelectorAll(className);
-                    for (const cell of p1cellak) {
-                        //console.log(cell.id);
-                        //cell.addEventListener("click", egyesHere(cell.id));
-                
-                        cell.onclick = function (e) {
-                            //clickAction(cell.id);
-                            //cell.className += " boat"
-                        }
-                    }
-                    break;
-            
-                default:
-                    break;
-            }
-        }
-    }
-    function clickAction2(pos) {
-        pos = pos.slice(1, 5);
+        console.log("Pozicio: "+pos)
         cellak.push(pos); 
         switch (bType) {
             case "egyes":
@@ -453,13 +393,18 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                 }
                 break;
             case "kettes1":
+                PutBoat(bType, cellak);
                 if (cellak.length == cellNumber) {
-                    PutBoat(bType, cellak);
                     cellak = [];
                     bType = "kettes2"
                     tartalom.innerHTML = "Helyezd el a kettes2 hajót"
                     clickActions()
                 }
+                let nextMezok = GetOtherCoords(pozicio)
+                csakEgyesesClick(nextMezok.keresztben, function () {
+                    
+                })
+
                 break;
             case "kettes2":
                 if (cellak.length == cellNumber) {
@@ -542,7 +487,7 @@ function letToNum(letter) {
 
 
 function GetOtherCoords (coord) {
-    clear();
+    //clear();
     let isPreRow = true;
     let isPreCol = true;
     let isNextRow = true;
