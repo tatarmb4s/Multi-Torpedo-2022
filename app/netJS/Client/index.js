@@ -358,6 +358,16 @@ function cellOnclickKettes1(className, bType, cellNumber) {
         }
     } 
     vege = false;
+
+    /*
+    Van egy tömb cellak néven. 
+    A minimális cellaszám kezdetben 1.
+    Ehhez hozzáad egyet akkor amikor valamire rákattintok.
+    Ha rákattintottam, akkor megnézi hogy a minimális cellaszám az egayenlő e a "cellak" hosszával.
+    Ha igen, akkor nullázza a "cellak" számát, és ezáltal a hosszát.
+    Majd megnézui milyen a hajónév, és átállítja következőre. Emellett hozzáad egyeta minimum cellaszámhoz.
+    Ha azt megint elérte megy ez előről. Az ötös hajóná ér csak véget
+    */
     function clickAction(pos) {
         pos = pos.slice(1, 5);
         cellak.push(pos); 
