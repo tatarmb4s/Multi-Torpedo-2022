@@ -28,6 +28,10 @@ table {
     border-spacing: 0;
 }
 
+.cantput {
+    background-color: bisque;
+}
+
 /* második játékos területe */
 #player2 {
     margin-left: 538px;
