@@ -856,6 +856,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-theme-color-3{
+  --tw-text-opacity: 1;
+  color: rgb(56 186 238 / var(--tw-text-opacity));
+}
+
 .text-theme-color{
   --tw-text-opacity: 1;
   color: rgb(54 28 193 / var(--tw-text-opacity));
@@ -864,11 +869,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-theme-color-2{
   --tw-text-opacity: 1;
   color: rgb(17 155 210 / var(--tw-text-opacity));
-}
-
-.text-theme-color-3{
-  --tw-text-opacity: 1;
-  color: rgb(56 186 238 / var(--tw-text-opacity));
 }
 
 .shadow{
@@ -1496,11 +1496,6 @@ p {
 
 .back-to-top:hover{
   background-position: right;
-}
-
-.hover\:text-theme-color:hover{
-  --tw-text-opacity: 1;
-  color: rgb(54 28 193 / var(--tw-text-opacity));
 }
 
 .hover\:text-theme-color-2:hover{
