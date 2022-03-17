@@ -6,10 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tatár Mátyás Bence">
     <title>Player1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="mainsite.css">
+    <link rel="stylesheet" href="tatar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&family=Hahmlet:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,700&family=Nunito:ital,wght@0,800;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/hajo.png"/>
 </head>
 <body>
+<!--Bootstrap navbar része-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!--<a href="#" class="navbar-brand mb-0 h1"><img src="img/Logo_JustName_Trans.png" alt="Codászok Főoldal" style="width: 150px;"></a>-->
+    <div class="container">
+        <a href="index.html" target="_blank" class="navbar-brand mb-0 h1">
+            <img src="img/hajo.png" alt="Torpedó - Főoldal" style="height: 35px; margin-top: 0px;">
+        </a>
+        <a href="index.html" class="navbar-brand mb-0 text-center neon-link" style="padding-left: 3px;">
+            <span class="neon-link-span"></span>
+            <span class="neon-link-span"></span>
+            <span class="neon-link-span"></span>
+            <span class="neon-link-span"></span>
+            Torpedó
+        </a>
+
+        <button
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        class="navbar-toggler"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link menu-link" href="index.html">
+                        Főoldal - Játékbemutatás
+                        <span class="menu-link-span"></span>
+                    </a>
+                </li>           
+                <li class="nav-item active">
+                    <a class="nav-link menu-link" href="NewGame.html#newGame">
+                        Új játék
+                        <span class="menu-link-span"></span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link menu-link" href="NewGame.html#publicGames">
+                        Publikus játékok
+                        <span class="menu-link-span"></span>
+                    </a>
+                </li>
+                
+                <li class="nav-item active">
+                    <a class="nav-link menu-link" href="NewGame.html#joinGame">
+                        Belépés játékba
+                        <span class="menu-link-span"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <div id="szovegek">
         <div id="tartalom"></div>

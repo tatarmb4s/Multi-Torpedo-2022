@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kábeltípusok - Hardwarek-kábelek</title>
+    <title>Torpedó - Főoldal</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="mainsite.css">
     <link rel="stylesheet" href="tatar.css">
@@ -12,15 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&family=Hahmlet:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,700&family=Nunito:ital,wght@0,800;0,900;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/img/usbA_B.jpg"/>
+    <link rel="icon" type="image/png" href="img/hajo.png"/>
 </head>
 <body>
-<!--Coment-->
+<!--Bootstrap navbar része-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <!--<a href="#" class="navbar-brand mb-0 h1"><img src="img/Logo_JustName_Trans.png" alt="Codászok Főoldal" style="width: 150px;"></a>-->
     <div class="container">
-        <a href="https://tatarmb4s.github.io/codaszok-main" target="_blank" class="navbar-brand mb-0 h1">
-            <img src="img/JustLogoTrans522.png" alt="Codaszok Főoldal" style="width: 35px; margin-top: -10px;">
+        <a href="index.html" target="_blank" class="navbar-brand mb-0 h1">
+            <img src="img/hajo.png" alt="Torpedó - Főoldal" style="height: 35px; margin-top: 0px;">
         </a>
         <a href="index.html" class="navbar-brand mb-0 text-center neon-link" style="padding-left: 3px;">
             <span class="neon-link-span"></span>
@@ -49,14 +49,21 @@
                     </a>
                 </li>           
                 <li class="nav-item active">
-                    <a class="nav-link menu-link" href="NewGame.html">
+                    <a class="nav-link menu-link" href="NewGame.html#newGame">
                         Új játék
                         <span class="menu-link-span"></span>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link menu-link" href="NewGame.html/#publicGames">
+                    <a class="nav-link menu-link" href="NewGame.html#publicGames">
                         Publikus játékok
+                        <span class="menu-link-span"></span>
+                    </a>
+                </li>
+                
+                <li class="nav-item active">
+                    <a class="nav-link menu-link" href="NewGame.html#joinGame">
+                        Belépés játékba
                         <span class="menu-link-span"></span>
                     </a>
                 </li>
@@ -70,12 +77,14 @@
 
     <div class="ycenter">
         <div class="text-center ">
-            <h1 class="display-3 fw-bold cim hatsoszin"><span class="">Üdvözöllek a <focim class="focimnev">Torpedo</focim> játékban!</span></h1>
+            <div class="hatsoszin">
+                <h1 class="display-3 fw-bold cim"><span class="">Üdvözöllek a <focim class="focimnev">Torpedo</focim> játékban!</span></h1>
+            </div>
             <div class="mt-6"></div>
             <!--<p>Ön most a <a href="http://www.njszki.hu" target="_blank">Neumann János Informatikai Technikum</a> egyik osztályának weboldalát olvassa.</p> --><br>
         </div>
         <div class="">
-            <h1 class="display-6 cim hatsoszin"><span class="">A <focim class="focimnev">játékról:</focim></span></h1>
+            <h1 class="display-5 cim hatsoszin"><span class="">A <focim class="focimnev">játékról:</focim></span></h1>
             <div class="mt-2"></div>
             <!--<p>Ön most a <a href="http://www.njszki.hu" target="_blank">Neumann János Informatikai Technikum</a> egyik osztályának weboldalát olvassa.</p> --><br>
         </div>
@@ -85,22 +94,26 @@
             <p class="hatsoszin">
                 <span class="">A <strong>torpedó</strong> egy saját hajtással és robanófejjel ellátott fegyver, ami leggyakrabban a hadihajókon és tengeralattjáról indítják, de előfordult már, hogy repülőről vettték be. A torpedó a céltárgyat a víz alatt közelíti meg, amikor eléri azt, vagy nekiütközik, felrobban. Ezzel okozva kárt a célpontban. Ezt a fegyvert általában tengerelettjárók és hadihajók ellen vetik be.</span>
             </p>
-            <div class="hatsoszin">
+            <div class="mt-5"></div>
+            <h2 class="display-6 cim hatsoszin">A Torpedó játék lényege</h2>
+            <div class="mt-4"></div>
+            <p class="hatsoszin">
+                A játékban tengeralattjárók szerepelnek, melyek egymásra torpedókat lőnek ki.
+                A játékot két játékos játszhatja.
+                A cél, hogy az ellenfél hadiflottáját minél előbb elsüllyesszük.
+                A tengeralattjárók két 10x10-es négyzethálónyi területen helyezkednek el.
+                A játékosok a bal oldali területre teszik fel saját tengeralattjáróikat, és itt láthatják az ellenfél általi lövések eredményeit.
+                A jobb oldali területen vannak az ellenfél tengeralattjárói melyeket nem látjuk. Erre a területre kell torpedókat lőni, hogy a flottáját el süllyesszük. Lövéseink eredményei is itt jelennek meg.
 
-                <h2 class="hatsocim">A Torpedó játék lényege</h2>
-                <p class="">
-                    A játékban tengeralattjárók szerepelnek, melyek egymásra torpedókat lőnek ki.
-                    A játékot két játékos játszhatja.
-                    A cél, hogy az ellenfél hadiflottáját minél előbb elsüllyesszük.
-                    A tengeralattjárók két 10x10-es négyzethálónyi területen helyezkednek el.
-                    A játékosok a bal oldali területre teszik fel saját tengeralattjáróikat, és itt láthatják az ellenfél általi lövések eredményeit.
-                    A jobb oldali területen vannak az ellenfél tengeralattjárói melyeket nem látjuk. Erre a területre kell torpedókat lőni, hogy a flottáját el süllyesszük. Lövéseink eredményei is itt jelennek meg.
-    
-                    A tengeralattjárók négyzet alakú cellákból állnak. Egy tengeralattjáró annyi cellát foglal el amekkora számértéke van. Például a kettes tengeralattjáróknak két cellája van, a hármas tengeralattjáróknak három és így tovább. A játékban 1 db egyes, 2 db kettes, 2 db hármas, 1 db négyes, és 1 db ötös tengeralattjáró van. Ezek mindegyikét egy kis tárolóból lehet a táblára helyezni. 
-    
-                    Miután az elrendezéssel végeztünk, megvárjuk ellenfelünek és kezdetét veszi a játék.
-                </p>
-                <h2 class="hatsocim">A szabályok</h2>
+                A tengeralattjárók négyzet alakú cellákból állnak. Egy tengeralattjáró annyi cellát foglal el amekkora számértéke van. Például a kettes tengeralattjáróknak két cellája van, a hármas tengeralattjáróknak három és így tovább. A játékban 1 db egyes, 2 db kettes, 2 db hármas, 1 db négyes, és 1 db ötös tengeralattjáró van. Ezek mindegyikét egy kis tárolóból lehet a táblára helyezni. 
+
+                Miután az elrendezéssel végeztünk, megvárjuk ellenfelünek és kezdetét veszi a játék.
+            </p>
+            <div class="mt-5"></div>
+
+            <h2 class="display-6 cim hatsoszin">A szabályok</h2>
+            <div class="mt-4"></div>
+            <div class="hatsoszin">
                 <p>
                     <ul>
                         <li>A tengeralattjárók között minimum egy kocka távolságnak kell lennie, és a sarkaik sem érhetnek össze. A tengeralattjáró lehet a tábla legszélén, de nem lóghat a tábláról ki.</li>
@@ -110,8 +123,10 @@
                     </ul>
                 </p>
             </div>
+            <div class="mt-5"></div>
+            <h2 class="display-6 cim hatsoszin">Játék menete</h2>
+            <div class="mt-4"></div>
             <div class="hatsoszin">
-                <h2 class="hatsocim">Játék menete</h2>
 
                 <p>A játék folyamán a játékosok egymásra lőnek torpedóikkal. Ezt úgy tudják megtenni, hogy amikor Ők következnek, akkor az ellenfél táblázatának egyik celláját kijelölik (belekattintanak). Ezután alul a tűz gombra kattintva indítható a torpedó. A lövésről három féle visszajelzést kapnak.</p> 
                 <ul>

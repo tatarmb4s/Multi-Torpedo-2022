@@ -537,6 +537,7 @@ progress {
   font-size: calc(0.925rem + 2.1vw);
   font-weight: 600;
   line-height: 1.1;
+  text-decoration: underline;
 }
 @media (min-width: 1200px) {
   .display-5 {

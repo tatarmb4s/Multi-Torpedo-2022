@@ -3,7 +3,7 @@ Author: Balogh Levente
 Address: levi@proc.hu
 2021-2022
 */
-const ws = new WebSocket('ws://localhost:8080');
+const ws = new WebSocket('ws://10.20.1.92:8080');
 
 class EmitEvents {
 
