@@ -50,9 +50,9 @@ ws.onopen = ()=>{
         //document.write(sessionID, isRandom, isPublic);
         console.log("NewGame:", sessionID, isRandom, isPublic)
         sesdata.sessionID = sessionID;
-        window.alert(sesdata.sessionID)
+        window.alert("A pertnered a következő játékazonosítóval fog tudni becsatlakozni: "+sesdata.sessionID)
         setTimeout(() => {               
-            var url = `player1.html?sessionID=${sessionID}&randomName=${chkRandomName.checked}&public=${chkPublic.checked}&newgame=${true}`;
+            var url = `player1.html?sessionID=${sessionID}&randomName=${chkRandomName.checked}&public=${chkPublic.checked}&newgame=${true}&sourceP=${"player1"}&targetorP=${"player1"}&targetP=${"player2"}`;
             window.location.href = url;
         }, 30);
     });
@@ -85,7 +85,8 @@ ws.onopen = ()=>{
             txtsessionIDjoin = document.querySelector('#txtsessionIDjoin');
     
             setTimeout(() => {                
-                var url = `player2.html?sessionID=${txtsessionIDjoin.value}&randomName=${chkRandomName.checked}&public=${chkPublic.checked}&newgame=${true}`;
+                var url = `player1.html?sessionID=${sesdata.sessionID}&randomName=${chkRandomName.checked}&public=${chkPublic.checked}&newgame=${false}&sourceP=${"player2"}&targetorP=${"player2"}&targetP=${"player1"}`
+                ;
                 window.location.href = url;
             }, 30);
         }
@@ -120,7 +121,9 @@ ws.onopen = ()=>{
 }
 
 function publicJoin(sessionIDc) {
+    console.log(sessionIDc);
     sesdata.sessionID = sessionIDc;
+    //console.log(sesdata.sessionID);
     codeValid();
 }
 

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tatár Mátyás Bence (extiploer@gmail.com)">
     <title>Új játék - Torpedó</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="mainsite.css">
@@ -12,58 +13,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&family=Hahmlet:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,700&family=Nunito:ital,wght@0,800;0,900;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/img/usbA_B.jpg"/>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
 </head>
 <body>
-<!--Coment-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <!--<a href="#" class="navbar-brand mb-0 h1"><img src="img/Logo_JustName_Trans.png" alt="Codászok Főoldal" style="width: 150px;"></a>-->
-    <div class="container">
-        <a href="https://tatarmb4s.github.io/codaszok-main" target="_blank" class="navbar-brand mb-0 h1">
-            <img src="img/JustLogoTrans522.png" alt="Codaszok Főoldal" style="width: 35px; margin-top: -10px;">
-        </a>
-        <a href="index.html" class="navbar-brand mb-0 text-center neon-link" style="padding-left: 3px;">
-            <span class="neon-link-span"></span>
-            <span class="neon-link-span"></span>
-            <span class="neon-link-span"></span>
-            <span class="neon-link-span"></span>
-            Torpedó
-        </a>
-
-        <button
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        class="navbar-toggler"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link menu-link" href="index.html">
-                        Főoldal - Játékbemutatás
-                        <span class="menu-link-span"></span>
-                    </a>
-                </li>           
-                <li class="nav-item active">
-                    <a class="nav-link menu-link" href="NewGame.html">
-                        Új játék
-                        <span class="menu-link-span"></span>
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link menu-link" href="NewGame.html#publicGames">
-                        Publikus játékok
-                        <span class="menu-link-span"></span>
-                    </a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <!--<a href="#" class="navbar-brand mb-0 h1"><img src="img/Logo_JustName_Trans.png" alt="Codászok Főoldal" style="width: 150px;"></a>-->
+        <div class="container">
+            <a href="index.html" target="_blank" class="navbar-brand mb-0 h1">
+                <img src="img/hajo.png" alt="Torpedó - Főoldal" style="height: 35px; margin-top: 0px;">
+            </a>
+            <a href="index.html" class="navbar-brand mb-0 text-center neon-link" style="padding-left: 3px;">
+                <span class="neon-link-span"></span>
+                <span class="neon-link-span"></span>
+                <span class="neon-link-span"></span>
+                <span class="neon-link-span"></span>
+                Torpedó
+            </a>
+    
+            <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link menu-link" href="index.html">
+                            Főoldal - Játékbemutatás
+                            <span class="menu-link-span"></span>
+                        </a>
+                    </li>           
+                    <li class="nav-item active">
+                        <a class="nav-link menu-link" href="NewGame.html#newGame">
+                            Új játék
+                            <span class="menu-link-span"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link menu-link" href="NewGame.html#publicGames">
+                            Publikus játékok
+                            <span class="menu-link-span"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link menu-link" href="NewGame.html#joinGame">
+                            Belépés játékba
+                            <span class="menu-link-span"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
 <div id="maindiv" class="mainsite text-justify">
@@ -137,7 +144,7 @@
     <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright: <a class="kek-link" href="https://tatarmb4s.github.io/codaszok-main" target="_blank">Codaszok.tk</a>
     </div>
-    </footer>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="socket.js"></script>
 <script src="NewGame.js" sessionID="pl1" source="player1" targetor="player1" target="player2"></script>

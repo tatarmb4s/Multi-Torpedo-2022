@@ -1,9 +1,12 @@
 
-console.clear();
+//console.clear();
 
 var url_string = window.location.href; //window.location.href
 var url = new URL(url_string);
 var prmSessionID = url.searchParams.get("sessionID");
+var sourceP = url.searchParams.get("sourceP");
+var targetorP = url.searchParams.get("targetorP");
+var targetP = url.searchParams.get("targetP");
 var prmRandomName = url.searchParams.get("randomName");
 var prmPublic = url.searchParams.get("public");
 var prmNewgame = url.searchParams.get("newgame");
@@ -11,10 +14,10 @@ const gombok = document.querySelector("#gombok")
 
 const sesdata = {
     sessionID: prmSessionID,
-    source: document.currentScript.getAttribute("source"),
-    targetor: document.currentScript.getAttribute("targetor"),
+    source: sourceP,
+    targetor: targetorP,
     // TODO: Át kell állítani majd player 2 re!
-    target: document.currentScript.getAttribute("target"),
+    target: targetP,
 }
 
 const player1table = document.querySelector('#player1');
@@ -53,16 +56,27 @@ ws.onopen = ()=>{
         //console.log(response);
         if (response === "Nem te következel") {
             window.alert(response);
-            document.getElementById(`2${response.coords}`).className = " pl2Cell";
         }
         if (response.result === "nemtalalt") {
             tartalom.innerHTML = "Nem talált a lövés a következő koordinátára:"+response.coords;
-            document.getElementById(`2${response.coords}`).className += " fired-cell";
+            document.getElementById(`2${response.coords}`).className = " fired-cell";
             //latestFired.className += " ";
         }
         if (response.result === "talalt") {
             tartalom.innerHTML = "Eltaláltad a következő koordinátát: "+response.coords
+            
+            let nextMezok = GetOtherCoords("1"+response.coords)
+            csoportosFunction(2,nextMezok.keresztben, function (source) {
+                //console.log("klikk")
+                source.className += " suggested"
+            })
+            
+            csoportosFunction(2,nextMezok.atloban, function (source) {
+                //console.log("klikk")
+                source.className += " non-suggested"
+            })
             document.getElementById(`2${response.coords}`).className += " fired-boat";
+
         }
         if (response.result === "sullyedt") {
             var talalatok = ""
@@ -71,6 +85,19 @@ ws.onopen = ()=>{
                 talalatok += crd + ", "
                 //console.log(crd)
                 document.getElementById(`2${crd}`).className += " sullyedt";
+                document.getElementById(`2${crd}`).classList.remove("boat");
+
+                let nextMezok = GetOtherCoords("1"+crd)
+                csoportosFunction(2,nextMezok.keresztben, function (source) {
+                    //console.log("klikk")
+                    source.classList.remove("suggested");
+                })
+                
+                csoportosFunction(2,nextMezok.atloban, function (source) {
+                    //console.log("klikk")
+                    source.classList.remove("non-suggested");
+                })
+
             }
             tartalom.innerHTML = "Elsüllyesztetted a következő koordinátákon lévő "+response.bType+" hajót: "+talalatok
         }
@@ -81,19 +108,19 @@ ws.onopen = ()=>{
         console.log(response);
     });
     EmitEvents.registerEventHandler('sessions', (response) => {
-        console.log(response);
+        //console.log(response);
     });
     EmitEvents.registerEventHandler('codeValid', (response) => {
-        console.log(response);
+        //console.log(response);
     });
     EmitEvents.registerEventHandler('canJoin', (response) => {
-        console.log(response);
+        //console.log(response);
     });
     EmitEvents.registerEventHandler('playerJoin', (response) => {
-        console.log(response);
+        //console.log(response);
     });
     EmitEvents.registerEventHandler('secondJoined', (response) => {
-        tartalom.innerHTML += "\r A 2. belépett";
+        window.alert(" Az ellenfél belépett");
     });
     EmitEvents.registerEventHandler('readySet2', (response) => {
         if (response === 'A játék indulhat') {
@@ -109,7 +136,7 @@ ws.onopen = ()=>{
         console.log(response);
     });
     EmitEvents.registerEventHandler('youTurn', (response) => {
-        console.log(response);
+        //console.log(response);
         if (response.result === "nemtalalt") {
             tartalom.innerHTML = "Nem talált az ellenfél lövése a következő koordinátára:"+response.coords;
             document.getElementById(`1${response.coords}`).className += " fired-cell";
@@ -137,7 +164,28 @@ ws.onopen = ()=>{
         ownDatas = response;
     });
     EmitEvents.registerEventHandler('endGame', (response) => {
-        window.alert("A nyertes: "+response)
+
+        if (response === "player1") {
+            window.alert("Megnyerted a játékot!"+response)
+            tartalom.innerHTML = `        <div style="color: green;">
+            Megnyerted a játékot!
+        </div>`
+        }
+        if (response === "player2") {
+            window.alert("Elvesztetted a játékot!"+response)
+            tartalom.innerHTML = `<div style="color: red;">Elvesztetted a játékot!</div>`
+        }
+
+        const p1cellak = document.querySelectorAll("pl2Cell");
+        for (const cell of p1cellak) {
+            //console.log(cell.id);
+            //cell.addEventListener("click", egyesHere(cell.id));
+            cell.onclick = function (e) {
+                //clickAction(cell.id);
+                //cell.className += " boat"
+            }
+        }
+
         const thk = document.getElementsByTagName('th');
         for (th in thk) {
             th.onclick = function () {
@@ -251,7 +299,12 @@ function tableMake(table, spId) {
         var txt = i;
         var classTh = "";
         if (i === 0) {
-            txt = "Player: "+spId;
+            if (spId == 1) {
+                txt = "Te";
+            }
+            if (spId == 2) {
+                txt = "";
+            }
             classTh = "firstCol"
         } 
         thead += `<th class="${classTh}">${txt}</th>`;
@@ -272,7 +325,7 @@ function tableMake(table, spId) {
                 tableCol += `<th id="${id}" class="0pl${spId}Cell tleft">${txt}</th>`;        
             }
             else {
-                tableCol += `<th id="${id}" class="pl${spId}Cell">${txt}</th>`;        
+                tableCol += `<th id="${id}" class="pl${spId}Cell"></th>`;        
             }     
             //console.log(id);
             
@@ -291,6 +344,7 @@ function tableMake(table, spId) {
     `;
     
     table.innerHTML = playerTable;
+    table.className += " visibe-table";
 }
 // converts numbers to spreadsheet letter columns eg. 1 -> A
 function numToSSColumn(num){
@@ -337,11 +391,11 @@ function cellOnclickDisable(className) {
 }
 
 
-function csoportosFunction(cellak, funkcio) {
+function csoportosFunction(player ,cellak, funkcio) {
     //console.log(cellak)
     for (let cell of cellak) {
         //console.log(cell)
-        const cella = document.getElementById("1"+cell);
+        const cella = document.getElementById(player.toString()+cell);
         //console.log(cella);
         //cell.addEventListener("click", egyesHere(cell.id));
         funkcio(cella);
@@ -382,9 +436,9 @@ function cellOnclickKettes1(className, bType, cellNumber) {
     function clickAction(pos) {
         let pozicio = pos;
         pos = pos.slice(1, 5);
-        console.log("Pozicio: "+pos)
+        //console.log("Pozicio: "+pos)
         cellak.push(pos); 
-        console.log("Cellak: "+cellak);
+        //console.log("Cellak: "+cellak);
         switch (bType) {
             case "egyes":
                 if (cellak.length == cellNumber) {
@@ -392,17 +446,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
 
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -410,7 +464,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -430,17 +484,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
 
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -448,7 +502,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -471,7 +525,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         //cell.className += " boat"
                     }
                 }
-                csoportosFunction(nextMezok.keresztben, function (source) {
+                csoportosFunction(1,nextMezok.keresztben, function (source) {
                     source.onclick = function (e) {
                         //console.log("klikk")
                         source.className = " boat"
@@ -481,7 +535,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     };
                 })
 
-                csoportosFunction(nextMezok.atloban, function (source) {
+                csoportosFunction(1,nextMezok.atloban, function (source) {
                     //("klikk")
                     source.className = " cantput"
                     source.onclick = function(e) {};
@@ -495,17 +549,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
 
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -513,7 +567,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -538,7 +592,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         //cell.className += " boat"
                     }
                 }
-                csoportosFunction(nextMezok.keresztben, function (source) {
+                csoportosFunction(1,nextMezok.keresztben, function (source) {
                     source.onclick = function (e) {
                         //console.log("klikk")
                         source.className = " boat"
@@ -548,7 +602,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     };
                 })
 
-                csoportosFunction(nextMezok.atloban, function (source) {
+                csoportosFunction(1,nextMezok.atloban, function (source) {
                     //("klikk")
                     source.className = " cantput"
                     source.onclick = function(e) {};
@@ -560,17 +614,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
 
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -578,7 +632,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -602,7 +656,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         //cell.className += " boat"
                     }
                 }
-                csoportosFunction(nextMezok.keresztben, function (source) {
+                csoportosFunction(1,nextMezok.keresztben, function (source) {
                     source.onclick = function (e) {
                         //console.log("klikk")
                         source.className = " boat"
@@ -612,7 +666,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     };
                 })
 
-                csoportosFunction(nextMezok.atloban, function (source) {
+                csoportosFunction(1,nextMezok.atloban, function (source) {
                     //("klikk")
                     source.className = " cantput"
                     source.onclick = function(e) {};
@@ -624,17 +678,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
 
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -642,7 +696,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -667,7 +721,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         //cell.className += " boat"
                     }
                 }
-                csoportosFunction(nextMezok.keresztben, function (source) {
+                csoportosFunction(1,nextMezok.keresztben, function (source) {
                     source.onclick = function (e) {
                         //console.log("klikk")
                         source.className = " boat"
@@ -677,7 +731,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     };
                 })
 
-                csoportosFunction(nextMezok.atloban, function (source) {
+                csoportosFunction(1,nextMezok.atloban, function (source) {
                     //("klikk")
                     source.className = " cantput"
                     source.onclick = function(e) {};
@@ -689,17 +743,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
 
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -707,7 +761,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -732,7 +786,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         //cell.className += " boat"
                     }
                 }
-                csoportosFunction(nextMezok.keresztben, function (source) {
+                csoportosFunction(1,nextMezok.keresztben, function (source) {
                     source.onclick = function (e) {
                         //console.log("klikk")
                         source.className = " boat"
@@ -742,7 +796,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     };
                 })
 
-                csoportosFunction(nextMezok.atloban, function (source) {
+                csoportosFunction(1,nextMezok.atloban, function (source) {
                     //("klikk")
                     source.className = " cantput"
                     source.onclick = function(e) {};
@@ -753,17 +807,17 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     PutBoat(bType, cellak);
                     for (let i = 0; i < cellak.length; i++) {
                         const element = cellak[i];
-                        console.log("1"+element);
+                        //console.log("1"+element);
                         let nextMezok = GetOtherCoords("1"+element)
                         if (cellak.includes(element)) {
     
-                            csoportosFunction(nextMezok.keresztben, function (source) {
+                            csoportosFunction(1,nextMezok.keresztben, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
                             })
             
-                            csoportosFunction(nextMezok.atloban, function (source) {
+                            csoportosFunction(1,nextMezok.atloban, function (source) {
                                 //console.log("klikk")
                                 source.className = " cantput"
                                 source.onclick = function(e) {};
@@ -771,7 +825,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         }
                     }
 
-                    csoportosFunction(cellak, function (source) {
+                    csoportosFunction(1,cellak, function (source) {
                         //("klikk")
                         source.className = " boat"
                         source.onclick = function(e) {};
@@ -806,7 +860,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                         //cell.className += " boat"
                     }
                 }
-                csoportosFunction(nextMezok.keresztben, function (source) {
+                csoportosFunction(1,nextMezok.keresztben, function (source) {
                     source.onclick = function (e) {
                         //console.log("klikk")
                         source.className = " boat"
@@ -816,7 +870,7 @@ function cellOnclickKettes1(className, bType, cellNumber) {
                     };
                 })
 
-                csoportosFunction(nextMezok.atloban, function (source) {
+                csoportosFunction(1,nextMezok.atloban, function (source) {
                     //("klikk")
                     source.className = " cantput"
                     source.onclick = function(e) {};
@@ -837,7 +891,7 @@ function letToNum(letter) {
     let a = "nincs";
     for (i=0; a != letter; i++) {
         a = numToSSColumn(i);
-        console.log(a)
+        //console.log(a)
     }
     return i-1;
 }

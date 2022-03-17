@@ -1,24 +1,202 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(212, 252, 255);
+/*
+font-family: 'Encode Sans', sans-serif;
+font-family: 'Hahmlet', serif;
+font-family: 'Lora', serif;
+font-family: 'Nunito', sans-serif;
+*/
+root {
+    
 }
+
+body {
+    margin-bottom: 60px;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(0, 24, 37) !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+html {
+    font-size: calc(0.575rem + 1.5vw);
+    position: relative;
+    min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    }
+
+nav {
+    font-family: 'Nunito', sans-serif;
+} 
+
+#maindiv {
+    padding-top: 2.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    text-align: justify;
+}
+
+@media (min-width: 1200px) {
+    #maindiv {
+        padding-top: 2.5rem;
+        padding-right: 7.5rem;
+        padding-left: 7.5rem;
+    }
+  }
+
+h2 h3 h4 h5 h6 {
+    font-family: 'Lora', serif;
+    text-align: right;
+}    
+
+h1 {
+    font-family: 'Encode Sans', sans-serif;
+}    
+
+.focimnev {
+    color: rgb(238, 71, 29);
+}        
+
+h2 {
+    /*color: rgb(0, 255, 115);*/
+    color: rgb(0, 255, 90);
+    text-align: left;
+}    
+
+h3 {
+    color: rgb(255, 166, 0);
+    text-align: left;
+}    
+
+h4 {
+    color: rgb(255, 0, 0); 
+    text-align: left;  
+} 
+
+h5 {
+    color: rgb(252, 255, 79);
+    text-align: left;
+}    
+
+a {
+color: #03cfd6;    
+}
+
+p {
+    font-size: 1.2rem;
+    text-indent: 2rem;
+}
+
+.nagylista {
+    font-size: 1.2rem;
+    text-indent: 1rem;
+    text-align: justify; 
+}
+
+figure {
+    margin-bottom: 4.5rem;
+}
+
+.mitjelent {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.img-kocka {
+    width: 50rem;
+} 
+@media (max-width: 528px) {
+    .img-kocka {
+        width: 30rem;
+    }    
+}  
+
+.img-termek {
+    width: 20rem;
+
+}
+
+
+.ajanlo-title {
+    font-size: calc(0.675rem + 1.5vw);
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: underline;
+    /*padding-bottom: 40PX;*/
+    
+}
+@media (min-width: 1200px) {
+    .ajanlo-title {
+          font-size: 1.4rem;
+        }
+}
+
+.kiemelt {
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.codaszok {
+    font-family: 'Nunito', sans-serif;  
+    /*color: hsl(185, 100%, 50%); */
+    background: -webkit-linear-gradient(hsl(185, 100%, 71%) 10%, hsl(185, 100%, 50%) 50%,#2689b1 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: calc(2rem + 2.1vw);
+}
+footer {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+
 /*A táblbázat teteje (az első sor) ahol az 1-10 van*/
 thead {
     height: 48px;
+    background-color: rgb(219, 219, 219);
 }
 /*Az első cella tartalma "Player 1" vagy "Player 2*/
 .firstCol {
     color: blue;
+    background-color: rgb(158, 158, 158);
+    
 }
 /*A táblázat bal oldalsó első oszlopa ahol az A B ... J van*/
 .tleft {
     color: red;
+    background-color: rgb(219, 219, 219);
 }
 /* Egy cella */
 th {
     width: 48px;
-    border: black solid 3px;
+    /*border: black solid 3px;*/
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(img/hatter.png);
+}
+
+thead, tbody, tfoot, tr, td, th {
+    border-color: none !important;
+    border-width: 0px !important;
+    text-align: center !important; 
 }
 
 /* Táblázatok alapterülete */
@@ -26,10 +204,25 @@ table {
     height: 528px;
     width: 528px;
     border-spacing: 0;
+    /*border-color: black;*/
+    color: #03cfd600;    
+}
+
+thead {
+    color: black;
+    
+}
+
+td {
+      
+}
+
+.visibe-table {
+    background-color: white;
 }
 
 .cantput {
-    background-color: bisque;
+    background-color: rgba(255, 166, 0, 0.288);
 }
 
 /* második játékos területe */
@@ -44,27 +237,44 @@ table {
     font-size: 2rem;
 }
 /*"A soron lévő játékos" kiírás*/
-.cim {
-    color: rgb(1, 70, 1);
+.soronlevo {
+    color: white;
+    font-size: 1.5rem;
 }
 /*Maga a soron évő játékos (vagy Te, vagy Ellenfél)*/
 .kiemeles {
-    color: rgb(0, 54, 54);
+    color: rgb(10, 255, 255);
 }
 /*Eltalált de el nem süllyedt hajók*/
 .fired-boat {
-    background-color: red !important;
+    background-color: rgba(255, 0, 0, 0.274) !important;
+    background-image: url(img/talalt2.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 /*Cella amire lőttek de nem talált*/
 .fired-cell {
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(211, 211, 211, 0.623);
+    background-image: url(img/Nemttalat2.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 /* Elsüllyedt hajó */
 .sullyedt {
-    background-color: brown !important;
+    background-color: rgba(255, 0, 0, 0.274) !important;
+    border-color: red !important;
+    background-image: url(img/sullyedt2.png);
 }
 
 /* Lehelyezett és sértetlen hajó */
 .boat {
-    background-color: gray;
+    background-image: url(img/boat2.png);
+}
+
+.non-suggested {
+    background-color: rgba(255, 4, 4, 0.253);
+}
+
+.suggested {
+    background-color: rgba(75, 255, 4, 0.253);
 }
