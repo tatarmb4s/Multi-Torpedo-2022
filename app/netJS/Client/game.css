@@ -183,9 +183,55 @@ thead {
     color: red;
     background-color: rgb(219, 219, 219);
 }
+
+@media (min-width: 1200px) {
+    th {
+        width: 48px;
+        /*border: black solid 3px;*/
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(img/hatter.png);
+    }
+    table {
+        height: 33rem;
+        width: 33rem;
+    }
+}
+@media (max-width: 1200px) {
+    th {
+        height: 3rem;
+        width: 3rem;
+        /*border: black solid 3px;*/
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(img/hatter.png);
+    }
+    table {
+
+    }
+}
+@media (max-width: 600px) {
+    th {
+        height: 2rem;
+        width: 2rem;
+        /*border: black solid 3px;*/
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(img/hatter.png);
+    }
+    table {
+
+    }
+}
+
 /* Egy cella */
 th {
-    width: 48px;
+    
     /*border: black solid 3px;*/
     text-align: center;
     background-repeat: no-repeat;
@@ -201,8 +247,8 @@ thead, tbody, tfoot, tr, td, th {
 
 /* Táblázatok alapterülete */
 table {
-    height: 528px;
-    width: 528px;
+    /*height: 528px;
+    width: 528px;*/
     border-spacing: 0;
     /*border-color: black;*/
     color: #03cfd600;    
