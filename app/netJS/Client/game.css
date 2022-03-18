@@ -200,8 +200,23 @@ thead {
 }
 @media (max-width: 1200px) {
     th {
-        height: 3rem;
-        width: 3rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        /*border: black solid 3px;*/
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(img/hatter.png);
+    }
+    table {
+
+    }
+}
+@media (max-width: 800px) {
+    th {
+        height: 2.3rem;
+        width: 2.3rem;
         /*border: black solid 3px;*/
         text-align: center;
         background-repeat: no-repeat;
@@ -215,8 +230,8 @@ thead {
 }
 @media (max-width: 600px) {
     th {
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
         /*border: black solid 3px;*/
         text-align: center;
         background-repeat: no-repeat;
