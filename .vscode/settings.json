@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "appService.defaultWebAppToDeploy": "/subscriptions/7e80e6c4-e47b-46f9-ab38-afec507ac3be/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/TorpedoNetJS",
+    "appService.deploySubpath": "app\\netJS\\Server"
 }

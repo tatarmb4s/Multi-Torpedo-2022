@@ -244,6 +244,23 @@ thead {
     }
 }
 
+.peldatabla {
+    height: 3rem !important;
+    background-color: white;
+    color: black;
+}
+
+.pedlacella {
+    height: 3rem !important;
+    width: 3rem !important;
+}
+
+
+.peldacella2 {
+    background-image: none;
+    text-align: left !important;
+}
+
 /* Egy cella */
 th {
     
