@@ -3,7 +3,7 @@ Author: Balogh Levente
 Address: levi@proc.hu
 2021-2022
 */
-const ws = new WebSocket('ws://95.138.139.129:8080');
+const ws = new WebSocket('ws://torpedo.ml:8080');
 
 class EmitEvents {
 
