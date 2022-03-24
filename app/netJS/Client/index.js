@@ -132,9 +132,6 @@ ws.onopen = ()=>{
     EmitEvents.registerEventHandler('status', (response) => {
         console.log(response);
     });
-    EmitEvents.registerEventHandler('endGame', (response) => {
-        console.log(response);
-    });
     EmitEvents.registerEventHandler('youTurn', (response) => {
         //console.log(response);
         if (response.result === "nemtalalt") {
@@ -165,15 +162,13 @@ ws.onopen = ()=>{
     });
     EmitEvents.registerEventHandler('endGame', (response) => {
 
-        if (response === "player1") {
+        if (response === sourceP) {
+            tartalom.innerHTML = `<div style="color: green;">Megnyerted a játékot!</div>`
             window.alert("Megnyerted a játékot!"+response)
-            tartalom.innerHTML = `        <div style="color: green;">
-            Megnyerted a játékot!
-        </div>`
         }
-        if (response === "player2") {
-            window.alert("Elvesztetted a játékot!"+response)
+        if (response === targetP) {
             tartalom.innerHTML = `<div style="color: red;">Elvesztetted a játékot!</div>`
+            window.alert("Elvesztetted a játékot!"+response)
         }
 
         const p1cellak = document.querySelectorAll("pl2Cell");
