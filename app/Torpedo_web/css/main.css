@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.display-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.grid {
+    background-color: rgb(0, 140, 255);
+    margin: 2vmin;
+    display: grid;
+    grid-template-rows: repeat(10, 5.6vmin);
+    grid-template-columns: repeat(10, 5.6vmin);
+}
+
+.grid div {
+    border: 1px solid rgb(141, 141, 141);
+}
+
+.action {
+    cursor: pointer;
+    padding: .6rem;
+    border-radius: .2rem;
+    background-color: #1cac4b;
+    color: white;
+    border: none;
+    font-size: 90%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.start-btn {
+    margin-right: .2rem;
+}
+
+.ship {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(5.6rem * var(--width, 1));
+    height: calc(5.6rem * var(--height, 1));
+    border-radius: 2vmin;
+    margin: 5px;
+    background-color: gray;
+}
+.grid-ship {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ship > div {
+    width: 5.6vmin;
+    height: 5.6vmin;
+}
+
+.sm-container {
+    width: 3rem;
+    height: 2.2rem;
+}
+
+.md-container {
+    width: 4rem;
+    height: 2.2rem;
+}
+
+.lg-container {
+    width: 5rem;
+    height: 2.2rem;
+}
+
+.xl-container {
+    width: 6rem;
+    height: 2.2rem;
+}
