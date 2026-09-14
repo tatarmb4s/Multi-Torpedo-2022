@@ -1,5 +1,16 @@
 {
+    "name": "torpedo-server",
+    "version": "1.0.0",
+    "description": "Multi-Torpedo 2022 WebSocket game server",
     "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "node --watch index.js"
+    },
+    "engines": {
+        "node": ">=18"
+    },
     "dependencies": {
         "https": "^1.0.0",
         "ws": "^8.5.0"
